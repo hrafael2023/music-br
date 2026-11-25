@@ -362,7 +362,7 @@
   }
   // "03 - Artista - Música.mp3" → "Música" (tira número, extensão e o nome do artista repetido)
   function nomeFaixa(nome, artista) {
-    var t = nome.replace(/\.[a-z0-9]{2,4}$/i, "").replace(/^(.* \/ )?\d{1,3}(\s*[-.)_]\s*|\s+)/, "$1");
+    var t = desembaralha(nome).replace(/\.[a-z0-9]{2,4}$/i, "").replace(/^(.* \/ )?\d{1,3}(\s*[-.)_]\s*|\s+)/, "$1");
     if (artista) {
       var m = t.match(/^(.* \/ )?(.+?)\s+[-–]\s+(.+)$/);
       if (m && norm(m[2]) === norm(artista)) t = (m[1] || "") + m[3];
@@ -404,8 +404,17 @@
       });
     }).join(" ");
   }
+  // Nomes de arquivo gravados em CP850 (DOS/Windows antigo) e lidos como MacRoman: "N∆o" → "Não",
+  // "Tentaá∆o" → "Tentação". Só converte quando há um símbolo que não aparece em título de verdade.
+  var MOJIBAKE = {"Ä": "Ç", "Å": "ü", "Ç": "é", "É": "â", "Ñ": "ä", "Ö": "à", "Ü": "å", "á": "ç", "à": "ê", "â": "ë", "ä": "è", "ã": "ï", "å": "î", "ç": "ì", "é": "Ä", "è": "Å", "ê": "É", "ë": "æ", "í": "Æ", "ì": "ô", "î": "ö", "ï": "ò", "ñ": "û", "ó": "ù", "ò": "ÿ", "ô": "Ö", "ö": "Ü", "õ": "ø", "ú": "£", "ù": "Ø", "û": "×", "ü": "ƒ", "†": "á", "°": "í", "¢": "ó", "£": "ú", "§": "ñ", "•": "Ñ", "¶": "ª", "ß": "º", "®": "¿", "©": "®", "™": "¬", "´": "½", "¨": "¼", "≠": "¡", "Æ": "«", "Ø": "»", "∞": "░", "±": "▒", "≤": "▓", "≥": "│", "¥": "┤", "µ": "Á", "∂": "Â", "∑": "À", "∏": "©", "π": "╣", "∫": "║", "ª": "╗", "º": "╝", "Ω": "¢", "æ": "¥", "ø": "┐", "¿": "└", "¡": "┴", "¬": "┬", "√": "├", "ƒ": "─", "≈": "┼", "∆": "ã", "«": "Ã", "»": "╚", "…": "╔", " ": "╩", "À": "╦", "Ã": "╠", "Õ": "═", "Œ": "╬", "œ": "¤", "–": "ð", "—": "Ð", "“": "Ê", "”": "Ë", "‘": "È", "’": "ı", "÷": "Í", "◊": "Î", "ÿ": "Ï", "Ÿ": "┘", "⁄": "┌", "€": "█", "‹": "▄", "›": "¦", "ﬁ": "Ì", "ﬂ": "▀", "‡": "Ó", "·": "ß", "‚": "Ô", "„": "Ò", "‰": "õ", "Â": "Õ", "Ê": "µ", "Á": "þ", "Ë": "Þ", "È": "Ú", "Í": "Û", "Î": "Ù", "Ï": "ý", "Ì": "Ý", "Ó": "¯", "Ô": "´", "": "­", "Ò": "±", "Ú": "‗", "Û": "¾", "Ù": "¶", "ı": "§", "ˆ": "÷", "˜": "¸", "¯": "°", "˘": "¨", "˙": "·", "˚": "¹", "¸": "³", "˝": "²", "˛": "■", "ˇ": " "};
+  var MARCA_MOJIBAKE = /[∆∑∂‰‡†÷‚]/;
+  function desembaralha(s) {
+    if (!MARCA_MOJIBAKE.test(s)) return s;
+    return String(s).split("").map(function (c) { return MOJIBAKE[c] || c; }).join("");
+  }
   // "CD1 / 03 - Artista - Música_.mp3" → { sub: "CD1 / ", nome: "Artista - Música" }
   function baseFaixa(nome) {
+    nome = desembaralha(nome);
     var sub = "", m = String(nome).match(/^(.* \/ )(.*)$/);
     if (m) { sub = m[1]; nome = m[2]; }
     nome = nome.replace(/\.[a-z0-9]{2,4}$/i, "").replace(/_+/g, " ")
@@ -446,7 +455,7 @@
     return faixas;
   }
   function nomeExibido(f, artista) { return f.exibir || nomeFaixa(f.nome, artista); }
-  window.MusicBRNomes = { nomesDoDisco: nomesDoDisco, titleCase: titleCase }; // usado nos testes
+  window.MusicBRNomes = { nomesDoDisco: nomesDoDisco, titleCase: titleCase, desembaralha: desembaralha }; // usado nos testes
 
   /* ---------- capas do Drive ---------- */
   function fundo(d) { return d ? '<div class="hero-fundo" data-fundo="' + d.id + '"></div>' : ""; }
