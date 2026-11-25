@@ -426,11 +426,11 @@
       var li = $('#faixas li[data-id="' + f.id + '"]');
       if (li) li.classList.add("carregando-faixa");
       $("#pl-sub").textContent = "carregando… · " + disco.artista;
-      full.classList.add("carregando");
+      full.classList.add("baixando");
       DriveBR.audio(f.id).then(function (url) {
         if (li) li.classList.remove("carregando-faixa");
         if (meu !== pedido) return;
-        full.classList.remove("carregando");
+        full.classList.remove("baixando");
         $("#pl-sub").textContent = disco.artista + " — " + disco.disco;
         audio.src = url;
         audio.play().catch(function () {});
@@ -440,7 +440,7 @@
         }
       }).catch(function (e) {
         if (li) li.classList.remove("carregando-faixa");
-        if (meu === pedido) { $("#pl-sub").textContent = e.message; full.classList.remove("carregando"); }
+        if (meu === pedido) { $("#pl-sub").textContent = e.message; full.classList.remove("baixando"); }
       });
     }
     // escreve o nome da faixa; se não couber, liga a rolagem lenta (velocidade fixa, ~35 px/s)

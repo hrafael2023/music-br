@@ -351,6 +351,7 @@ footer b { color: var(--tinta); font-weight: 600; }
 .full {
   position: fixed; inset: 0; z-index: 70; overflow-y: auto; overscroll-behavior: contain; color: var(--texto);
   background: var(--painel);
+  padding: 60px 20px; text-align: center; /* formatação fixa (antes só aparecia enquanto a faixa baixava) */
   transform: translateY(100%); transition: transform .32s cubic-bezier(.2, .8, .2, 1);
 }
 .full.aberto { transform: translateY(0); }
@@ -365,7 +366,7 @@ footer b { color: var(--tinta); font-weight: 600; }
 .full-capa { width: 100%; max-width: 440px; margin: 6px auto 0; }
 .full-capa .capa { border-radius: 2px; box-shadow: 0 2px 4px rgba(23, 49, 47, .08), 0 18px 40px rgba(23, 49, 47, .18); }
 .full-capa .capa::after { font-size: 56px; }
-.full.carregando .full-capa .capa { opacity: .8; }
+.full.baixando .full-capa .capa { opacity: .8; }
 .full-info { margin-top: 28px; min-width: 0; }
 .full-titulo { display: block; font-size: 24px; font-weight: 700; letter-spacing: -.035em; line-height: 1.2; color: var(--tinta); overflow: hidden; white-space: nowrap; }
 .full-titulo.mover { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 16px), transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 16px), transparent 100%); }
