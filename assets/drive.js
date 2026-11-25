@@ -56,6 +56,7 @@
         cliente.callback = function (r) {
           if (r.error) return erro(new Error(r.error_description || r.error));
           token = r.access_token;
+          memoFilhos = {}; memoDisco = {}; memoCapa = {}; // outra conta pode ver outras pastas
           expira = Date.now() + (Number(r.expires_in) || 3600) * 1000;
           ls(function () { localStorage.setItem(CHAVE_TOKEN, JSON.stringify({ token: token, exp: expira })); });
           avisar(); ok();
@@ -184,9 +185,11 @@
   function disco(d) {
     if (memoDisco[d.id]) return memoDisco[d.id];
     var salvo = ls(function () { return JSON.parse(localStorage.getItem(CHAVE_PASTA + d.id)); });
-    if (salvo && salvo.t > Date.now() - VALIDADE_PASTA) return (memoDisco[d.id] = Promise.resolve(salvo.v));
+    // só vale o que foi achado (um "não achei" antigo pode ser de antes de a conta ter acesso à pasta)
+    if (salvo && salvo.v && salvo.t > Date.now() - VALIDADE_PASTA) return (memoDisco[d.id] = Promise.resolve(salvo.v));
     memoDisco[d.id] = acharPastaDisco(d).then(function (p) { return p ? conteudo(p) : null; }).then(function (v) {
-      ls(function () { localStorage.setItem(CHAVE_PASTA + d.id, JSON.stringify({ t: Date.now(), v: v })); });
+      if (v) ls(function () { localStorage.setItem(CHAVE_PASTA + d.id, JSON.stringify({ t: Date.now(), v: v })); });
+      else { ls(function () { localStorage.removeItem(CHAVE_PASTA + d.id); }); delete memoDisco[d.id]; }
       return v;
     }, function (e) { delete memoDisco[d.id]; throw e; });
     return memoDisco[d.id];
@@ -210,7 +213,8 @@
     if (memoCapa[d.id]) return memoCapa[d.id];
     memoCapa[d.id] = naFila(function () {
       return disco(d).then(function (info) {
-        if (!info || !info.capa) return null;
+        if (!info) { delete memoCapa[d.id]; return null; } // pasta não achada: tenta de novo da próxima vez
+        if (!info.capa) return null;
         return chamar(API + "/" + info.capa + "?alt=media", true).then(function (b) { return URL.createObjectURL(b); });
       });
     }).catch(function (e) { delete memoCapa[d.id]; throw e; });
