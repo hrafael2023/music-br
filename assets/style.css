@@ -306,7 +306,8 @@ footer b { color: var(--tinta); font-weight: 600; }
   .paineis > .painel { border-left: 0; }
   .paineis > .painel + .painel { border-top: 1px solid var(--linha); }
 }
-@media (max-width: 720px) {
+/* celular e tablet (telas até 1024px ou qualquer tela de toque até 1366px): mesmas funções e layout */
+@media (max-width: 1024px), (pointer: coarse) and (max-width: 1366px) {
   .topo-in { flex-wrap: wrap; height: auto; padding: 10px 16px 0; gap: 10px; }
   .menu { order: 3; width: 100%; margin: 0 -4px; overflow-x: auto; }
   .menu a { padding: 9px 10px; }
@@ -397,3 +398,12 @@ html.travado, html.travado body { overflow: hidden; }
 .full.tocando .full-play .i-pause { display: block; }
 @media (prefers-reduced-motion: reduce) { .full { transition: none; } .full-titulo.mover .rolar { animation: none; } }
 @media (prefers-reduced-motion: reduce) { .full-titulo.mover .rolar > span + span { display: none; } }
+
+/* tablet: mesmo layout do celular, só a grade de capas aproveita a largura */
+@media (min-width: 721px) and (max-width: 1024px), (pointer: coarse) and (min-width: 721px) and (max-width: 1366px) {
+  .grade-capas { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); }
+  .card-disco { padding: 34px 20px 20px; }
+  .ficha-capa { padding: 32px; }
+  .ficha-capa .capa { max-width: 340px; margin: 0 auto; }
+  .full-capa { max-width: 420px; }
+}
