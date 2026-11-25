@@ -5,59 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Music BR</title>
   <meta name="description" content="Acervo Music BR: artistas, discos e músicas da planilha MUSICBR, com capas e player do Drive.">
-  <meta name="color-scheme" content="dark light">
+  <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow">
   <script>try { var t = localStorage.getItem("mbr-tema"); if (t) document.documentElement.dataset.tema = t; } catch (e) {}</script>
   <link rel="icon" href="assets/icone.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=2.2">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css?v=3.0">
 </head>
 <body>
-  <aside class="lateral" aria-label="Navegação">
-    <a class="marca" href="#/" aria-label="Music BR — início">
-      <img src="assets/icone.svg" alt="" width="28" height="28">
-      <span>Music BR</span>
-    </a>
-    <nav class="menu" aria-label="Seções">
-      <span class="menu-rot">Biblioteca</span>
-      <a href="#/" data-rota=""><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span>Início</span></a>
-      <a href="#/discos" data-rota="discos"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg><span>Discos</span></a>
-      <a href="#/artistas" data-rota="artistas"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span>Artistas</span></a>
-      <a href="#/numeros" data-rota="numeros"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V11M12 20V4M19 20v-6"/></svg><span>Números</span></a>
-    </nav>
-    <div class="lateral-pe">
-      <button type="button" class="lat-btn" id="atualizar" title="Buscar as novas inserções da planilha" aria-label="Buscar as novas inserções da planilha">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M3 21v-5h5"/></svg>
-        <span>Buscar novidades</span>
-      </button>
-      <button type="button" class="lat-btn drive-btn" id="drive-btn" hidden>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.7 3h8.6l5.2 9-4.3 7.5H6.8L2.5 12z"/><path d="M7.7 3 12 10.5"/><path d="m21.5 12h-8.6"/><path d="m6.8 19.5 4.3-7.5"/></svg>
-        <span id="drive-txt">Conectar Drive</span>
-      </button>
-      <button type="button" class="lat-btn" id="tema" title="Mudar entre escuro e claro" aria-label="Mudar entre escuro e claro">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.14A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <span>Tema</span>
-      </button>
-    </div>
-  </aside>
-
-  <div class="conteudo">
-    <header class="barra">
-      <form class="busca" id="busca" role="search" autocomplete="off">
+  <header class="topo">
+    <div class="topo-in">
+      <a class="marca" href="#/" aria-label="Music BR — início">
+        <span class="marca-ic" aria-hidden="true">MB</span>
+        <span>Music BR</span>
+      </a>
+      <nav class="menu" aria-label="Seções">
+        <a href="#/" data-rota="">Início</a>
+        <a href="#/discos" data-rota="discos">Discos</a>
+        <a href="#/artistas" data-rota="artistas">Artistas</a>
+        <a href="#/numeros" data-rota="numeros">Números</a>
+      </nav>
+      <form class="busca-topo" id="busca" role="search" autocomplete="off">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
-        <input id="q" type="search" placeholder="Buscar artista, disco ou ano (1977, anos 70)" aria-label="Buscar no Music BR">
+        <input id="q" type="search" placeholder="Buscar artista, disco ou ano" aria-label="Buscar no Music BR">
       </form>
-    </header>
+      <div class="acoes-topo">
+        <button type="button" class="quad" id="atualizar" title="Buscar as novas inserções da planilha" aria-label="Buscar as novas inserções da planilha">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M3 21v-5h5"/></svg>
+        </button>
+        <button type="button" class="quad" id="tema" title="Mudar entre claro e escuro" aria-label="Mudar entre claro e escuro">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.14A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button type="button" class="quad drive-btn" id="drive-btn" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.7 3h8.6l5.2 9-4.3 7.5H6.8L2.5 12z"/><path d="M7.7 3 12 10.5"/><path d="m21.5 12h-8.6"/><path d="m6.8 19.5 4.3-7.5"/></svg>
+          <span id="drive-txt">Conectar Drive</span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <main id="app"><div class="carregando">Carregando o acervo…</div></main>
+  <main id="app"><div class="carregando">Carregando o acervo…</div></main>
 
-    <footer>
-      <span>Dados da <a id="link-planilha" target="_blank" rel="noopener">planilha MUSICBR</a> · capas e músicas do Google Drive</span>
-      <span><span id="atualizado"></span> · <b class="versao">v2.2</b></span>
-    </footer>
-  </div>
+  <footer>
+    <div class="in">
+      <span><b>Music BR</b> · dados da <a id="link-planilha" target="_blank" rel="noopener">planilha MUSICBR</a> · capas e músicas do Google Drive</span>
+      <span><span id="atualizado"></span> · <b class="versao">v3.0</b></span>
+    </div>
+  </footer>
 
   <div class="player" id="player" hidden>
     <div class="pl-progresso"><input type="range" id="pl-pos" min="0" max="1000" value="0" aria-label="Posição na faixa"></div>
@@ -99,8 +95,8 @@
   </dialog>
 
   <div class="dica-flutuante" id="dica" role="tooltip"></div>
-  <script src="assets/config.js?v=2.2"></script>
-  <script src="assets/drive.js?v=2.2"></script>
-  <script src="assets/app.js?v=2.2"></script>
+  <script src="assets/config.js?v=3.0"></script>
+  <script src="assets/drive.js?v=3.0"></script>
+  <script src="assets/app.js?v=3.0"></script>
 </body>
 </html>
