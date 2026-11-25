@@ -401,3 +401,10 @@ footer b { color: var(--tinta); font-weight: 600; }
   .ficha-capa .capa { max-width: 340px; margin: 0 auto; }
   .full-capa { max-width: 420px; }
 }
+
+/* gráficos de colunas: no desktop cabem inteiros; no celular/tablet rolam de lado quando não cabem */
+.colunas-rolagem { overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+@media (max-width: 1024px), (pointer: coarse) and (max-width: 1366px) {
+  .colunas-in { min-width: var(--min, 0); }
+  .colunas-rolagem { margin: 0 -18px; padding: 0 18px 6px; }
+}

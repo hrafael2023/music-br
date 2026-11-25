@@ -116,7 +116,10 @@
       return '<div class="c" data-tip="<b>' + esc(rotulo(k)) + "</b><br>" + n(vals[i]) + " " + unidade + '"><i style="height:' + (vals[i] / max * 100).toFixed(2) + '%"></i></div>';
     }).join("") + "</div>";
     var meio = chaves[Math.floor(chaves.length / 2)];
-    return html + '<div class="eixo"><span>' + esc(rotulo(chaves[0])) + "</span><span>" + esc(rotulo(meio)) + "</span><span>" + esc(rotulo(chaves[chaves.length - 1])) + "</span></div>";
+    // gráfico + eixo numa área com rolagem horizontal: no celular/tablet cada coluna tem largura mínima
+    // e o gráfico rola de lado em vez de alargar a página
+    return '<div class="colunas-rolagem"><div class="colunas-in" style="--min:' + (chaves.length * 7) + 'px">' + html +
+      '<div class="eixo"><span>' + esc(rotulo(chaves[0])) + "</span><span>" + esc(rotulo(meio)) + "</span><span>" + esc(rotulo(chaves[chaves.length - 1])) + "</span></div></div></div>";
   }
 
   function kpis(s) {
@@ -131,7 +134,7 @@
   function decadasHTML(s, medida) {
     var ks = Object.keys(s.decadas).map(Number).sort(function (a, b) { return a - b; });
     return colunas(ks, function (k) { return s.decadas[k][medida]; }, function (k) { return "anos " + String(k).slice(-2) + " (" + k + ")"; }, medida === "discos" ? "discos" : "músicas", 180)
-      .replace(/<div class="eixo">[\s\S]*<\/div>$/, '<div class="eixo">' + ks.map(function (k) { return "<span>" + String(k).slice(-2) + "</span>"; }).join("") + "</div>");
+      .replace(/<div class="eixo">[\s\S]*?<\/div>(?=<\/div><\/div>$)/, '<div class="eixo">' + ks.map(function (k) { return "<span>" + String(k).slice(-2) + "</span>"; }).join("") + "</div>");
   }
 
   function tiposHTML(s) {
