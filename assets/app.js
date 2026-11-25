@@ -147,6 +147,17 @@
       '<p class="nota">Tipo lido da etiqueta no nome do disco, como [EP] ou [SINGLE].</p></div>';
   }
 
+  // Voltar: volta para a página anterior do site; se a pessoa chegou direto pelo link, vai para a página "de cima".
+  var pilha = [location.hash || "#/"]; // páginas visitadas nesta aba, para saber se "voltar" fica dentro do site
+  function botaoVoltar(acima) {
+    return '<button type="button" class="voltar" data-voltar="' + esc(acima) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Voltar</button>';
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-voltar]");
+    if (!b) return;
+    if (pilha.length > 1) history.back(); else location.hash = b.getAttribute("data-voltar");
+  });
+
   /* ---------- páginas ---------- */
   function paginaInicio() {
     var s = stats();
@@ -316,7 +327,7 @@
     var letra = norm(nome).charAt(0).toUpperCase();
     if (!/[A-Z]/.test(letra)) letra = "#";
     var periodo = anos.length ? Math.min.apply(null, anos) + (Math.max.apply(null, anos) !== Math.min.apply(null, anos) ? "–" + Math.max.apply(null, anos) : "") : "";
-    app.innerHTML = '<div class="migalha"><a href="#/artistas?l=' + encodeURIComponent(letra) + '">Artistas</a> / ' + esc(nome) + "</div>" +
+    app.innerHTML = '<div class="voltar-linha">' + botaoVoltar("#/artistas?l=" + encodeURIComponent(letra)) + '<div class="migalha"><a href="#/artistas?l=' + encodeURIComponent(letra) + '">Artistas</a> / ' + esc(nome) + "</div></div>" +
       '<section class="painel-box"><div class="ficha-info"><span class="rotulo">Artista · ' + estilos.map(esc).join(", ") + "</span><h1>" + esc(nome) + "</h1></div>" +
       '<div class="ficha-dados"><div><b>' + n(ds.length) + "</b><span>" + (ds.length === 1 ? "disco" : "discos") + "</span></div><div><b>" + n(mus) + "</b><span>músicas</span></div>" +
       "<div><b>" + (periodo || "—") + "</b><span>período</span></div><div><b>" + n(ds.filter(function (d) { return d.tipo === "ÁLBUM"; }).length) + "</b><span>álbuns</span></div></div></section>" +
@@ -330,7 +341,7 @@
     if (!d) { app.innerHTML = '<div class="vazio">Disco não encontrado. Ele pode ter sido apagado ou renomeado na planilha.</div>'; return; }
     var outros = (DB.artistas[d.artista] || []).filter(function (x) { return x !== d; })
       .sort(function (a, b) { return (a.ano || 9999) - (b.ano || 9999); }).slice(0, 12);
-    app.innerHTML = '<div class="migalha"><a href="#/artistas">Artistas</a> / <a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + "</a> / " + esc(d.disco) + "</div>" +
+    app.innerHTML = '<div class="voltar-linha">' + botaoVoltar(urlArtista(d.artista)) + '<div class="migalha"><a href="#/artistas">Artistas</a> / <a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + "</a> / " + esc(d.disco) + "</div></div>" +
       '<section class="painel-box"><div class="ficha"><div class="ficha-capa">' + capa(d) + '</div><div class="ficha-info">' +
       '<span class="rotulo">' + (d.tipo === "ÁLBUM" ? "Álbum" : esc(d.tipo)) + " · " + esc(d.estilo) + "</span>" +
       "<h1>" + esc(d.disco) + '</h1><div class="artista"><a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + "</a></div>" +
@@ -467,7 +478,10 @@
     else paginaInicio();
     document.title = (seg[0] === "artista" ? decodeURIComponent(seg.slice(1).join("/")) + " · " : seg[0] === "disco" && DB.porId[seg[1]] ? DB.porId[seg[1]].disco + " · " : "") + "Music BR";
   }
-  window.addEventListener("hashchange", function () { rota(); if (!/^#\/discos/.test(location.hash)) window.scrollTo(0, 0); });
+  window.addEventListener("hashchange", function () {
+    var h = location.hash || "#/";
+    if (pilha.length > 1 && pilha[pilha.length - 2] === h) pilha.pop(); else pilha.push(h);
+    rota(); if (!/^#\/discos/.test(location.hash)) window.scrollTo(0, 0); });
 
   document.addEventListener("submit", function (e) {
     var form = e.target;
