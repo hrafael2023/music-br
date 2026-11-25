@@ -182,14 +182,16 @@
   }
 
   var memoDisco = {};
+  // só guarda pasta achada e com faixas: pasta vazia pode ser compartilhamento do Drive ainda propagando
+  function util(v) { return !!(v && v.faixas && v.faixas.length); }
   function disco(d) {
     if (memoDisco[d.id]) return memoDisco[d.id];
     var salvo = ls(function () { return JSON.parse(localStorage.getItem(CHAVE_PASTA + d.id)); });
     // só vale o que foi achado (um "não achei" antigo pode ser de antes de a conta ter acesso à pasta)
-    if (salvo && salvo.v && salvo.t > Date.now() - VALIDADE_PASTA) return (memoDisco[d.id] = Promise.resolve(salvo.v));
+    if (salvo && util(salvo.v) && salvo.t > Date.now() - VALIDADE_PASTA) return (memoDisco[d.id] = Promise.resolve(salvo.v));
     memoDisco[d.id] = acharPastaDisco(d).then(function (p) { return p ? conteudo(p) : null; }).then(function (v) {
-      if (v) ls(function () { localStorage.setItem(CHAVE_PASTA + d.id, JSON.stringify({ t: Date.now(), v: v })); });
-      else { ls(function () { localStorage.removeItem(CHAVE_PASTA + d.id); }); delete memoDisco[d.id]; }
+      if (util(v)) ls(function () { localStorage.setItem(CHAVE_PASTA + d.id, JSON.stringify({ t: Date.now(), v: v })); });
+      else { ls(function () { localStorage.removeItem(CHAVE_PASTA + d.id); }); setTimeout(function () { delete memoDisco[d.id]; }, 0); }
       return v;
     }, function (e) { delete memoDisco[d.id]; throw e; });
     return memoDisco[d.id];
@@ -213,7 +215,7 @@
     if (memoCapa[d.id]) return memoCapa[d.id];
     memoCapa[d.id] = naFila(function () {
       return disco(d).then(function (info) {
-        if (!info) { delete memoCapa[d.id]; return null; } // pasta não achada: tenta de novo da próxima vez
+        if (!util(info)) { delete memoCapa[d.id]; if (!info || !info.capa) return null; } // pasta não achada: tenta de novo da próxima vez
         if (!info.capa) return null;
         return chamar(API + "/" + info.capa + "?alt=media", true).then(function (b) { return URL.createObjectURL(b); });
       });
