@@ -1,11 +1,10 @@
 name: Atualizar catálogo
 
 # Lê a aba MUSICBR da planilha e regenera data/musicbr.json.
-# Roda todo dia às 06:00 (Brasília) e quando alguém clica em "Run workflow".
+# Só roda quando alguém pede: o ícone de atualizar no topo do site
+# ou o botão "Run workflow" na aba Actions. Não há agendamento.
 # Se algo mudou, faz commit — e o GitHub Pages publica sozinho.
 on:
-  schedule:
-    - cron: "0 9 * * *"
   workflow_dispatch: {}
 
 permissions:

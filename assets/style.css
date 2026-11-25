@@ -62,8 +62,40 @@ h3 { font-size: 16px; font-weight: 700; }
 .marca b { font-weight: 800; color: var(--amarelo); }
 .marca:hover { color: #fff; text-decoration: none; }
 .menu { margin-left: auto; display: flex; gap: 4px; }
+.menu + .icone-topo { margin-left: -8px; }
 .menu a { color: #fff; padding: 7px 12px; border-radius: 999px; font-weight: 600; font-size: 14px; white-space: nowrap; }
 .menu a:hover, .menu a.ativo { background: var(--verde-2); color: var(--amarelo); text-decoration: none; }
+.icone-topo {
+  display: grid; place-items: center; width: 34px; height: 34px; border-radius: 999px; padding: 0;
+  color: #9fc6b5; flex: none; background: none; border: 0;
+}
+.icone-topo:hover, .icone-topo:focus-visible { color: var(--amarelo); background: var(--verde-2); }
+.icone-topo.girando { color: var(--amarelo); }
+.icone-topo.girando svg { animation: girar 1.1s linear infinite; }
+@keyframes girar { to { transform: rotate(360deg); } }
+
+/* diálogo de atualizar */
+.dlg { width: min(460px, calc(100vw - 32px)); border: 0; border-radius: 12px; padding: 0; background: var(--cartao); color: var(--texto); box-shadow: 0 20px 60px rgba(0, 0, 0, .4); }
+.dlg::backdrop { background: rgba(8, 25, 19, .6); }
+.dlg form { padding: 22px; display: grid; gap: 14px; }
+.dlg h3 { font-size: 20px; color: var(--verde-ink); }
+.dlg-sub { margin: -6px 0 0; color: var(--texto-2); font-size: 14px; }
+.dlg-token { display: grid; gap: 6px; padding: 12px; background: var(--creme); border-radius: 8px; font-size: 13px; color: var(--texto-2); }
+.dlg-token p { margin: 0; }
+.dlg label { display: grid; gap: 4px; font-size: 13px; font-weight: 600; color: var(--texto-2); }
+.dlg label small { font-weight: 400; color: var(--texto-3); }
+.dlg input { border: 1px solid var(--borda); background: var(--cartao); color: var(--texto); border-radius: 6px; padding: 8px 10px; font: 14px var(--fonte); }
+.dlg input:focus { outline: 2px solid var(--amarelo); outline-offset: 1px; }
+.at-passos { margin: 0; padding-left: 20px; display: grid; gap: 4px; font-size: 14px; color: var(--texto-2); }
+.at-passos li.feito { color: var(--texto-3); }
+.at-passos li.agora { color: var(--texto); font-weight: 600; }
+.at-passos small { font-weight: 400; color: var(--texto-3); }
+.dlg-msg { margin: 0; font-size: 14px; }
+.dlg-msg:empty { display: none; }
+.dlg-msg.erro { color: #c0392b; }
+.dlg-msg.ok { color: var(--verde-ink); font-weight: 600; }
+.dlg-botoes { display: flex; justify-content: flex-end; gap: 8px; }
+
 .drive-btn {
   display: inline-flex; align-items: center; gap: 6px; background: transparent; color: #cfe3da;
   border: 1px solid #2f6b55; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 600; white-space: nowrap;

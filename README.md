@@ -7,7 +7,7 @@ Acervo da planilha **MUSICBR-FILES** (aba `MUSICBR`): artistas, discos, anos e n
 ## Como funciona
 
 - **Catálogo:** `scripts/atualizar.py` baixa a aba `MUSICBR` em CSV e gera `data/musicbr.json`. A planilha precisa continuar com acesso "Qualquer pessoa com o link: Leitor".
-- **Atualização:** a Action [`Atualizar catálogo`](.github/workflows/atualizar.yml) roda todo dia às 06:00 (Brasília) e pelo botão *Run workflow* na aba Actions. Se algo mudou, faz commit e o GitHub Pages republica.
+- **Atualização (manual):** o ícone de atualizar no topo do site dispara a Action [`Atualizar catálogo`](.github/workflows/atualizar.yml) (também dá pelo botão *Run workflow* na aba Actions). Não há agendamento. Se algo mudou, ela faz commit e o GitHub Pages republica. Na primeira vez, o site pede um token do GitHub (fine-grained, repositório `music-br`, permissão *Actions: Read and write*), guardado só naquele navegador.
 - **Últimas inserções:** as 10 últimas linhas da aba `MUSICBR` (a planilha recebe discos novos no fim).
 - **Capas e player:** vêm do Drive privado, pelo navegador de quem está logado com uma conta Google que tem acesso à pasta. O site segue o caminho `ESTILO/LETRA/ARTISTA/ANO - DISCO` e nunca torna arquivos públicos. Precisa de um ID de cliente OAuth em `assets/config.js` (veja abaixo).
 - **Site:** HTML/CSS/JS puro (`index.html`, `assets/`), sem build.

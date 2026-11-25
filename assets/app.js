@@ -30,7 +30,9 @@
   }
 
   function carregar() {
-    return fetch("data/musicbr.json", { cache: "no-cache" }).then(function (r) {
+    // logo depois de uma atualização, pula o cache do GitHub Pages para pegar o catálogo novo
+    var recente = ls(function () { var v = sessionStorage.getItem("mbr-recente"); sessionStorage.removeItem("mbr-recente"); return v; });
+    return fetch("data/musicbr.json" + (recente ? "?t=" + Date.now() : ""), { cache: "no-cache" }).then(function (r) {
       if (!r.ok) throw new Error("Não consegui ler o catálogo (" + r.status + ").");
       return r.json();
     }).then(function (j) {
@@ -479,6 +481,125 @@
     dica.style.left = x + "px"; dica.style.top = (e.clientY - dica.offsetHeight - 10) + "px";
     dica.classList.add("on");
   });
+
+  /* ---------- buscar novas inserções (manual) ----------
+   * Dispara a Action "Atualizar catálogo" pela API do GitHub, acompanha até o fim
+   * e espera o GitHub Pages servir o data/musicbr.json novo. O token fica só neste aparelho. */
+  var REPO = "hrafael2023/music-br";
+  var CHAVE_GH = "mbr-gh-token";
+  var tokenGH = function () { return ls(function () { return localStorage.getItem(CHAVE_GH); }) || ""; };
+  var espera = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+  function ghApi(caminho, token, opcoes) {
+    opcoes = opcoes || {};
+    var cab = { Authorization: "Bearer " + token, Accept: "application/vnd.github+json" };
+    if (opcoes.body) cab["Content-Type"] = "application/json";
+    return fetch("https://api.github.com/repos/" + REPO + "/" + caminho, { method: opcoes.method || "GET", body: opcoes.body, headers: cab, cache: "no-store" })
+      .then(function (r) {
+        if (r.status === 401) throw Object.assign(new Error("O GitHub recusou o token."), { token: true });
+        return r;
+      });
+  }
+  var PASSOS = ["Pedir a atualização ao GitHub", "Ler a planilha", "Publicar o site"];
+  function passo(i, extra) {
+    var ol = $("#at-passos");
+    ol.hidden = false;
+    ol.innerHTML = PASSOS.map(function (p, j) {
+      return '<li class="' + (j < i ? "feito" : j === i ? "agora" : "") + '">' + (j < i ? "✓ " : "") + p + (j === i && extra ? " <small>" + esc(extra) + "</small>" : "") + "</li>";
+    }).join("");
+  }
+  function msgAt(t, tipo) { $("#at-msg").textContent = t; $("#at-msg").className = "dlg-msg " + (tipo || ""); }
+  var atualizando = false;
+
+  function abrirAtualizar() {
+    if (!atualizando) {
+      $("#at-token-box").hidden = !!tokenGH();
+      $("#at-passos").hidden = true;
+      $("#at-ir").disabled = false;
+      msgAt("");
+    }
+    $("#dlg-atualizar").showModal();
+  }
+
+  async function rodarAtualizacao() {
+    var token = tokenGH() || $("#at-token").value.trim();
+    if (!token) { $("#at-token-box").hidden = false; $("#at-token").focus(); return msgAt("Cole o token do GitHub para continuar.", "erro"); }
+    atualizando = true;
+    $("#at-ir").disabled = true;
+    $("#atualizar").classList.add("girando");
+    msgAt("");
+    try {
+      passo(0);
+      var shaDe = async function () {
+        var r = await ghApi("commits/main", token);
+        if (r.status === 403 || r.status === 404) throw Object.assign(new Error("O token não tem acesso ao repositório music-br."), { token: true });
+        if (!r.ok) throw new Error("GitHub respondeu " + r.status);
+        return (await r.json()).sha;
+      };
+      var antes = await shaDe();
+      var inicio = new Date(Date.now() - 10000).toISOString();
+      var d = await ghApi("actions/workflows/atualizar.yml/dispatches", token, { method: "POST", body: JSON.stringify({ ref: "main", return_run_details: true }) });
+      if (d.status === 403 || d.status === 404) throw Object.assign(new Error("O token não tem permissão para rodar a atualização. Edite o token no GitHub e dê a permissão Actions: Read and write no music-br."), { token: true });
+      if (!d.ok) throw new Error("GitHub respondeu " + d.status);
+      ls(function () { localStorage.setItem(CHAVE_GH, token); });
+      $("#at-token-box").hidden = true;
+      var runId = null;
+      try { runId = (await d.json()).workflow_run_id || null; } catch (e) { /* sem corpo: acha pela lista */ }
+
+      var t0 = Date.now(), run = null;
+      while (Date.now() - t0 < 10 * 60 * 1000) {
+        await espera(4000);
+        var seg = Math.round((Date.now() - t0) / 1000);
+        if (runId) run = await (await ghApi("actions/runs/" + runId, token)).json();
+        else {
+          var l = await (await ghApi("actions/workflows/atualizar.yml/runs?event=workflow_dispatch&per_page=1&created=%3E%3D" + encodeURIComponent(inicio), token)).json();
+          run = (l.workflow_runs || [])[0] || null;
+          if (run) runId = run.id;
+        }
+        passo(1, run ? (run.status === "queued" ? "na fila… " + seg + "s" : seg + "s") : "aguardando o GitHub… " + seg + "s");
+        if (run && run.status === "completed") break;
+      }
+      if (!run || run.status !== "completed") throw new Error("A atualização está demorando mais que o normal. Confira a aba Actions do repositório.");
+      if (run.conclusion !== "success") throw new Error("A atualização falhou (" + run.conclusion + "). Detalhes: " + run.html_url);
+
+      if ((await shaDe()) === antes) {
+        passo(3);
+        msgAt("Nada novo na planilha. O site já está em dia.", "ok");
+        return;
+      }
+      // houve commit: espera o GitHub Pages servir o catálogo novo
+      var t1 = Date.now(), novo = null;
+      while (Date.now() - t1 < 5 * 60 * 1000) {
+        passo(2, Math.round((Date.now() - t1) / 1000) + "s");
+        await espera(5000);
+        try {
+          var j = await (await fetch("data/musicbr.json?t=" + Date.now(), { cache: "no-store" })).json();
+          if (j.atualizado !== DB.atualizado) { novo = j; break; }
+        } catch (e) { /* ainda publicando */ }
+      }
+      passo(3);
+      var dif = novo ? novo.discos.length - DB.discos.length : 0;
+      msgAt(novo ? (dif > 0 ? n(dif) + (dif === 1 ? " disco novo" : " discos novos") + ". Recarregando…" : "Planilha atualizada. Recarregando…")
+                 : "Atualizado. O site pode levar mais um minuto para mostrar; recarregando…", "ok");
+      ls(function () { sessionStorage.setItem("mbr-recente", "1"); });
+      await espera(1500);
+      location.hash = "#/";
+      location.reload();
+    } catch (e) {
+      if (e.token) {
+        ls(function () { localStorage.removeItem(CHAVE_GH); });
+        $("#at-token-box").hidden = false;
+        $("#at-token").value = "";
+      }
+      msgAt(e.message, "erro");
+    } finally {
+      atualizando = false;
+      $("#at-ir").disabled = false;
+      $("#atualizar").classList.remove("girando");
+    }
+  }
+  $("#atualizar").addEventListener("click", abrirAtualizar);
+  $("#dlg-atualizar form").addEventListener("submit", function (e) { e.preventDefault(); if (!atualizando) rodarAtualizacao(); });
+  $("#at-fechar").addEventListener("click", function () { $("#dlg-atualizar").close(); });
 
   /* ---------- tema ---------- */
   $("#tema").onclick = function () {
