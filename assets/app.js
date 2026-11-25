@@ -466,38 +466,28 @@
       tResize = setTimeout(retitular, 200);
     });
 
-    /* tela cheia: abre ao tocar no mini player; fecha na seta, arrastando para baixo ou no "voltar" do celular */
-    var aberta = false, voltando = false, reabrir = false;
+    /* tela cheia: abre ao tocar no mini player; fecha no X ou arrastando para baixo.
+       Não trava a rolagem da página nem mexe no histórico ao abrir: no celular essas duas coisas
+       fazem o navegador mostrar de novo a barra de endereço, e a tela "pula" logo depois de abrir. */
+    var aberta = false;
     function abrirFull() {
       if (aberta || !fila.length) return;
-      if (voltando) { reabrir = true; return; } // espera o "voltar" anterior terminar antes de empilhar de novo
       aberta = true;
       full.hidden = false;
       void full.offsetWidth; // força o navegador a desenhar a posição inicial antes de animar a subida
       full.classList.add("aberto");
       retitular();
-      document.documentElement.classList.add("travado");
-      history.pushState({ full: 1 }, "");
     }
-    function fecharFull(veioDoHistorico) {
+    function fecharFull() {
       if (!aberta) return;
       aberta = false;
       full.classList.remove("aberto");
       full.style.transform = "";
-      document.documentElement.classList.remove("travado");
       setTimeout(function () { if (!aberta) full.hidden = true; }, 320);
-      if (!veioDoHistorico && history.state && history.state.full) { voltando = true; history.back(); }
     }
-    window.addEventListener("popstate", function () {
-      if (voltando) { voltando = false; if (reabrir) { reabrir = false; abrirFull(); } return; }
-      if (aberta) fecharFull(true);
-    });
-    // link de dentro da tela cheia: fecha sem mexer no histórico e troca a entrada da tela cheia pela página nova
-    function irPara(destino) {
-      fecharFull(true);
-      if (history.state && history.state.full) history.replaceState(null, "", destino); else history.pushState(null, "", destino);
-      window.dispatchEvent(new HashChangeEvent("hashchange"));
-    }
+    // se a página mudar com a tela cheia aberta (por exemplo, o "voltar" do celular), ela fecha
+    window.addEventListener("hashchange", fecharFull);
+    function irPara(destino) { fecharFull(); location.hash = destino; }
     $(".pl-agora").addEventListener("click", abrirFull);
     $("#full-x").onclick = function () { fecharFull(); };
     $("#full-artista").addEventListener("click", function (e) { e.preventDefault(); irPara(this.getAttribute("href")); });
@@ -507,7 +497,7 @@
     full.addEventListener("touchmove", function (e) {
       if (y0 == null) return;
       var dy = e.touches[0].clientY - y0;
-      if (dy > 0) full.style.transform = "translateY(" + dy + "px)";
+      if (dy > 12) full.style.transform = "translateY(" + (dy - 12) + "px)"; // só segue o dedo depois de um arrasto claro (um toque não mexe a tela)
     }, { passive: true });
     full.addEventListener("touchend", function (e) {
       if (y0 == null) return;

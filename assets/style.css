@@ -348,7 +348,6 @@ footer b { color: var(--tinta); font-weight: 600; }
 /* ---------- player em tela cheia (abre ao tocar no mini player) ----------
    Mesmo visual do site, com o fundo liso do painel (branco no claro, escuro no escuro). */
 .pl-agora { cursor: pointer; }
-html.travado, html.travado body { overflow: hidden; }
 .full {
   position: fixed; inset: 0; z-index: 70; overflow-y: auto; overscroll-behavior: contain; color: var(--texto);
   background: var(--painel);
