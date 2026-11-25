@@ -197,6 +197,8 @@
       '<div class="paineis"><div class="painel"><h3>Top 25 artistas por discos</h3>' + hbar(topD, "v", "discos") + "</div>" +
       '<div class="painel"><h3>Top 25 artistas por músicas</h3>' + hbar(topM, "v", "músicas") + "</div></div>" +
       '<div class="paineis um">' + tiposHTML(s) + "</div></section>";
+    // anos antigos têm pouquíssimos discos: o gráfico que rola começa mostrando o fim (anos recentes)
+    $$(".colunas-rolagem").forEach(function (el) { el.scrollLeft = el.scrollWidth; });
     $("#medida").value = medida;
     $("#medida").onchange = function () { location.hash = "#/numeros" + (this.value === "musicas" ? "?m=musicas" : ""); };
   }
