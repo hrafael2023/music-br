@@ -153,10 +153,10 @@
     var ultimos = DB.discos.slice(-10).reverse();
     var top = s.topDiscos.slice(0, 10).map(function (a) { return { nome: a.nome, discos: a.discos, link: urlArtista(a.nome) }; });
     app.innerHTML =
-      '<section class="secao"><div class="secao-topo"><h2>Últimas inserções</h2><span class="muted">as 10 linhas mais recentes da planilha</span>' +
-      '<a class="mais" href="#/discos">ver todos os discos →</a></div>' + avisoDrive() +
+      '<section class="secao"><div class="secao-topo"><h2>Adicionados recentemente</h2><span class="muted">as 10 últimas inserções da planilha</span>' +
+      '<a class="mais" href="#/discos">ver todos</a></div>' + avisoDrive() +
       '<div class="grade-capas">' + ultimos.map(function (d) { return card(d); }).join("") + "</div></section>" +
-      '<section class="secao"><div class="secao-topo"><h2>Resumo do acervo</h2><a class="mais" href="#/numeros">dashboard completo →</a></div>' +
+      '<section class="secao"><div class="secao-topo"><h2>Resumo do acervo</h2><a class="mais" href="#/numeros">ver números</a></div>' +
       kpis(s) +
       '<div class="paineis tres"><div class="cartao painel"><h3>Discos por década de lançamento</h3>' + decadasHTML(s, "discos") +
       '<p class="nota">' + n(s.semAno) + ' discos sem ano não entram no gráfico.</p></div>' + estilosTiposHTML(s) + "</div>" +
@@ -306,10 +306,16 @@
     var mus = ds.reduce(function (t, d) { return t + d.musicas; }, 0);
     var anos = ds.filter(function (d) { return d.ano; }).map(function (d) { return d.ano; });
     var estilos = ds.map(function (d) { return d.estilo; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
-    app.innerHTML = '<div class="migalha"><a href="#/artistas?l=' + encodeURIComponent(ds[0].letra === "#" ? "#" : norm(nome).charAt(0).toUpperCase()) + '">Artistas</a> › ' + esc(nome) + "</div>" +
-      '<div class="cab-artista"><h1>' + esc(nome) + '</h1><span class="muted">' + n(ds.length) + (ds.length === 1 ? " disco" : " discos") + " · " + n(mus) + " músicas" +
-      (anos.length ? " · " + Math.min.apply(null, anos) + (Math.max.apply(null, anos) !== Math.min.apply(null, anos) ? "–" + Math.max.apply(null, anos) : "") : "") + " · " + estilos.map(esc).join(", ") + "</span></div>" +
-      avisoDrive() + '<div class="grade-capas">' + ds.map(function (d) { return card(d, true); }).join("") + "</div>";
+    var letra = norm(nome).charAt(0).toUpperCase();
+    if (!/[A-Z]/.test(letra)) letra = "#";
+    var periodo = anos.length ? Math.min.apply(null, anos) + (Math.max.apply(null, anos) !== Math.min.apply(null, anos) ? "–" + Math.max.apply(null, anos) : "") : "";
+    app.innerHTML = '<section class="hero artista-hero">' + fundo(ds[ds.length - 1]) + '<div class="hero-in"><div>' +
+      '<div class="migalha"><a href="#/artistas?l=' + encodeURIComponent(letra) + '">Artistas</a></div>' +
+      '<span class="rotulo">Artista</span><h1>' + esc(nome) + "</h1>" +
+      '<div class="meta"><span>' + n(ds.length) + (ds.length === 1 ? " disco" : " discos") + "</span><span>" + n(mus) + " músicas</span>" +
+      (periodo ? "<span>" + periodo + "</span>" : "") + estilos.map(function (e) { return '<span class="selo estilo">' + esc(e) + "</span>"; }).join("") + "</div>" +
+      "</div></div></section>" +
+      avisoDrive() + '<section class="secao"><div class="secao-topo"><h2>Discografia</h2></div><div class="grade-capas">' + ds.map(function (d) { return card(d, true); }).join("") + "</div></section>";
     hidratarCapas();
   }
 
@@ -318,13 +324,14 @@
     if (!d) { app.innerHTML = '<div class="vazio">Disco não encontrado. Ele pode ter sido apagado ou renomeado na planilha.</div>'; return; }
     var outros = (DB.artistas[d.artista] || []).filter(function (x) { return x !== d; })
       .sort(function (a, b) { return (a.ano || 9999) - (b.ano || 9999); }).slice(0, 12);
-    app.innerHTML = '<div class="migalha"><a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + "</a> › " + esc(d.disco) + "</div>" +
-      '<div class="disco">' + capa(d) + "<div>" +
+    app.innerHTML = '<section class="hero">' + fundo(d) + '<div class="hero-in">' + capa(d) + "<div>" +
+      '<span class="rotulo">' + (d.tipo === "ÁLBUM" ? "Álbum" : esc(d.tipo)) + "</span>" +
       "<h1>" + esc(d.disco) + '</h1><div class="artista"><a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + "</a></div>" +
-      '<div class="meta"><span>' + (d.ano || "sem ano") + "</span><span>" + n(d.musicas) + " faixas na planilha</span><span>" + selos(d) + "</span></div>" +
-      '<div class="acoes" id="acoes"></div>' + avisoDrive("Entre com a conta Google que tem acesso à pasta MUSICBR para ouvir este disco.") +
-      '<div id="faixas"></div></div></div>' +
-      (outros.length ? '<section class="secao" style="margin-top:40px"><div class="secao-topo"><h2>Mais de ' + esc(d.artista) + '</h2><a class="mais" href="' + urlArtista(d.artista) + '">todos →</a></div><div class="grade-capas">' +
+      '<div class="meta"><span>' + (d.ano || "sem ano") + "</span><span>" + n(d.musicas) + (d.musicas === 1 ? " faixa" : " faixas") + '</span><span class="selo estilo">' + esc(d.estilo) + "</span></div>" +
+      '<div class="acoes" id="acoes"></div></div></div></section>' +
+      avisoDrive("Entre com a conta Google que tem acesso à pasta MUSICBR para ouvir este disco.") +
+      '<div id="faixas"></div>' +
+      (outros.length ? '<section class="secao" style="margin-top:52px"><div class="secao-topo"><h2>Mais de ' + esc(d.artista) + '</h2><a class="mais" href="' + urlArtista(d.artista) + '">ver todos</a></div><div class="grade-capas">' +
         outros.map(function (x) { return card(x, true); }).join("") + "</div></section>" : "");
     hidratarCapas();
     if (!DriveBR.conectado()) return;
@@ -355,8 +362,14 @@
   }
 
   /* ---------- capas do Drive ---------- */
+  function fundo(d) { return d ? '<div class="hero-fundo" data-fundo="' + d.id + '"></div>' : ""; }
   function hidratarCapas() {
     if (!DriveBR.conectado()) return;
+    $$("[data-fundo]:not([data-ok])").forEach(function (el) {
+      el.setAttribute("data-ok", "1");
+      var d = DB.porId[el.dataset.fundo];
+      if (d) DriveBR.capa(d).then(function (url) { if (url) el.style.backgroundImage = 'url("' + url + '")'; }, function () { el.removeAttribute("data-ok"); });
+    });
     $$(".capa[data-capa]:not([data-ok])").forEach(function (el) {
       el.setAttribute("data-ok", "1");
       var d = DB.porId[el.dataset.capa];
@@ -416,7 +429,10 @@
     audio.addEventListener("timeupdate", function () {
       $("#pl-t").textContent = fmtT(audio.currentTime);
       $("#pl-d").textContent = fmtT(audio.duration);
-      if (audio.duration) $("#pl-pos").value = Math.round(audio.currentTime / audio.duration * 1000);
+      if (audio.duration) {
+        $("#pl-pos").value = Math.round(audio.currentTime / audio.duration * 1000);
+        $("#pl-pos").style.setProperty("--pos", (audio.currentTime / audio.duration * 100).toFixed(2) + "%");
+      }
     });
     $("#pl-pos").addEventListener("input", function () { if (audio.duration) audio.currentTime = this.value / 1000 * audio.duration; });
     $("#pl-play").onclick = function () { if (audio.paused) audio.play().catch(function () {}); else audio.pause(); };
@@ -604,7 +620,7 @@
   /* ---------- tema ---------- */
   $("#tema").onclick = function () {
     var r = document.documentElement;
-    var escuroAgora = r.dataset.tema ? r.dataset.tema === "escuro" : matchMedia("(prefers-color-scheme: dark)").matches;
+    var escuroAgora = r.dataset.tema !== "claro"; // escuro é o padrão
     r.dataset.tema = escuroAgora ? "claro" : "escuro";
     ls(function () { localStorage.setItem("mbr-tema", r.dataset.tema); });
   };
