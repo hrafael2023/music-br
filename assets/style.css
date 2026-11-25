@@ -455,3 +455,5 @@ footer b { color: var(--tinta); font-weight: 600; }
 .full-ctrl { gap: 26px; margin-top: 8px; }
 .full-ctrl button svg { width: 26px; height: 26px; }
 .full-ctrl .full-play { width: 62px; height: 62px; }
+/* "Tocando do disco" mais afastado do topo */
+.full-in { padding-top: max(34px, calc(env(safe-area-inset-top) + 16px)); }
