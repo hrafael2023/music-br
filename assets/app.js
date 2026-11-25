@@ -304,8 +304,9 @@
       '<nav class="letras" aria-label="Letra inicial">' + todas.map(function (l) {
         return '<a href="#/artistas?l=' + encodeURIComponent(l) + '"' + (l === atual ? ' class="ativo"' : "") + ">" + l + "</a>";
       }).join("") + "</nav>" +
+      '<div class="artistas-cab" aria-hidden="true">' + [1, 2, 3].map(function () { return "<div><span>Artista</span><span>Discos</span></div>"; }).join("") + "</div>" +
       '<div class="artistas">' + lista.map(function (a) {
-        return '<a href="' + urlArtista(a.nome) + '">' + esc(a.nome) + "<span>" + a.discos + (a.discos === 1 ? " disco" : " discos") + "</span></a>";
+        return '<a href="' + urlArtista(a.nome) + '">' + esc(a.nome) + '<span title="' + a.discos + (a.discos === 1 ? " disco" : " discos") + '">' + a.discos + "</span></a>";
       }).join("") + "</div></section>";
   }
 
@@ -736,6 +737,12 @@
   };
 
   $("#link-planilha").href = CFG.planilha || "#";
+
+  // altura do topo (muda entre desktop e celular): os cabeçalhos fixos de listas param logo abaixo dele
+  function medirTopo() { document.documentElement.style.setProperty("--topo-h", $(".topo").offsetHeight + "px"); }
+  medirTopo();
+  window.addEventListener("resize", medirTopo);
+  if (window.ResizeObserver) new ResizeObserver(medirTopo).observe($(".topo"));
 
   carregar().then(function () {
     if (DB.atualizado) {
