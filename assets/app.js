@@ -248,7 +248,6 @@
     var paginas = Math.max(1, Math.ceil(lista.length / POR_PAGINA));
     if (pag > paginas) pag = paginas;
     var parte = lista.slice((pag - 1) * POR_PAGINA, pag * POR_PAGINA);
-    var musicas = lista.reduce(function (t, d) { return t + d.musicas; }, 0);
     var s = stats();
     function opt(v, r, atual) { return '<option value="' + esc(v) + '"' + (v === atual ? " selected" : "") + ">" + esc(r) + "</option>"; }
     app.innerHTML = '<section class="painel-box"><div class="secao-topo"><div><span class="rotulo">' + (q ? "Busca" : "Catálogo") + "</span><h2>" + (q ? "“" + esc(q) + "”" : "Todos os discos") + "</h2></div></div>" +
@@ -256,7 +255,7 @@
       '<select id="f-tipo" aria-label="Tipo">' + opt("", "Todos os tipos", tipo) + Object.keys(s.tipos).sort().map(function (k) { return opt(k, k === "ÁLBUM" ? "Álbum" : k, tipo); }).join("") + "</select>" +
       '<select id="f-ordem" aria-label="Ordem">' + opt("recentes", "Inseridos por último", ordem) + opt("artista", "Artista (A–Z)", ordem) + opt("disco", "Disco (A–Z)", ordem) +
       opt("ano", "Mais novos", ordem) + opt("antigos", "Mais antigos", ordem) + opt("faixas", "Mais faixas", ordem) + "</select>" +
-      '<span class="total">' + n(lista.length) + " discos · " + n(musicas) + " músicas</span></div>" +
+      "</div>" +
       (lista.length ? '<table class="lista"><thead><tr><th>Ano</th><th>Disco</th><th>Artista</th><th class="num">Faixas</th></tr></thead><tbody>' +
         parte.map(function (d) {
           return '<tr><td class="ano">' + (d.ano || "—") + '</td><td><a href="' + urlDisco(d) + '">' + esc(d.disco) + "</a></td>" +
