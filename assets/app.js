@@ -313,7 +313,7 @@
     var letra = norm(nome).charAt(0).toUpperCase();
     if (!/[A-Z]/.test(letra)) letra = "#";
     var periodo = anos.length ? Math.min.apply(null, anos) + (Math.max.apply(null, anos) !== Math.min.apply(null, anos) ? "–" + Math.max.apply(null, anos) : "") : "";
-    app.innerHTML = '<div class="voltar-linha">' + botaoVoltar("#/artistas?l=" + encodeURIComponent(letra)) + '<div class="migalha"><a href="#/artistas?l=' + encodeURIComponent(letra) + '">Artistas</a> / ' + esc(nome) + "</div></div>" +
+    app.innerHTML = '<div class="voltar-linha">' + botaoVoltar("#/artistas?l=" + encodeURIComponent(letra)) + "</div>" +
       '<section class="painel-box"><div class="ficha-info"><span class="rotulo">Artista</span><h1>' + esc(nome) + "</h1></div>" +
       '<div class="ficha-dados"><div><b>' + n(ds.length) + "</b><span>" + (ds.length === 1 ? "disco" : "discos") + "</span></div><div><b>" + n(mus) + "</b><span>músicas</span></div>" +
       "<div><b>" + (periodo || "—") + "</b><span>período</span></div><div><b>" + n(ds.filter(function (d) { return d.tipo === "ÁLBUM"; }).length) + "</b><span>álbuns</span></div></div></section>" +
@@ -327,7 +327,7 @@
     if (!d) { app.innerHTML = '<div class="vazio">Disco não encontrado. Ele pode ter sido apagado ou renomeado na planilha.</div>'; return; }
     var outros = (DB.artistas[d.artista] || []).filter(function (x) { return x !== d; })
       .sort(function (a, b) { return (a.ano || 9999) - (b.ano || 9999); }).slice(0, 12);
-    app.innerHTML = '<div class="voltar-linha">' + botaoVoltar(urlArtista(d.artista)) + '<div class="migalha"><a href="#/artistas">Artistas</a> / <a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + "</a> / " + esc(d.disco) + "</div></div>" +
+    app.innerHTML = '<div class="voltar-linha">' + botaoVoltar(urlArtista(d.artista)) + "</div>" +
       '<section class="painel-box"><div class="ficha"><div class="ficha-capa">' + capa(d) + '</div><div class="ficha-info">' +
       '<span class="rotulo">' + (d.tipo === "ÁLBUM" ? "Álbum" : esc(d.tipo)) + "</span>" +
       "<h1>" + esc(d.disco) + '</h1><div class="artista"><a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + "</a></div>" +
