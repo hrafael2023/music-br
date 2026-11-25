@@ -457,3 +457,14 @@ footer b { color: var(--tinta); font-weight: 600; }
 .full-ctrl .full-play { width: 62px; height: 62px; }
 /* "Tocando do disco" mais afastado do topo */
 .full-in { padding-top: max(34px, calc(env(safe-area-inset-top) + 16px)); }
+
+/* lista de discos no celular/tablet: fonte um ponto menor, ano e faixas sem quebrar, células mais justas */
+@media (max-width: 1024px), (pointer: coarse) and (max-width: 1366px) {
+  table.lista:not(.lista-compacta) { font-size: 13px; }
+  table.lista:not(.lista-compacta) td, table.lista:not(.lista-compacta) th { padding: 10px 8px; }
+  table.lista:not(.lista-compacta) td:first-child, table.lista:not(.lista-compacta) th:first-child { padding-left: 16px; }
+  table.lista:not(.lista-compacta) td:last-child, table.lista:not(.lista-compacta) th:last-child { padding-right: 16px; }
+  table.lista:not(.lista-compacta) th:first-child { width: 60px; }
+  table.lista:not(.lista-compacta) th:last-child { width: 58px; }
+  table.lista .ano, table.lista .num { white-space: nowrap; overflow-wrap: normal; }
+}
