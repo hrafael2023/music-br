@@ -351,8 +351,9 @@
       $("#acoes").innerHTML = (info.faixas.length ? '<button type="button" class="btn" id="tocar-tudo">▶ Ouvir o disco</button>' : "") +
         '<a class="btn sec" href="https://drive.google.com/drive/folders/' + info.pasta + '" target="_blank" rel="noopener">Abrir pasta no Drive ↗</a>';
       if (!info.faixas.length) { box.innerHTML = '<div class="faixas-vazio">A pasta existe, mas o Drive ainda não mostra arquivos de áudio nela para esta conta.</div>'; return; }
+      nomesDoDisco(info.faixas, d.artista);
       box.innerHTML = '<ol class="faixas">' + info.faixas.map(function (f, i) {
-        return '<li data-i="' + i + '" data-id="' + f.id + '"><span class="n">' + (i + 1) + "</span><span>" + esc(nomeFaixa(f.nome, d.artista)) + '</span><span class="tam">' + (f.tam ? (f.tam / 1048576).toFixed(1).replace(".", ",") + " MB" : "") + "</span></li>";
+        return '<li data-i="' + i + '" data-id="' + f.id + '"><span class="n">' + (i + 1) + "</span><span>" + esc(nomeExibido(f, d.artista)) + '</span><span class="tam">' + (f.tam ? (f.tam / 1048576).toFixed(1).replace(".", ",") + " MB" : "") + "</span></li>";
       }).join("") + "</ol>";
       $$("#faixas li").forEach(function (li) { li.onclick = function () { Player.tocar(d, info.faixas, Number(li.dataset.i)); }; });
       $("#tocar-tudo").onclick = function () { Player.tocar(d, info.faixas, 0); };
@@ -368,6 +369,84 @@
     }
     return t || nome;
   }
+
+  /* ---------- nome das faixas ----------
+   * Regra (vale para o disco inteiro):
+   *  1. disco de um artista só (inclusive dupla/parceria em que todas as faixas são dos mesmos):
+   *     mostra só a música, em Title Case;
+   *  2. disco com artistas diferentes entre as faixas (coletâneas etc.): "Artista - Música".
+   * O prefixo "X - " só conta como artista quando é o artista do disco ou quando o padrão se
+   * repete no disco (assim "Asa Branca - Ao Vivo" não vira artista "Asa Branca"). */
+  var MINUSCULAS = ["a", "o", "as", "os", "e", "é", "de", "da", "do", "das", "dos", "d'", "em", "no", "na", "nos", "nas",
+    "um", "uma", "por", "pra", "pro", "para", "com", "sem", "ao", "aos", "à", "às", "que", "se", "nem", "ou", "num", "numa",
+    "of", "the", "and", "in", "on", "to", "for", "y", "del", "la", "el", "los", "las"];
+  function titleCase(s) {
+    var palavras = String(s).replace(/\s+/g, " ").trim().split(" ");
+    // nome inteiro em MAIÚSCULAS (2+ palavras): trata como texto normal, sem preservar "siglas"
+    var tudoMaiusculo = palavras.length > 1 && String(s) === String(s).toUpperCase() && /[A-ZÀ-Þ]{2}/.test(s);
+    return palavras.map(function (p, i) {
+      return p.replace(/^([("'“‘¿¡]*)(.*)$/, function (_, abre, w) {
+        if (!w) return abre;
+        var letras = w.replace(/[^A-Za-zÀ-ÿ]/g, "");
+        var minus = w.toLowerCase();
+        // siglas curtas em maiúsculas (DJ, MPB, SP) e palavras com maiúsculas no meio (McCartney) ficam como estão
+        if (!tudoMaiusculo && letras.length > 1 && letras.length <= 4 && letras === letras.toUpperCase() && /[A-Z]/.test(letras)) return abre + w;
+        if (/[a-zà-ÿ][A-ZÀ-Þ]/.test(w)) return abre + w;
+        // numeral romano (II, IV, XII)
+        // numeral romano: em nome normal, qualquer um em maiúsculas; em nome todo em MAIÚSCULAS, só os inequívocos
+        if (letras === letras.toUpperCase() && (tudoMaiusculo ? /^(II|III|IV|VII|VIII|IX|XI|XII|XIII|XIV|XV|XX)$/.test(letras)
+                                                             : /^[IVXLCDM]{1,4}$/.test(letras) && letras.length > 1)) return abre + w;
+        var anterior = i > 0 ? palavras[i - 1] : "";
+        var depoisDeQuebra = i === 0 || /[:.!?(\-–\/]$/.test(anterior);
+        if (!depoisDeQuebra && MINUSCULAS.indexOf(minus.replace(/[^a-zà-ÿ']/g, "")) >= 0) return abre + minus;
+        // maiúscula na primeira letra e depois de hífen ("Coca-Cola")
+        return abre + minus.replace(/(^|-)([a-zà-ÿ])/g, function (_, h, c) { return h + c.toUpperCase(); });
+      });
+    }).join(" ");
+  }
+  // "CD1 / 03 - Artista - Música_.mp3" → { sub: "CD1 / ", nome: "Artista - Música" }
+  function baseFaixa(nome) {
+    var sub = "", m = String(nome).match(/^(.* \/ )(.*)$/);
+    if (m) { sub = m[1]; nome = m[2]; }
+    nome = nome.replace(/\.[a-z0-9]{2,4}$/i, "").replace(/_+/g, " ")
+      .replace(/^\s*(?:(?:cd|disco|disc)\s*\d+\s*[-.]\s*)?(?:\d{1,2}[-.](?=\d))?\d{1,3}(?:\s*[-.)]\s*|\s+)/i, "").replace(/\s+/g, " ").trim();
+    return { sub: sub, nome: nome };
+  }
+  function separa(nome) {
+    var m = nome.match(/^(.+?)\s+[-–—]\s+(.+)$/);
+    return m ? { art: m[1].trim(), mus: m[2].trim() } : null;
+  }
+  function nomesDoDisco(faixas, artistaDisco) {
+    var bases = faixas.map(function (f) { return baseFaixa(f.nome); });
+    var partes = bases.map(function (b) { return separa(b.nome); });
+    var nArt = norm(artistaDisco), contaArt = {}, contaMus = {}, comPrefixo = 0;
+    partes.forEach(function (p) {
+      if (!p) return;
+      comPrefixo++;
+      var a = norm(p.art), m = norm(p.mus);
+      contaArt[a] = (contaArt[a] || 0) + 1;
+      contaMus[m] = (contaMus[m] || 0) + 1;
+    });
+    var total = faixas.length || 1;
+    // lado direito repetido ("Ao Vivo", "Remaster") em boa parte: não é "Artista - Música"
+    var sufixoRepetido = Object.keys(contaMus).some(function (k) { return contaMus[k] >= Math.max(2, comPrefixo * 0.5); });
+    var ehArtista = function (a) {
+      return a === nArt || (nArt && (a.indexOf(nArt) >= 0 || nArt.indexOf(a) >= 0)) || contaArt[a] >= 2 || artistaDisco === "VA";
+    };
+    var artistas = Object.keys(contaArt).filter(ehArtista);
+    var variosArtistas = !sufixoRepetido && comPrefixo >= total * 0.5 && artistas.length >= 2;
+    faixas.forEach(function (f, i) {
+      var b = bases[i], p = partes[i];
+      if (p && !sufixoRepetido && ehArtista(norm(p.art))) {
+        f.exibir = b.sub + (variosArtistas ? p.art + " - " + titleCase(p.mus) : titleCase(p.mus));
+      } else {
+        f.exibir = b.sub + titleCase(b.nome || f.nome);
+      }
+    });
+    return faixas;
+  }
+  function nomeExibido(f, artista) { return f.exibir || nomeFaixa(f.nome, artista); }
+  window.MusicBRNomes = { nomesDoDisco: nomesDoDisco, titleCase: titleCase }; // usado nos testes
 
   /* ---------- capas do Drive ---------- */
   function fundo(d) { return d ? '<div class="hero-fundo" data-fundo="' + d.id + '"></div>' : ""; }
@@ -423,7 +502,7 @@
     function ir(k) {
       if (k < 0 || k >= fila.length) return;
       i = k;
-      var f = fila[i], meu = ++pedido, nome = nomeFaixa(f.nome, disco.artista);
+      var f = fila[i], meu = ++pedido, nome = nomeExibido(f, disco.artista);
       box.hidden = false; document.body.classList.add("tocando");
       botoesNavegacao();
       titulo($("#pl-titulo"), nome);
@@ -463,7 +542,7 @@
         b.classList.add("mover");
       });
     }
-    function retitular() { if (fila[i]) { var t = nomeFaixa(fila[i].nome, disco.artista); titulo($("#pl-titulo"), t); titulo($("#full-titulo"), t); } }
+    function retitular() { if (fila[i]) { var t = nomeExibido(fila[i], disco.artista); titulo($("#pl-titulo"), t); titulo($("#full-titulo"), t); } }
     var larguraJanela = window.innerWidth, tResize;
     window.addEventListener("resize", function () { // no celular a barra do navegador dispara resize: só refaz se a largura mudou
       if (window.innerWidth === larguraJanela) return;
