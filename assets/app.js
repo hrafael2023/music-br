@@ -827,6 +827,24 @@
 
   $("#link-planilha").href = CFG.planilha || "#";
 
+  /* ---------- app instalável (PWA) ---------- */
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function () {}); });
+  }
+  // o navegador avisa quando dá para instalar: mostra o botão "Instalar" no topo
+  var pedidoInstalar = null;
+  window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    pedidoInstalar = e;
+    $("#instalar").hidden = false;
+  });
+  $("#instalar").addEventListener("click", function () {
+    if (!pedidoInstalar) return;
+    pedidoInstalar.prompt();
+    pedidoInstalar.userChoice.then(function () { pedidoInstalar = null; $("#instalar").hidden = true; });
+  });
+  window.addEventListener("appinstalled", function () { $("#instalar").hidden = true; });
+
   // altura do topo (muda entre desktop e celular): os cabeçalhos fixos de listas param logo abaixo dele
   function medirTopo() { document.documentElement.style.setProperty("--topo-h", $(".topo").offsetHeight + "px"); }
   medirTopo();

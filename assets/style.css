@@ -497,3 +497,9 @@ table.lista:not(.lista-compacta) thead th { position: sticky; top: var(--topo-h,
   .artistas-cab { grid-template-columns: 1fr; }
   .artistas-cab div + div { display: none; }
 }
+
+/* ---------- app instalado em tela cheia: respeita câmera (topo) e barra de gestos (base) ---------- */
+.topo { padding-top: env(safe-area-inset-top); }
+.player { height: calc(72px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); }
+body.tocando { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+footer .in { padding-bottom: calc(20px + env(safe-area-inset-bottom)); }

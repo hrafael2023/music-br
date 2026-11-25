@@ -2,17 +2,23 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Music BR</title>
   <meta name="description" content="Acervo Music BR: artistas, discos e músicas da planilha MUSICBR, com capas e player do Drive.">
   <meta name="color-scheme" content="light dark">
   <meta name="robots" content="noindex, nofollow">
   <script>try { var t = localStorage.getItem("mbr-tema"); if (t) document.documentElement.dataset.tema = t; } catch (e) {}</script>
   <link rel="icon" href="assets/icone.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icones/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Music BR">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=3.29">
+  <link rel="stylesheet" href="assets/style.css?v=3.30">
 </head>
 <body>
   <header class="topo">
@@ -32,6 +38,10 @@
         <input id="q" type="search" placeholder="Buscar artista, disco ou ano" aria-label="Buscar no Music BR">
       </form>
       <div class="acoes-topo">
+        <button type="button" class="quad" id="instalar" hidden title="Instalar o Music BR como app" aria-label="Instalar o Music BR como app">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          <span>Instalar</span>
+        </button>
         <button type="button" class="quad" id="atualizar" title="Buscar as novas inserções da planilha" aria-label="Buscar as novas inserções da planilha">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M3 21v-5h5"/></svg>
         </button>
@@ -51,7 +61,7 @@
   <footer>
     <div class="in">
       <span><b>Music BR</b> · dados da <a id="link-planilha" target="_blank" rel="noopener">planilha MUSICBR</a> · capas e músicas do Google Drive</span>
-      <span><span id="atualizado"></span> · <b class="versao">v3.29</b></span>
+      <span><span id="atualizado"></span> · <b class="versao">v3.30</b></span>
     </div>
   </footer>
 
@@ -119,8 +129,8 @@
   </dialog>
 
   <div class="dica-flutuante" id="dica" role="tooltip"></div>
-  <script src="assets/config.js?v=3.29"></script>
-  <script src="assets/drive.js?v=3.29"></script>
-  <script src="assets/app.js?v=3.29"></script>
+  <script src="assets/config.js?v=3.30"></script>
+  <script src="assets/drive.js?v=3.30"></script>
+  <script src="assets/app.js?v=3.30"></script>
 </body>
 </html>
