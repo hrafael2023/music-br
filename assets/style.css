@@ -468,3 +468,9 @@ footer b { color: var(--tinta); font-weight: 600; }
   table.lista:not(.lista-compacta) th:last-child { width: 58px; }
   table.lista .ano, table.lista .num { white-space: nowrap; overflow-wrap: normal; }
 }
+
+/* lista de artistas: 3 colunas no desktop; celular/tablet seguem a largura (1 no celular) */
+.artistas { columns: 3; column-gap: 32px; }
+@media (max-width: 1024px), (pointer: coarse) and (max-width: 1366px) {
+  .artistas { columns: auto 220px; column-gap: 0; }
+}
