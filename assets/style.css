@@ -412,3 +412,32 @@ footer b { color: var(--tinta); font-weight: 600; }
 /* anterior/próxima sem faixa disponível */
 .pl-ctrl button:disabled, .full-ctrl button:disabled { opacity: .28; cursor: default; background: none; }
 .pl-ctrl button:disabled:hover, .full-ctrl button:disabled:hover { background: none; color: inherit; }
+
+/* ---------- tela cheia cabe inteira na tela (sem rolagem) ----------
+   A coluna ocupa exatamente a altura visível; topo, título, barra e controles têm altura fixa
+   e a capa fica com o espaço que sobra (o menor entre a largura e a altura disponíveis). */
+.full { padding: 0; }
+.full-in {
+  height: 100%; min-height: 0; display: flex; flex-direction: column;
+  padding: max(10px, env(safe-area-inset-top)) 18px max(18px, env(safe-area-inset-bottom));
+}
+.full-topo { flex: none; margin-bottom: 10px; }
+.full-capa {
+  flex: 1 1 auto; min-height: 120px; width: 100%; max-width: 560px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center; container-type: size;
+}
+.full-capa .capa { width: min(100cqw, 100cqh); flex: none; }
+.full-info { flex: none; margin-top: 16px; }
+.full-barra { flex: none; margin-top: 14px; }
+.full-ctrl { flex: none; margin: 10px 0 0; }
+@supports not (container-type: size) {
+  .full-capa .capa { width: min(100%, calc(100dvh - 330px)); }
+}
+
+/* lista de discos no celular/tablet: colunas fixas e nomes longos quebram, sem alargar a página */
+@media (max-width: 1024px), (pointer: coarse) and (max-width: 1366px) {
+  table.lista:not(.lista-compacta) { table-layout: fixed; }
+  table.lista:not(.lista-compacta) th:first-child { width: 62px; }
+  table.lista:not(.lista-compacta) th:last-child { width: 72px; }
+  table.lista td { overflow-wrap: anywhere; }
+}
