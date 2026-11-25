@@ -4,7 +4,8 @@
 // Google Drive API ativada no projeto. Sem ele, o site mostra o catálogo,
 // mas não as capas nem o player (que vêm do Drive privado).
 window.MUSICBR = {
-  googleClientId: "",
+  // projeto "Music BR" no Google Cloud (modo de teste; usuários de teste na tela Audience)
+  googleClientId: "947533376821-t8ahirf5nhogru7erin6uaq3ntk6aumd.apps.googleusercontent.com",
   planilha: "https://docs.google.com/spreadsheets/d/1EnyOWiXYubgVPIHIgeGVZLnyxVsi5-eNJQmNxyDH7V0/edit?gid=1366612687",
   pastaRaiz: "18CFCMDIMukogui3abxHT-wQY5UH_ERjI",
   // pasta de cada estilo dentro da raiz (coluna "Estilo" da planilha)
