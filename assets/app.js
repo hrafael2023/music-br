@@ -335,15 +335,21 @@
         '<a class="btn sec" href="https://drive.google.com/drive/folders/' + info.pasta + '" target="_blank" rel="noopener">Abrir pasta no Drive ↗</a>';
       if (!info.faixas.length) { box.innerHTML = '<div class="aviso-drive">A pasta existe, mas não tem arquivos de áudio.</div>'; return; }
       box.innerHTML = '<ol class="faixas">' + info.faixas.map(function (f, i) {
-        return '<li data-i="' + i + '" data-id="' + f.id + '"><span class="n">' + (i + 1) + "</span><span>" + esc(nomeFaixa(f.nome)) + '</span><span class="tam">' + (f.tam ? (f.tam / 1048576).toFixed(1).replace(".", ",") + " MB" : "") + "</span></li>";
+        return '<li data-i="' + i + '" data-id="' + f.id + '"><span class="n">' + (i + 1) + "</span><span>" + esc(nomeFaixa(f.nome, d.artista)) + '</span><span class="tam">' + (f.tam ? (f.tam / 1048576).toFixed(1).replace(".", ",") + " MB" : "") + "</span></li>";
       }).join("") + "</ol>";
       $$("#faixas li").forEach(function (li) { li.onclick = function () { Player.tocar(d, info.faixas, Number(li.dataset.i)); }; });
       $("#tocar-tudo").onclick = function () { Player.tocar(d, info.faixas, 0); };
       Player.marcar();
     }).catch(function (e) { box.innerHTML = '<div class="aviso-drive">' + esc(e.message) + "</div>"; });
   }
-  function nomeFaixa(nome) {
-    return nome.replace(/\.[a-z0-9]{2,4}$/i, "").replace(/^(.* \/ )?\d{1,3}(\s*[-.)_]\s*|\s+)/, "$1") || nome;
+  // "03 - Artista - Música.mp3" → "Música" (tira número, extensão e o nome do artista repetido)
+  function nomeFaixa(nome, artista) {
+    var t = nome.replace(/\.[a-z0-9]{2,4}$/i, "").replace(/^(.* \/ )?\d{1,3}(\s*[-.)_]\s*|\s+)/, "$1");
+    if (artista) {
+      var m = t.match(/^(.* \/ )?(.+?)\s+[-–]\s+(.+)$/);
+      if (m && norm(m[2]) === norm(artista)) t = (m[1] || "") + m[3];
+    }
+    return t || nome;
   }
 
   /* ---------- capas do Drive ---------- */
@@ -379,7 +385,7 @@
       i = k;
       var f = fila[i], meu = ++pedido;
       box.hidden = false; document.body.classList.add("tocando");
-      $("#pl-titulo").textContent = nomeFaixa(f.nome);
+      $("#pl-titulo").textContent = nomeFaixa(f.nome, disco.artista);
       $("#pl-sub").textContent = disco.artista + " — " + disco.disco;
       $("#pl-capa").innerHTML = capa(disco);
       DriveBR.capa(disco).then(function (u) { if (u) $("#pl-capa").innerHTML = '<div class="capa ok"><img alt="" src="' + u + '"></div>'; }, function () {});
@@ -395,7 +401,7 @@
         audio.play().catch(function () {});
         if (fila[i + 1]) DriveBR.audio(fila[i + 1].id).catch(function () {}); // já baixa a próxima
         if ("mediaSession" in navigator) {
-          navigator.mediaSession.metadata = new MediaMetadata({ title: nomeFaixa(f.nome), artist: disco.artista, album: disco.disco });
+          navigator.mediaSession.metadata = new MediaMetadata({ title: nomeFaixa(f.nome, disco.artista), artist: disco.artista, album: disco.disco });
         }
       }).catch(function (e) {
         if (li) li.classList.remove("carregando-faixa");
