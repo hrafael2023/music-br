@@ -425,6 +425,7 @@
       i = k;
       var f = fila[i], meu = ++pedido, nome = nomeFaixa(f.nome, disco.artista);
       box.hidden = false; document.body.classList.add("tocando");
+      botoesNavegacao();
       titulo($("#pl-titulo"), nome);
       titulo($("#full-titulo"), nome);
       marcar();
@@ -510,8 +511,20 @@
       if (dy > 110) fecharFull(); else full.style.transform = "";
     });
 
+    // anterior/próxima ficam desabilitados quando não há faixa antes/depois neste disco
+    function botoesNavegacao() {
+      var semAnterior = i <= 0, semProxima = i >= fila.length - 1;
+      ["#pl-ant", "#full-ant"].forEach(function (s) { $(s).disabled = semAnterior; });
+      ["#pl-prox", "#full-prox"].forEach(function (s) { $(s).disabled = semProxima; });
+      if ("mediaSession" in navigator) {
+        try {
+          navigator.mediaSession.setActionHandler("previoustrack", semAnterior ? null : anterior);
+          navigator.mediaSession.setActionHandler("nexttrack", semProxima ? null : proxima);
+        } catch (e) { /* navegador sem suporte a desligar a ação */ }
+      }
+    }
     function alternar() { if (audio.paused) audio.play().catch(function () {}); else audio.pause(); }
-    function anterior() { if (audio.currentTime > 3) audio.currentTime = 0; else ir(i - 1); }
+    function anterior() { if (i > 0) ir(i - 1); }
     function proxima() { ir(i + 1); }
     audio.addEventListener("play", function () { box.classList.add("tocando"); full.classList.add("tocando"); });
     audio.addEventListener("pause", function () { box.classList.remove("tocando"); full.classList.remove("tocando"); });

@@ -408,3 +408,7 @@ footer b { color: var(--tinta); font-weight: 600; }
   .colunas-in { min-width: var(--min, 0); }
   .colunas-rolagem { margin: 0 -18px; padding: 0 18px 6px; }
 }
+
+/* anterior/próxima sem faixa disponível */
+.pl-ctrl button:disabled, .full-ctrl button:disabled { opacity: .28; cursor: default; background: none; }
+.pl-ctrl button:disabled:hover, .full-ctrl button:disabled:hover { background: none; color: inherit; }
