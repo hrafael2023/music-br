@@ -84,9 +84,6 @@
   function urlDisco(d) { return "#/disco/" + d.id; }
   function iniciais(d) { return (d.artista.replace(/[^\p{L}\p{N} ]/gu, "").trim().split(/\s+/).slice(0, 2).map(function (p) { return p[0]; }).join("") || "♪"); }
   function capa(d) { return '<div class="capa" data-capa="' + d.id + '" data-ini="' + esc(iniciais(d)) + '"></div>'; }
-  function selos(d) {
-    return '<span class="selo estilo">' + esc(d.estilo) + "</span>" + (d.tipo !== "ÁLBUM" ? '<span class="selo">' + esc(d.tipo) + "</span>" : "");
-  }
   function card(d, semArtista, i) {
     return '<a class="card-disco" href="' + urlDisco(d) + '">' + (i != null ? '<span class="idx">' + String(i + 1).padStart(2, "0") + "</span>" : "") + capa(d) +
       '<div class="t">' + esc(d.disco) + "</div>" +
@@ -137,13 +134,10 @@
       .replace(/<div class="eixo">[\s\S]*<\/div>$/, '<div class="eixo">' + ks.map(function (k) { return "<span>" + String(k).slice(-2) + "</span>"; }).join("") + "</div>");
   }
 
-  function estilosTiposHTML(s) {
-    var est = Object.keys(s.estilos).map(function (k) { return { nome: k, discos: s.estilos[k].discos, link: "#/discos?estilo=" + encodeURIComponent(k) }; })
-      .sort(function (a, b) { return b.discos - a.discos; });
+  function tiposHTML(s) {
     var tip = Object.keys(s.tipos).map(function (k) { return { nome: k === "ÁLBUM" ? "Álbum" : k, discos: s.tipos[k], link: "#/discos?tipo=" + encodeURIComponent(k) }; })
       .sort(function (a, b) { return b.discos - a.discos; });
-    return '<div class="painel"><h3>Por estilo</h3>' + hbar(est, "discos", "discos") +
-      '<h3 style="margin-top:20px">Por tipo de lançamento</h3>' + hbar(tip, "discos", "discos") +
+    return '<div class="painel"><h3>Por tipo de lançamento</h3>' + hbar(tip, "discos", "discos") +
       '<p class="nota">Tipo lido da etiqueta no nome do disco, como [EP] ou [SINGLE].</p></div>';
   }
 
@@ -177,7 +171,7 @@
       '<div class="grade-capas">' + ultimos.map(function (d, i) { return card(d, false, i); }).join("") + "</div></section>" +
       '<section class="painel-box"><div class="secao-topo"><div><span class="rotulo">Dashboard</span><h2>Resumo do acervo</h2></div><a class="mais" href="#/numeros">Ver todos os números</a></div>' +
       '<div class="paineis tres"><div class="painel"><h3>Discos por década de lançamento</h3>' + decadasHTML(s, "discos") +
-      '<p class="nota">' + n(s.semAno) + ' discos sem ano não entram no gráfico.</p></div>' + estilosTiposHTML(s) + "</div>" +
+      '<p class="nota">' + n(s.semAno) + ' discos sem ano não entram no gráfico.</p></div>' + tiposHTML(s) + "</div>" +
       '<div class="paineis"><div class="painel" style="grid-column:1/-1"><h3>Artistas com mais discos</h3>' + hbar(top, "discos", "discos") +
       '<p class="nota">Sem contar as coletâneas de vários artistas (VA, ' + n(s.va) + " discos).</p></div></div></section>";
     hidratarCapas();
@@ -191,7 +185,6 @@
     for (var a = s.min; a <= s.max; a++) anos.push(a);
     var topD = s.topDiscos.slice(0, 25).map(function (x) { return { nome: x.nome, v: x.discos, link: urlArtista(x.nome) }; });
     var topM = s.topMusicas.slice(0, 25).map(function (x) { return { nome: x.nome, v: x.musicas, link: urlArtista(x.nome) }; });
-    var est = Object.keys(s.estilos).map(function (k) { return { nome: k, v: s.estilos[k][medida], link: "#/discos?estilo=" + encodeURIComponent(k) }; });
     app.innerHTML =
       '<section class="painel-box"><div class="secao-topo"><div><span class="rotulo">Dashboard</span><h2>Números do acervo</h2></div>' +
       '<div class="filtros"><label class="muted" for="medida">Medir por</label><select id="medida"><option value="discos">discos</option><option value="musicas">músicas</option></select></div></div>' +
@@ -200,10 +193,10 @@
       colunas(anos, function (k) { return (s.anos[k] || {})[medida] || 0; }, String, rot, 220) +
       '<p class="nota">Passe o mouse nas colunas para ver o número de cada ano. ' + n(s.semAno) + " discos estão sem ano.</p></div></div>" +
       '<div class="paineis"><div class="painel"><h3>Por década</h3>' + decadasHTML(s, medida) + "</div>" +
-      '<div class="painel"><h3>Por estilo</h3>' + hbar(est, "v", rot) + "</div></div>" +
+      tabelaDecadas(s) + "</div>" +
       '<div class="paineis"><div class="painel"><h3>Top 25 artistas por discos</h3>' + hbar(topD, "v", "discos") + "</div>" +
       '<div class="painel"><h3>Top 25 artistas por músicas</h3>' + hbar(topM, "v", "músicas") + "</div></div>" +
-      '<div class="paineis">' + estilosTiposHTML(s) + tabelaDecadas(s) + "</div></section>";
+      '<div class="paineis um">' + tiposHTML(s) + "</div></section>";
     $("#medida").value = medida;
     $("#medida").onchange = function () { location.hash = "#/numeros" + (this.value === "musicas" ? "?m=musicas" : ""); };
   }
@@ -230,12 +223,11 @@
 
   var POR_PAGINA = 100;
   function paginaDiscos(params) {
-    var q = params.get("q") || "", estilo = params.get("estilo") || "", tipo = params.get("tipo") || "";
+    var q = params.get("q") || "", tipo = params.get("tipo") || "";
     var ordem = params.get("ordem") || "recentes", pag = Math.max(1, Number(params.get("p")) || 1);
     $("#q").value = q;
     var f = interpretar(q);
     var lista = DB.discos.filter(function (d) {
-      if (estilo && d.estilo !== estilo) return false;
       if (tipo && d.tipo !== tipo) return false;
       if (f.ano && d.ano !== f.ano) return false;
       if (f.dec && !(d.ano >= f.dec && d.ano < f.dec + 10)) return false;
@@ -259,15 +251,14 @@
     function opt(v, r, atual) { return '<option value="' + esc(v) + '"' + (v === atual ? " selected" : "") + ">" + esc(r) + "</option>"; }
     app.innerHTML = '<section class="painel-box"><div class="secao-topo"><div><span class="rotulo">' + (q ? "Busca" : "Catálogo") + "</span><h2>" + (q ? "“" + esc(q) + "”" : "Todos os discos") + "</h2></div></div>" +
       '<div class="filtros">' +
-      '<select id="f-estilo" aria-label="Estilo">' + opt("", "Todos os estilos", estilo) + Object.keys(s.estilos).sort().map(function (k) { return opt(k, k, estilo); }).join("") + "</select>" +
       '<select id="f-tipo" aria-label="Tipo">' + opt("", "Todos os tipos", tipo) + Object.keys(s.tipos).sort().map(function (k) { return opt(k, k === "ÁLBUM" ? "Álbum" : k, tipo); }).join("") + "</select>" +
       '<select id="f-ordem" aria-label="Ordem">' + opt("recentes", "Inseridos por último", ordem) + opt("artista", "Artista (A–Z)", ordem) + opt("disco", "Disco (A–Z)", ordem) +
       opt("ano", "Mais novos", ordem) + opt("antigos", "Mais antigos", ordem) + opt("faixas", "Mais faixas", ordem) + "</select>" +
       '<span class="total">' + n(lista.length) + " discos · " + n(musicas) + " músicas</span></div>" +
-      (lista.length ? '<table class="lista"><thead><tr><th>Ano</th><th>Disco</th><th>Artista</th><th class="some">Estilo</th><th class="num">Faixas</th></tr></thead><tbody>' +
+      (lista.length ? '<table class="lista"><thead><tr><th>Ano</th><th>Disco</th><th>Artista</th><th class="num">Faixas</th></tr></thead><tbody>' +
         parte.map(function (d) {
           return '<tr><td class="ano">' + (d.ano || "—") + '</td><td><a href="' + urlDisco(d) + '">' + esc(d.disco) + "</a></td>" +
-            '<td><a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + '</a></td><td class="some"><span class="selo estilo">' + esc(d.estilo) + '</span></td><td class="num">' + d.musicas + "</td></tr>";
+            '<td><a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + '</a></td><td class="num">' + d.musicas + "</td></tr>";
         }).join("") + "</tbody></table>" + paginacao(pag, paginas)
         : '<div class="vazio">Nada encontrado. Tente só o nome do artista, ou um ano como 1977.</div>') + "</section>";
 
@@ -277,7 +268,6 @@
       if (!("p" in mud)) p.delete("p");
       location.hash = "#/discos" + (p.toString() ? "?" + p : "");
     }
-    $("#f-estilo").onchange = function () { ir({ estilo: this.value }); };
     $("#f-tipo").onchange = function () { ir({ tipo: this.value }); };
     $("#f-ordem").onchange = function () { ir({ ordem: this.value === "recentes" ? "" : this.value }); };
     $$(".paginas button[data-p]").forEach(function (b) { b.onclick = function () { ir({ p: b.dataset.p === "1" ? "" : b.dataset.p }); window.scrollTo(0, 0); }; });
@@ -323,12 +313,11 @@
     if (!ds.length) { app.innerHTML = '<div class="vazio">Artista não encontrado.</div>'; return; }
     var mus = ds.reduce(function (t, d) { return t + d.musicas; }, 0);
     var anos = ds.filter(function (d) { return d.ano; }).map(function (d) { return d.ano; });
-    var estilos = ds.map(function (d) { return d.estilo; }).filter(function (v, i, a) { return a.indexOf(v) === i; });
     var letra = norm(nome).charAt(0).toUpperCase();
     if (!/[A-Z]/.test(letra)) letra = "#";
     var periodo = anos.length ? Math.min.apply(null, anos) + (Math.max.apply(null, anos) !== Math.min.apply(null, anos) ? "–" + Math.max.apply(null, anos) : "") : "";
     app.innerHTML = '<div class="voltar-linha">' + botaoVoltar("#/artistas?l=" + encodeURIComponent(letra)) + '<div class="migalha"><a href="#/artistas?l=' + encodeURIComponent(letra) + '">Artistas</a> / ' + esc(nome) + "</div></div>" +
-      '<section class="painel-box"><div class="ficha-info"><span class="rotulo">Artista · ' + estilos.map(esc).join(", ") + "</span><h1>" + esc(nome) + "</h1></div>" +
+      '<section class="painel-box"><div class="ficha-info"><span class="rotulo">Artista</span><h1>' + esc(nome) + "</h1></div>" +
       '<div class="ficha-dados"><div><b>' + n(ds.length) + "</b><span>" + (ds.length === 1 ? "disco" : "discos") + "</span></div><div><b>" + n(mus) + "</b><span>músicas</span></div>" +
       "<div><b>" + (periodo || "—") + "</b><span>período</span></div><div><b>" + n(ds.filter(function (d) { return d.tipo === "ÁLBUM"; }).length) + "</b><span>álbuns</span></div></div></section>" +
       '<section class="painel-box"><div class="secao-topo"><div><span class="rotulo">Por ano de lançamento</span><h2>Discografia</h2></div></div>' + avisoDrive() +
@@ -343,7 +332,7 @@
       .sort(function (a, b) { return (a.ano || 9999) - (b.ano || 9999); }).slice(0, 12);
     app.innerHTML = '<div class="voltar-linha">' + botaoVoltar(urlArtista(d.artista)) + '<div class="migalha"><a href="#/artistas">Artistas</a> / <a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + "</a> / " + esc(d.disco) + "</div></div>" +
       '<section class="painel-box"><div class="ficha"><div class="ficha-capa">' + capa(d) + '</div><div class="ficha-info">' +
-      '<span class="rotulo">' + (d.tipo === "ÁLBUM" ? "Álbum" : esc(d.tipo)) + " · " + esc(d.estilo) + "</span>" +
+      '<span class="rotulo">' + (d.tipo === "ÁLBUM" ? "Álbum" : esc(d.tipo)) + "</span>" +
       "<h1>" + esc(d.disco) + '</h1><div class="artista"><a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + "</a></div>" +
       '<div class="meta"><span>' + (d.ano || "sem ano") + "</span><span>" + n(d.musicas) + (d.musicas === 1 ? " faixa" : " faixas") + "</span></div>" +
       '<div class="acoes" id="acoes"></div></div></div>' +

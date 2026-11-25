@@ -145,6 +145,7 @@ a.kpi .r::after { content: "→"; color: var(--texto-3); }
 /* ---------- gráficos e números ---------- */
 .paineis { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--linha); }
 .paineis.tres { grid-template-columns: 2fr 1fr; }
+.paineis.um { grid-template-columns: 1fr; }
 .paineis > .painel { border-left: 1px solid var(--linha); }
 .paineis > .painel:first-child { border-left: 0; }
 .painel { padding: 24px 32px 26px; min-width: 0; }
