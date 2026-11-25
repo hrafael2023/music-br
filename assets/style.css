@@ -244,8 +244,16 @@ table.lista { width: 100%; border-collapse: collapse; font-size: 14px; border-to
 .pl-capa { width: 48px; flex: none; }
 .pl-capa .capa::after { font-size: 14px; }
 .pl-info { min-width: 0; display: flex; flex-direction: column; font-size: 13px; }
-.pl-info b { font-weight: 600; color: var(--tinta); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.pl-info span { color: var(--texto-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pl-info b { font-weight: 600; color: var(--tinta); overflow: hidden; white-space: nowrap; display: block; }
+/* nome da faixa: quando não cabe, rola devagar (texto duplicado para o laço ficar contínuo) */
+.rolar { display: inline-flex; }
+.rolar > span { flex: none; }
+.pl-info b.mover { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 16px), transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 12px, #000 calc(100% - 16px), transparent 100%); }
+.pl-info b.mover .rolar { animation: rolar var(--dur, 12s) linear infinite; animation-delay: 1.5s; }
+.pl-info b.mover .rolar > span { padding-right: 48px; }
+@keyframes rolar { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .pl-info b.mover .rolar { animation: none; } .pl-info b.mover .rolar > span + span { display: none; } }
+#pl-sub { color: var(--texto-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pl-ctrl { display: flex; gap: 8px; align-items: center; }
 .pl-ctrl button, .pl-fechar { background: none; border: 0; color: var(--texto-2); width: 36px; height: 36px; border-radius: var(--raio); display: grid; place-items: center; padding: 0; }
 .pl-ctrl button:hover, .pl-fechar:hover { color: var(--tinta); background: var(--painel-2); }
@@ -325,8 +333,8 @@ footer b { color: var(--tinta); font-weight: 600; }
   .player-in { grid-template-columns: 1fr auto; padding: 0 12px; }
   .pl-fim .pl-tempo { display: none; }
   .pl-fim { position: absolute; right: 4px; top: 4px; }
-  .pl-ctrl { margin-right: 28px; }
-  .pl-ctrl #pl-ant { display: none; }
+  .pl-ctrl { margin-right: 28px; gap: 2px; }
+  .pl-ctrl button { width: 34px; }
 }
 
 /* tabela dentro de painel (sem as margens da tabela de página inteira) */

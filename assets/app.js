@@ -406,7 +406,7 @@
       i = k;
       var f = fila[i], meu = ++pedido;
       box.hidden = false; document.body.classList.add("tocando");
-      $("#pl-titulo").textContent = nomeFaixa(f.nome, disco.artista);
+      titulo(nomeFaixa(f.nome, disco.artista));
       $("#pl-sub").textContent = disco.artista + " — " + disco.disco;
       $("#pl-capa").innerHTML = capa(disco);
       DriveBR.capa(disco).then(function (u) { if (u) $("#pl-capa").innerHTML = '<div class="capa ok"><img alt="" src="' + u + '"></div>'; }, function () {});
@@ -429,6 +429,27 @@
         if (meu === pedido) $("#pl-sub").textContent = e.message;
       });
     }
+    // escreve o nome da faixa; se não couber, liga a rolagem lenta (velocidade fixa, ~35 px/s)
+    function titulo(t) {
+      var b = $("#pl-titulo");
+      b.classList.remove("mover");
+      b.innerHTML = '<span class="rolar"><span>' + esc(t) + "</span></span>";
+      b.title = t;
+      requestAnimationFrame(function () {
+        var largura = b.firstChild.scrollWidth;
+        if (largura <= b.clientWidth + 1) return;
+        b.firstChild.innerHTML = "<span>" + esc(t) + '</span><span aria-hidden="true">' + esc(t) + "</span>";
+        b.style.setProperty("--dur", Math.max(6, (largura + 48) / 35).toFixed(1) + "s");
+        b.classList.add("mover");
+      });
+    }
+    var larguraJanela = window.innerWidth, tResize;
+    window.addEventListener("resize", function () { // no celular a barra do navegador dispara resize: só refaz se a largura mudou
+      if (window.innerWidth === larguraJanela) return;
+      larguraJanela = window.innerWidth;
+      clearTimeout(tResize);
+      tResize = setTimeout(function () { if (fila[i]) titulo(nomeFaixa(fila[i].nome, disco.artista)); }, 200);
+    });
     audio.addEventListener("play", function () { box.classList.add("tocando"); });
     audio.addEventListener("pause", function () { box.classList.remove("tocando"); });
     audio.addEventListener("ended", function () { if (i + 1 < fila.length) ir(i + 1); });
