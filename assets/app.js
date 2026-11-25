@@ -410,7 +410,8 @@
   var MARCA_MOJIBAKE = /[∆∑∂‰‡†÷‚]/;
   function desembaralha(s) {
     if (!MARCA_MOJIBAKE.test(s)) return s;
-    return String(s).split("").map(function (c) { return MOJIBAKE[c] || c; }).join("");
+    // nomes vindos de Mac guardam acentos decompostos ("a" + acento): junta antes de converter
+    return String(s).normalize("NFC").split("").map(function (c) { return MOJIBAKE[c] || c; }).join("");
   }
   // "CD1 / 03 - Artista - Música_.mp3" → { sub: "CD1 / ", nome: "Artista - Música" }
   function baseFaixa(nome) {
