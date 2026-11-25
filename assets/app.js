@@ -157,15 +157,12 @@
     var s = stats();
     var ultimos = DB.discos.slice(-10).reverse();
     var top = s.topDiscos.slice(0, 10).map(function (a) { return { nome: a.nome, discos: a.discos, link: urlArtista(a.nome) }; });
-    var populares = s.topDiscos.slice(0, 4).map(function (a) { return '<a href="' + urlArtista(a.nome) + '">' + esc(a.nome) + "</a>"; }).join("") +
-      '<a href="#/discos?q=anos%2070">Anos 70</a><a href="#/discos?tipo=EP">EPs</a>';
     app.innerHTML =
       '<section class="painel-box"><div class="abertura"><span class="rotulo">Acervo de música brasileira</span>' +
-      "<h1>" + n(s.discos) + " discos de " + n(s.artistas) + " artistas</h1>" +
       '<p class="sub">Busque por artista, disco, ano ou década. Capas e faixas vêm direto da pasta MUSICBR no Google Drive.</p>' +
       '<form class="busca-grande" data-busca role="search" autocomplete="off"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>' +
       '<input type="search" name="q" placeholder="Artista, disco ou ano (1977, anos 70)" aria-label="Buscar no acervo"><button class="btn" type="submit">Buscar</button></form>' +
-      '<div class="populares"><span>Populares:</span>' + populares + "</div></div>" + kpis(s) + "</section>" +
+      "</div>" + kpis(s) + "</section>" +
       '<section class="painel-box"><div class="secao-topo"><div><span class="rotulo">Novidades</span><h2>Adicionados recentemente</h2></div>' +
       '<a class="mais" href="#/discos">Ver todos os discos</a></div>' + avisoDrive() +
       '<div class="grade-capas">' + ultimos.map(function (d, i) { return card(d, false, i); }).join("") + "</div></section>" +
