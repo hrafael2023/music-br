@@ -503,3 +503,11 @@ table.lista:not(.lista-compacta) thead th { position: sticky; top: var(--topo-h,
 .player { height: calc(72px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); }
 body.tocando { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
 footer .in { padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
+
+/* botões Grade / Lista na página de discos */
+.vistas { display: inline-flex; margin-left: auto; border: 1px solid var(--linha-forte); border-radius: var(--raio); overflow: hidden; }
+.vistas button { display: grid; place-items: center; width: 36px; height: 32px; padding: 0; border: 0; background: var(--painel); color: var(--texto-3); }
+.vistas button + button { border-left: 1px solid var(--linha-forte); }
+.vistas button svg { width: 18px; height: 18px; }
+.vistas button:hover { color: var(--tinta); }
+.vistas button[aria-pressed="true"] { background: var(--tinta); color: var(--sobre-tinta); }

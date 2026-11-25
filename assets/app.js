@@ -227,6 +227,7 @@
   function paginaDiscos(params) {
     var q = params.get("q") || "", tipo = params.get("tipo") || "";
     var ordem = params.get("ordem") || "recentes", pag = Math.max(1, Number(params.get("p")) || 1);
+    var vista = ls(function () { return localStorage.getItem("mbr-vista"); }) === "lista" ? "lista" : "grade"; // padrão: grade com capas
     $("#q").value = q;
     var f = interpretar(q);
     var lista = DB.discos.filter(function (d) {
@@ -255,8 +256,12 @@
       '<select id="f-tipo" aria-label="Tipo">' + opt("", "Todos os tipos", tipo) + Object.keys(s.tipos).sort(function (a, b) { return a === "ÁLBUM" ? -1 : b === "ÁLBUM" ? 1 : a.localeCompare(b); }).map(function (k) { return opt(k, k, tipo); }).join("") + "</select>" +
       '<select id="f-ordem" aria-label="Ordem">' + opt("recentes", "Inseridos por último", ordem) + opt("artista", "Artista (A–Z)", ordem) + opt("disco", "Disco (A–Z)", ordem) +
       opt("ano", "Mais novos", ordem) + opt("antigos", "Mais antigos", ordem) + opt("faixas", "Mais faixas", ordem) + "</select>" +
-      "</div>" +
-      (lista.length ? '<table class="lista"><thead><tr><th>Ano</th><th>Disco</th><th>Artista</th><th class="num">Faixas</th></tr></thead><tbody>' +
+      '<div class="vistas" role="group" aria-label="Visualização">' +
+      '<button type="button" data-vista="grade" title="Grade com capas" aria-label="Grade com capas" aria-pressed="' + (vista === "grade") + '"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1"/></svg></button>' +
+      '<button type="button" data-vista="lista" title="Lista" aria-label="Lista" aria-pressed="' + (vista === "lista") + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".6"/><circle cx="4" cy="12" r=".6"/><circle cx="4" cy="18" r=".6"/></svg></button>' +
+      "</div></div>" +
+      (lista.length && vista === "grade" ? avisoDrive() + '<div class="grade-capas">' + parte.map(function (d, i) { return card(d, false, (pag - 1) * POR_PAGINA + i); }).join("") + "</div>" + paginacao(pag, paginas)
+      : lista.length ? '<table class="lista"><thead><tr><th>Ano</th><th>Disco</th><th>Artista</th><th class="num">Faixas</th></tr></thead><tbody>' +
         parte.map(function (d) {
           return '<tr><td class="ano">' + (d.ano || "—") + '</td><td><a href="' + urlDisco(d) + '">' + esc(d.disco) + "</a></td>" +
             '<td><a href="' + urlArtista(d.artista) + '">' + esc(d.artista) + '</a></td><td class="num">' + d.musicas + "</td></tr>";
@@ -271,6 +276,10 @@
     }
     $("#f-tipo").onchange = function () { ir({ tipo: this.value }); };
     $("#f-ordem").onchange = function () { ir({ ordem: this.value === "recentes" ? "" : this.value }); };
+    $$(".vistas button").forEach(function (b) {
+      b.onclick = function () { ls(function () { localStorage.setItem("mbr-vista", b.dataset.vista); }); paginaDiscos(params); };
+    });
+    if (vista === "grade") hidratarCapas();
     $$(".paginas button[data-p]").forEach(function (b) { b.onclick = function () { ir({ p: b.dataset.p === "1" ? "" : b.dataset.p }); window.scrollTo(0, 0); }; });
   }
   function paginacao(atual, total) {
@@ -469,15 +478,26 @@
     });
     $$(".capa[data-capa]:not([data-ok])").forEach(function (el) {
       el.setAttribute("data-ok", "1");
-      var d = DB.porId[el.dataset.capa];
-      if (!d) return;
-      DriveBR.capa(d).then(function (url) {
-        if (!url) return;
-        el.innerHTML = '<img alt="" src="' + url + '">';
-        el.classList.add("ok");
-      }).catch(function () { el.removeAttribute("data-ok"); });
+      if (observadorCapas) observadorCapas.observe(el); else carregarCapa(el);
     });
   }
+  function carregarCapa(el) {
+    var d = DB.porId[el.dataset.capa];
+    if (!d || !el.isConnected) return;
+    DriveBR.capa(d).then(function (url) {
+      if (!url) return;
+      el.innerHTML = '<img alt="" src="' + url + '">';
+      el.classList.add("ok");
+    }).catch(function () { el.removeAttribute("data-ok"); });
+  }
+  // capa só é buscada quando o card chega perto da tela (grades com 100 discos não baixam tudo de uma vez)
+  var observadorCapas = window.IntersectionObserver ? new IntersectionObserver(function (itens) {
+    itens.forEach(function (it) {
+      if (!it.isIntersecting) return;
+      observadorCapas.unobserve(it.target);
+      carregarCapa(it.target);
+    });
+  }, { rootMargin: "400px 0px" }) : null;
 
   /* ---------- player ---------- */
   // Mini player fixo no rodapé + tela cheia (abre ao tocar no mini player, como nos apps de música).
