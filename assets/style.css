@@ -346,19 +346,13 @@ footer b { color: var(--tinta); font-weight: 600; }
 .lista-compacta td:nth-child(3) { color: var(--texto-2); }
 
 /* ---------- player em tela cheia (abre ao tocar no mini player) ----------
-   Mesmo visual do site; o fundo leva um toque da cor predominante da capa,
-   misturado com o fundo claro (ou escuro) para o texto continuar legível. */
+   Mesmo visual do site, com o fundo liso do painel (branco no claro, escuro no escuro). */
 .pl-agora { cursor: pointer; }
 html.travado, html.travado body { overflow: hidden; }
 .full {
-  --tom: color-mix(in srgb, var(--full-cor, var(--painel-2)) 16%, var(--painel));
   position: fixed; inset: 0; z-index: 70; overflow-y: auto; overscroll-behavior: contain; color: var(--texto);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--full-cor, var(--painel-2)) 30%, var(--painel)) 0%, var(--tom) 55%, var(--painel) 100%);
+  background: var(--painel);
   transform: translateY(100%); transition: transform .32s cubic-bezier(.2, .8, .2, 1);
-}
-:root[data-tema="escuro"] .full {
-  --tom: color-mix(in srgb, var(--full-cor, var(--painel-2)) 14%, var(--painel));
-  background: linear-gradient(180deg, color-mix(in srgb, var(--full-cor, var(--painel-2)) 26%, var(--painel)) 0%, var(--tom) 55%, var(--painel) 100%);
 }
 .full.aberto { transform: translateY(0); }
 .full-in { max-width: 520px; margin: 0 auto; min-height: 100%; display: flex; flex-direction: column; padding: max(12px, env(safe-area-inset-top)) 22px max(28px, env(safe-area-inset-bottom)); }

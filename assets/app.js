@@ -405,44 +405,15 @@
       $("#pl-capa").innerHTML = capa(disco);
       $("#full-capa").innerHTML = capa(disco);
       $("#full-disco").textContent = disco.disco;
-      $("#full-ir").href = urlDisco(disco);
       $("#full-artista").textContent = disco.artista;
       $("#full-artista").href = urlArtista(disco.artista);
-      full.style.removeProperty("--full-cor");
       var d = disco;
       DriveBR.capa(d).then(function (u) {
         if (!u || d !== disco) return;
         var img = '<div class="capa ok"><img alt="" src="' + u + '"></div>';
         $("#pl-capa").innerHTML = img;
         $("#full-capa").innerHTML = img;
-        corDaCapa(u);
       }, function () {});
-    }
-    // cor predominante da capa: agrupa os pixels em faixas de matiz e fica com a mais frequente
-    // (ignorando cinzas, quase brancos e quase pretos). O CSS mistura essa cor com o fundo do site,
-    // então o texto continua na cor normal e legível.
-    function corDaCapa(url) {
-      var im = new Image();
-      im.onload = function () {
-        try {
-          var c = document.createElement("canvas"); c.width = c.height = 40;
-          var x = c.getContext("2d"); x.drawImage(im, 0, 0, 40, 40);
-          var px = x.getImageData(0, 0, 40, 40).data, baldes = {}, melhor = null;
-          for (var k = 0; k < px.length; k += 4) {
-            var r = px[k], g = px[k + 1], b = px[k + 2];
-            var max = Math.max(r, g, b), min = Math.min(r, g, b), sat = max ? (max - min) / max : 0;
-            if (sat < 0.22 || max < 40 || min > 235) continue;
-            var h = max === min ? 0 : max === r ? ((g - b) / (max - min) + 6) % 6 : max === g ? (b - r) / (max - min) + 2 : (r - g) / (max - min) + 4;
-            var chave = Math.floor(h * 4); // 24 faixas de matiz
-            var bd = baldes[chave] = baldes[chave] || { n: 0, r: 0, g: 0, b: 0 };
-            bd.n++; bd.r += r; bd.g += g; bd.b += b;
-            if (!melhor || bd.n > melhor.n) melhor = bd;
-          }
-          if (!melhor || melhor.n < 20) { full.style.removeProperty("--full-cor"); return; } // capa sem cor marcante
-          full.style.setProperty("--full-cor", "rgb(" + Math.round(melhor.r / melhor.n) + "," + Math.round(melhor.g / melhor.n) + "," + Math.round(melhor.b / melhor.n) + ")");
-        } catch (e) { /* sem cor: fica o fundo padrão */ }
-      };
-      im.src = url;
     }
     function ir(k) {
       if (k < 0 || k >= fila.length) return;
@@ -529,7 +500,7 @@
     }
     $(".pl-agora").addEventListener("click", abrirFull);
     $("#full-fechar").onclick = function () { fecharFull(); };
-    $("#full-ir").addEventListener("click", function (e) { e.preventDefault(); irPara(this.getAttribute("href")); });
+    $("#full-x").onclick = function () { fecharFull(); };
     $("#full-artista").addEventListener("click", function (e) { e.preventDefault(); irPara(this.getAttribute("href")); });
     // arrastar para baixo fecha
     var y0 = null;
