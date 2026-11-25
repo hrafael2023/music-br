@@ -392,7 +392,7 @@
     function fmtT(s) { s = Math.floor(s || 0); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); }
     function marcar() {
       var id = disco && fila[i] ? fila[i].id : null;
-      $$("#faixas li, #full-fila li").forEach(function (li) { li.classList.toggle("atual", li.dataset.id === id); });
+      $$("#faixas li").forEach(function (li) { li.classList.toggle("atual", li.dataset.id === id); });
     }
     function tocar(d, faixas, k) {
       var mudouDisco = disco !== d;
@@ -409,9 +409,6 @@
       $("#full-artista").textContent = disco.artista;
       $("#full-artista").href = urlArtista(disco.artista);
       full.style.removeProperty("--full-cor");
-      $("#full-fila").innerHTML = fila.map(function (f, k) {
-        return '<li data-i="' + k + '" data-id="' + f.id + '"><span class="n">' + (k + 1) + "</span><span>" + esc(nomeFaixa(f.nome, disco.artista)) + "</span></li>";
-      }).join("");
       var d = disco;
       DriveBR.capa(d).then(function (u) {
         if (!u || d !== disco) return;
@@ -421,17 +418,28 @@
         corDaCapa(u);
       }, function () {});
     }
-    // cor média da capa (escurecida) para o fundo da tela cheia
+    // cor predominante da capa: agrupa os pixels em faixas de matiz e fica com a mais frequente
+    // (ignorando cinzas, quase brancos e quase pretos). O CSS mistura essa cor com o fundo do site,
+    // então o texto continua na cor normal e legível.
     function corDaCapa(url) {
       var im = new Image();
       im.onload = function () {
         try {
-          var c = document.createElement("canvas"); c.width = c.height = 24;
-          var x = c.getContext("2d"); x.drawImage(im, 0, 0, 24, 24);
-          var px = x.getImageData(0, 0, 24, 24).data, r = 0, g = 0, b = 0, n = 0;
-          for (var k = 0; k < px.length; k += 4) { r += px[k]; g += px[k + 1]; b += px[k + 2]; n++; }
-          var f = 0.62; // escurece para o texto branco ficar legível
-          full.style.setProperty("--full-cor", "rgb(" + Math.round(r / n * f) + "," + Math.round(g / n * f) + "," + Math.round(b / n * f) + ")");
+          var c = document.createElement("canvas"); c.width = c.height = 40;
+          var x = c.getContext("2d"); x.drawImage(im, 0, 0, 40, 40);
+          var px = x.getImageData(0, 0, 40, 40).data, baldes = {}, melhor = null;
+          for (var k = 0; k < px.length; k += 4) {
+            var r = px[k], g = px[k + 1], b = px[k + 2];
+            var max = Math.max(r, g, b), min = Math.min(r, g, b), sat = max ? (max - min) / max : 0;
+            if (sat < 0.22 || max < 40 || min > 235) continue;
+            var h = max === min ? 0 : max === r ? ((g - b) / (max - min) + 6) % 6 : max === g ? (b - r) / (max - min) + 2 : (r - g) / (max - min) + 4;
+            var chave = Math.floor(h * 4); // 24 faixas de matiz
+            var bd = baldes[chave] = baldes[chave] || { n: 0, r: 0, g: 0, b: 0 };
+            bd.n++; bd.r += r; bd.g += g; bd.b += b;
+            if (!melhor || bd.n > melhor.n) melhor = bd;
+          }
+          if (!melhor || melhor.n < 20) { full.style.removeProperty("--full-cor"); return; } // capa sem cor marcante
+          full.style.setProperty("--full-cor", "rgb(" + Math.round(melhor.r / melhor.n) + "," + Math.round(melhor.g / melhor.n) + "," + Math.round(melhor.b / melhor.n) + ")");
         } catch (e) { /* sem cor: fica o fundo padrão */ }
       };
       im.src = url;
@@ -523,7 +531,6 @@
     $("#full-fechar").onclick = function () { fecharFull(); };
     $("#full-ir").addEventListener("click", function (e) { e.preventDefault(); irPara(this.getAttribute("href")); });
     $("#full-artista").addEventListener("click", function (e) { e.preventDefault(); irPara(this.getAttribute("href")); });
-    $("#full-fila").addEventListener("click", function (e) { var li = e.target.closest("li"); if (li) ir(Number(li.dataset.i)); });
     // arrastar para baixo fecha
     var y0 = null;
     full.addEventListener("touchstart", function (e) { y0 = full.scrollTop <= 0 ? e.touches[0].clientY : null; }, { passive: true });
