@@ -139,7 +139,8 @@
     var nomesDisco = d.ano ? [d.ano + " - " + d.disco, d.disco] : [d.disco];
     return acharFilho(raiz, [d.letra]).then(function (letra) {
       if (!letra) return null;
-      return acharFilho(letra.id, [d.artista]);
+      // coletâneas (VA) não têm pasta de artista: ESTILO/--VA/ANO - DISCO
+      return acharFilho(letra.id, [d.artista]).then(function (art) { return art || letra; });
     }).then(function (art) {
       if (!art) return null;
       return acharFilho(art.id, nomesDisco).then(function (f) {
