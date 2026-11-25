@@ -252,7 +252,7 @@
     function opt(v, r, atual) { return '<option value="' + esc(v) + '"' + (v === atual ? " selected" : "") + ">" + esc(r) + "</option>"; }
     app.innerHTML = '<section class="painel-box"><div class="secao-topo"><div><h2>' + n(lista.length) + (lista.length === 1 ? " Álbum" : " Álbuns") + "</h2></div></div>" +
       '<div class="filtros">' +
-      '<select id="f-tipo" aria-label="Tipo">' + opt("", "Todos os tipos", tipo) + Object.keys(s.tipos).sort().map(function (k) { return opt(k, k === "ÁLBUM" ? "Álbum" : k, tipo); }).join("") + "</select>" +
+      '<select id="f-tipo" aria-label="Tipo">' + opt("", "Todos os tipos", tipo) + Object.keys(s.tipos).sort(function (a, b) { return a === "ÁLBUM" ? -1 : b === "ÁLBUM" ? 1 : a.localeCompare(b); }).map(function (k) { return opt(k, k, tipo); }).join("") + "</select>" +
       '<select id="f-ordem" aria-label="Ordem">' + opt("recentes", "Inseridos por último", ordem) + opt("artista", "Artista (A–Z)", ordem) + opt("disco", "Disco (A–Z)", ordem) +
       opt("ano", "Mais novos", ordem) + opt("antigos", "Mais antigos", ordem) + opt("faixas", "Mais faixas", ordem) + "</select>" +
       "</div>" +
