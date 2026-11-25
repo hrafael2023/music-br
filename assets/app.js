@@ -499,7 +499,6 @@
       window.dispatchEvent(new HashChangeEvent("hashchange"));
     }
     $(".pl-agora").addEventListener("click", abrirFull);
-    $("#full-fechar").onclick = function () { fecharFull(); };
     $("#full-x").onclick = function () { fecharFull(); };
     $("#full-artista").addEventListener("click", function (e) { e.preventDefault(); irPara(this.getAttribute("href")); });
     // arrastar para baixo fecha
