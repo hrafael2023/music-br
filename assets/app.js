@@ -250,7 +250,7 @@
     var parte = lista.slice((pag - 1) * POR_PAGINA, pag * POR_PAGINA);
     var s = stats();
     function opt(v, r, atual) { return '<option value="' + esc(v) + '"' + (v === atual ? " selected" : "") + ">" + esc(r) + "</option>"; }
-    app.innerHTML = '<section class="painel-box"><div class="secao-topo"><div><span class="rotulo">' + (q ? "Busca" : "Catálogo") + "</span><h2>" + (q ? "“" + esc(q) + "”" : "Todos os discos") + "</h2></div></div>" +
+    app.innerHTML = '<section class="painel-box"><div class="secao-topo"><div><h2>' + n(lista.length) + (lista.length === 1 ? " Álbum" : " Álbuns") + "</h2></div></div>" +
       '<div class="filtros">' +
       '<select id="f-tipo" aria-label="Tipo">' + opt("", "Todos os tipos", tipo) + Object.keys(s.tipos).sort().map(function (k) { return opt(k, k === "ÁLBUM" ? "Álbum" : k, tipo); }).join("") + "</select>" +
       '<select id="f-ordem" aria-label="Ordem">' + opt("recentes", "Inseridos por último", ordem) + opt("artista", "Artista (A–Z)", ordem) + opt("disco", "Disco (A–Z)", ordem) +
@@ -300,7 +300,7 @@
     var atual = params.get("l") || "A";
     if (!letras[atual]) atual = todas[0];
     var lista = letras[atual].sort(function (a, b) { return a.nome.localeCompare(b.nome, "pt-BR"); });
-    app.innerHTML = '<section class="painel-box"><div class="secao-topo"><div><span class="rotulo">' + n(s.artistas) + " no acervo</span><h2>Artistas</h2></div></div>" +
+    app.innerHTML = '<section class="painel-box"><div class="secao-topo"><div><h2>' + n(s.artistas) + " Artistas</h2></div></div>" +
       '<nav class="letras" aria-label="Letra inicial">' + todas.map(function (l) {
         return '<a href="#/artistas?l=' + encodeURIComponent(l) + '"' + (l === atual ? ' class="ativo"' : "") + ">" + l + "</a>";
       }).join("") + "</nav>" +
