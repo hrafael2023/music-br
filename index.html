@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=3.3">
+  <link rel="stylesheet" href="assets/style.css?v=3.4">
 </head>
 <body>
   <header class="topo">
@@ -51,7 +51,7 @@
   <footer>
     <div class="in">
       <span><b>Music BR</b> · dados da <a id="link-planilha" target="_blank" rel="noopener">planilha MUSICBR</a> · capas e músicas do Google Drive</span>
-      <span><span id="atualizado"></span> · <b class="versao">v3.3</b></span>
+      <span><span id="atualizado"></span> · <b class="versao">v3.4</b></span>
     </div>
   </footer>
 
@@ -75,6 +75,34 @@
     <audio id="audio" preload="auto"></audio>
   </div>
 
+  <section class="full" id="full" hidden aria-label="Tocando agora">
+    <div class="full-in">
+      <div class="full-topo">
+        <button type="button" class="full-btn" id="full-fechar" aria-label="Fechar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="full-de"><small>Tocando do disco</small><b id="full-disco"></b></div>
+        <a class="full-btn" id="full-ir" href="#/" aria-label="Abrir a página do disco"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg></a>
+      </div>
+      <div class="full-capa" id="full-capa"></div>
+      <div class="full-info">
+        <b id="full-titulo" class="full-titulo"></b>
+        <a id="full-artista" class="full-artista" href="#/"></a>
+      </div>
+      <div class="full-barra">
+        <input type="range" id="full-pos" min="0" max="1000" value="0" aria-label="Posição na faixa">
+        <div class="full-tempos"><span id="full-t">0:00</span><span id="full-d">0:00</span></div>
+      </div>
+      <div class="full-ctrl">
+        <button type="button" id="full-ant" aria-label="Faixa anterior"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+        <button type="button" id="full-play" class="full-play" aria-label="Tocar/pausar"><svg class="i-play" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg><svg class="i-pause" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></button>
+        <button type="button" id="full-prox" aria-label="Próxima faixa"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+      </div>
+      <div class="full-lista">
+        <h4>Faixas do disco</h4>
+        <ol id="full-fila"></ol>
+      </div>
+    </div>
+  </section>
+
   <dialog class="dlg" id="dlg-atualizar" aria-labelledby="at-titulo">
     <form method="dialog">
       <h3 id="at-titulo">Buscar novas inserções</h3>
@@ -95,8 +123,8 @@
   </dialog>
 
   <div class="dica-flutuante" id="dica" role="tooltip"></div>
-  <script src="assets/config.js?v=3.3"></script>
-  <script src="assets/drive.js?v=3.3"></script>
-  <script src="assets/app.js?v=3.3"></script>
+  <script src="assets/config.js?v=3.4"></script>
+  <script src="assets/drive.js?v=3.4"></script>
+  <script src="assets/app.js?v=3.4"></script>
 </body>
 </html>

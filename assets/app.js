@@ -389,53 +389,91 @@
   }
 
   /* ---------- player ---------- */
+  // Mini player fixo no rodapé + tela cheia (abre ao tocar no mini player, como nos apps de música).
   var Player = (function () {
-    var audio = $("#audio"), box = $("#player"), fila = [], i = -1, disco = null, pedido = 0;
+    var audio = $("#audio"), box = $("#player"), full = $("#full"), fila = [], i = -1, disco = null, pedido = 0;
     function fmtT(s) { s = Math.floor(s || 0); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); }
     function marcar() {
-      $$("#faixas li").forEach(function (li) {
-        var atual = disco && fila[i] && li.dataset.id === fila[i].id;
-        li.classList.toggle("atual", !!atual);
-      });
+      var id = disco && fila[i] ? fila[i].id : null;
+      $$("#faixas li, #full-fila li").forEach(function (li) { li.classList.toggle("atual", li.dataset.id === id); });
     }
     function tocar(d, faixas, k) {
-      disco = d; fila = faixas; ir(k);
+      var mudouDisco = disco !== d;
+      disco = d; fila = faixas;
+      if (mudouDisco) montarDisco();
+      ir(k);
+    }
+    // o que só muda quando troca o disco: capas, cor de fundo da tela cheia, lista "a seguir"
+    function montarDisco() {
+      $("#pl-capa").innerHTML = capa(disco);
+      $("#full-capa").innerHTML = capa(disco);
+      $("#full-disco").textContent = disco.disco;
+      $("#full-ir").href = urlDisco(disco);
+      $("#full-artista").textContent = disco.artista;
+      $("#full-artista").href = urlArtista(disco.artista);
+      full.style.removeProperty("--full-cor");
+      $("#full-fila").innerHTML = fila.map(function (f, k) {
+        return '<li data-i="' + k + '" data-id="' + f.id + '"><span class="n">' + (k + 1) + "</span><span>" + esc(nomeFaixa(f.nome, disco.artista)) + "</span></li>";
+      }).join("");
+      var d = disco;
+      DriveBR.capa(d).then(function (u) {
+        if (!u || d !== disco) return;
+        var img = '<div class="capa ok"><img alt="" src="' + u + '"></div>';
+        $("#pl-capa").innerHTML = img;
+        $("#full-capa").innerHTML = img;
+        corDaCapa(u);
+      }, function () {});
+    }
+    // cor média da capa (escurecida) para o fundo da tela cheia
+    function corDaCapa(url) {
+      var im = new Image();
+      im.onload = function () {
+        try {
+          var c = document.createElement("canvas"); c.width = c.height = 24;
+          var x = c.getContext("2d"); x.drawImage(im, 0, 0, 24, 24);
+          var px = x.getImageData(0, 0, 24, 24).data, r = 0, g = 0, b = 0, n = 0;
+          for (var k = 0; k < px.length; k += 4) { r += px[k]; g += px[k + 1]; b += px[k + 2]; n++; }
+          var f = 0.62; // escurece para o texto branco ficar legível
+          full.style.setProperty("--full-cor", "rgb(" + Math.round(r / n * f) + "," + Math.round(g / n * f) + "," + Math.round(b / n * f) + ")");
+        } catch (e) { /* sem cor: fica o fundo padrão */ }
+      };
+      im.src = url;
     }
     function ir(k) {
       if (k < 0 || k >= fila.length) return;
       i = k;
-      var f = fila[i], meu = ++pedido;
+      var f = fila[i], meu = ++pedido, nome = nomeFaixa(f.nome, disco.artista);
       box.hidden = false; document.body.classList.add("tocando");
-      titulo(nomeFaixa(f.nome, disco.artista));
-      $("#pl-sub").textContent = disco.artista + " — " + disco.disco;
-      $("#pl-capa").innerHTML = capa(disco);
-      DriveBR.capa(disco).then(function (u) { if (u) $("#pl-capa").innerHTML = '<div class="capa ok"><img alt="" src="' + u + '"></div>'; }, function () {});
+      titulo($("#pl-titulo"), nome);
+      titulo($("#full-titulo"), nome);
       marcar();
       var li = $('#faixas li[data-id="' + f.id + '"]');
       if (li) li.classList.add("carregando-faixa");
       $("#pl-sub").textContent = "carregando… · " + disco.artista;
+      full.classList.add("carregando");
       DriveBR.audio(f.id).then(function (url) {
         if (li) li.classList.remove("carregando-faixa");
         if (meu !== pedido) return;
+        full.classList.remove("carregando");
         $("#pl-sub").textContent = disco.artista + " — " + disco.disco;
         audio.src = url;
         audio.play().catch(function () {});
         if (fila[i + 1]) DriveBR.audio(fila[i + 1].id).catch(function () {}); // já baixa a próxima
         if ("mediaSession" in navigator) {
-          navigator.mediaSession.metadata = new MediaMetadata({ title: nomeFaixa(f.nome, disco.artista), artist: disco.artista, album: disco.disco });
+          navigator.mediaSession.metadata = new MediaMetadata({ title: nome, artist: disco.artista, album: disco.disco });
         }
       }).catch(function (e) {
         if (li) li.classList.remove("carregando-faixa");
-        if (meu === pedido) $("#pl-sub").textContent = e.message;
+        if (meu === pedido) { $("#pl-sub").textContent = e.message; full.classList.remove("carregando"); }
       });
     }
     // escreve o nome da faixa; se não couber, liga a rolagem lenta (velocidade fixa, ~35 px/s)
-    function titulo(t) {
-      var b = $("#pl-titulo");
+    function titulo(b, t) {
       b.classList.remove("mover");
       b.innerHTML = '<span class="rolar"><span>' + esc(t) + "</span></span>";
       b.title = t;
       requestAnimationFrame(function () {
+        if (!b.clientWidth) return; // escondido (tela cheia fechada): mede de novo ao abrir
         var largura = b.firstChild.scrollWidth;
         if (largura <= b.clientWidth + 1) return;
         b.firstChild.innerHTML = "<span>" + esc(t) + '</span><span aria-hidden="true">' + esc(t) + "</span>";
@@ -443,32 +481,91 @@
         b.classList.add("mover");
       });
     }
+    function retitular() { if (fila[i]) { var t = nomeFaixa(fila[i].nome, disco.artista); titulo($("#pl-titulo"), t); titulo($("#full-titulo"), t); } }
     var larguraJanela = window.innerWidth, tResize;
     window.addEventListener("resize", function () { // no celular a barra do navegador dispara resize: só refaz se a largura mudou
       if (window.innerWidth === larguraJanela) return;
       larguraJanela = window.innerWidth;
       clearTimeout(tResize);
-      tResize = setTimeout(function () { if (fila[i]) titulo(nomeFaixa(fila[i].nome, disco.artista)); }, 200);
+      tResize = setTimeout(retitular, 200);
     });
-    audio.addEventListener("play", function () { box.classList.add("tocando"); });
-    audio.addEventListener("pause", function () { box.classList.remove("tocando"); });
+
+    /* tela cheia: abre ao tocar no mini player; fecha na seta, arrastando para baixo ou no "voltar" do celular */
+    var aberta = false, voltando = false, reabrir = false;
+    function abrirFull() {
+      if (aberta || !fila.length) return;
+      if (voltando) { reabrir = true; return; } // espera o "voltar" anterior terminar antes de empilhar de novo
+      aberta = true;
+      full.hidden = false;
+      void full.offsetWidth; // força o navegador a desenhar a posição inicial antes de animar a subida
+      full.classList.add("aberto");
+      retitular();
+      document.documentElement.classList.add("travado");
+      history.pushState({ full: 1 }, "");
+    }
+    function fecharFull(veioDoHistorico) {
+      if (!aberta) return;
+      aberta = false;
+      full.classList.remove("aberto");
+      full.style.transform = "";
+      document.documentElement.classList.remove("travado");
+      setTimeout(function () { if (!aberta) full.hidden = true; }, 320);
+      if (!veioDoHistorico && history.state && history.state.full) { voltando = true; history.back(); }
+    }
+    window.addEventListener("popstate", function () {
+      if (voltando) { voltando = false; if (reabrir) { reabrir = false; abrirFull(); } return; }
+      if (aberta) fecharFull(true);
+    });
+    // link de dentro da tela cheia: fecha sem mexer no histórico e troca a entrada da tela cheia pela página nova
+    function irPara(destino) {
+      fecharFull(true);
+      if (history.state && history.state.full) history.replaceState(null, "", destino); else history.pushState(null, "", destino);
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    }
+    $(".pl-agora").addEventListener("click", abrirFull);
+    $("#full-fechar").onclick = function () { fecharFull(); };
+    $("#full-ir").addEventListener("click", function (e) { e.preventDefault(); irPara(this.getAttribute("href")); });
+    $("#full-artista").addEventListener("click", function (e) { e.preventDefault(); irPara(this.getAttribute("href")); });
+    $("#full-fila").addEventListener("click", function (e) { var li = e.target.closest("li"); if (li) ir(Number(li.dataset.i)); });
+    // arrastar para baixo fecha
+    var y0 = null;
+    full.addEventListener("touchstart", function (e) { y0 = full.scrollTop <= 0 ? e.touches[0].clientY : null; }, { passive: true });
+    full.addEventListener("touchmove", function (e) {
+      if (y0 == null) return;
+      var dy = e.touches[0].clientY - y0;
+      if (dy > 0) full.style.transform = "translateY(" + dy + "px)";
+    }, { passive: true });
+    full.addEventListener("touchend", function (e) {
+      if (y0 == null) return;
+      var dy = e.changedTouches[0].clientY - y0; y0 = null;
+      if (dy > 110) fecharFull(); else full.style.transform = "";
+    });
+
+    function alternar() { if (audio.paused) audio.play().catch(function () {}); else audio.pause(); }
+    function anterior() { if (audio.currentTime > 3) audio.currentTime = 0; else ir(i - 1); }
+    function proxima() { ir(i + 1); }
+    audio.addEventListener("play", function () { box.classList.add("tocando"); full.classList.add("tocando"); });
+    audio.addEventListener("pause", function () { box.classList.remove("tocando"); full.classList.remove("tocando"); });
     audio.addEventListener("ended", function () { if (i + 1 < fila.length) ir(i + 1); });
     audio.addEventListener("timeupdate", function () {
-      $("#pl-t").textContent = fmtT(audio.currentTime);
-      $("#pl-d").textContent = fmtT(audio.duration);
+      var t = fmtT(audio.currentTime), d = fmtT(audio.duration);
+      $("#pl-t").textContent = t; $("#pl-d").textContent = d;
+      $("#full-t").textContent = t; $("#full-d").textContent = d;
       if (audio.duration) {
-        $("#pl-pos").value = Math.round(audio.currentTime / audio.duration * 1000);
-        $("#pl-pos").style.setProperty("--pos", (audio.currentTime / audio.duration * 100).toFixed(2) + "%");
+        var v = Math.round(audio.currentTime / audio.duration * 1000), pct = (audio.currentTime / audio.duration * 100).toFixed(2) + "%";
+        [$("#pl-pos"), $("#full-pos")].forEach(function (el) { el.value = v; el.style.setProperty("--pos", pct); });
       }
     });
-    $("#pl-pos").addEventListener("input", function () { if (audio.duration) audio.currentTime = this.value / 1000 * audio.duration; });
-    $("#pl-play").onclick = function () { if (audio.paused) audio.play().catch(function () {}); else audio.pause(); };
-    $("#pl-ant").onclick = function () { if (audio.currentTime > 3) audio.currentTime = 0; else ir(i - 1); };
-    $("#pl-prox").onclick = function () { ir(i + 1); };
-    $("#pl-fechar").onclick = function () { audio.pause(); box.hidden = true; document.body.classList.remove("tocando"); };
+    [$("#pl-pos"), $("#full-pos")].forEach(function (el) {
+      el.addEventListener("input", function () { if (audio.duration) audio.currentTime = this.value / 1000 * audio.duration; });
+    });
+    $("#pl-play").onclick = alternar; $("#full-play").onclick = alternar;
+    $("#pl-ant").onclick = anterior; $("#full-ant").onclick = anterior;
+    $("#pl-prox").onclick = proxima; $("#full-prox").onclick = proxima;
+    $("#pl-fechar").onclick = function (e) { e.stopPropagation(); fecharFull(); audio.pause(); box.hidden = true; document.body.classList.remove("tocando"); };
     if ("mediaSession" in navigator) {
-      navigator.mediaSession.setActionHandler("previoustrack", function () { ir(i - 1); });
-      navigator.mediaSession.setActionHandler("nexttrack", function () { ir(i + 1); });
+      navigator.mediaSession.setActionHandler("previoustrack", anterior);
+      navigator.mediaSession.setActionHandler("nexttrack", proxima);
     }
     return { tocar: tocar, marcar: marcar };
   })();
