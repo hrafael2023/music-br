@@ -441,3 +441,17 @@ footer b { color: var(--tinta); font-weight: 600; }
   table.lista:not(.lista-compacta) th:last-child { width: 72px; }
   table.lista td { overflow-wrap: anywhere; }
 }
+
+/* tela cheia: elementos um pouco menores e mais folga em volta */
+.full-in { padding: max(18px, env(safe-area-inset-top)) 30px max(30px, env(safe-area-inset-bottom)); }
+.full-topo { margin-bottom: 14px; }
+.full-btn { width: 34px; height: 34px; }
+.full-btn svg { width: 18px; height: 18px; }
+.full-capa .capa { width: calc(min(100cqw, 100cqh) * .86); }
+.full-info { margin-top: 18px; }
+.full-titulo { font-size: 21px; }
+.full-artista { font-size: 15px; }
+.full-barra { margin-top: 14px; }
+.full-ctrl { gap: 26px; margin-top: 8px; }
+.full-ctrl button svg { width: 26px; height: 26px; }
+.full-ctrl .full-play { width: 62px; height: 62px; }
