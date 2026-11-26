@@ -1,7 +1,7 @@
 /* Service worker do Music BR (para o site poder ser instalado como app).
    Estratégia: rede primeiro — sempre pega a versão nova; a cópia guardada só é usada sem internet.
    Não guarda nada do Google (Drive, login): isso passa direto. */
-var VERSAO = "v3.32";
+var VERSAO = "v3.33";
 var CACHE = "mbr-app-" + VERSAO;
 var BASICO = ["./", "index.html", "manifest.webmanifest", "assets/icone.svg",
   "assets/icones/icone-192.png", "assets/icones/icone-512.png"];

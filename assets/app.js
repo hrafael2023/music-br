@@ -673,6 +673,7 @@
     else if (seg[0] === "artista") paginaArtista(decodeURIComponent(seg.slice(1).join("/")));
     else if (seg[0] === "disco") paginaDisco(seg[1]);
     else if (seg[0] === "numeros") paginaNumeros(params);
+    else if (seg[0] === "capas") { paginaInicio(); mostrarBotaoCapas(true); abrirCapas(); }
     else paginaInicio();
     document.title = (seg[0] === "artista" ? decodeURIComponent(seg.slice(1).join("/")) + " · " : seg[0] === "disco" && DB.porId[seg[1]] ? DB.porId[seg[1]].disco + " · " : "") + "Music BR";
   }
@@ -836,6 +837,107 @@
   $("#atualizar").addEventListener("click", abrirAtualizar);
   $("#dlg-atualizar form").addEventListener("submit", function (e) { e.preventDefault(); if (!atualizando) rodarAtualizacao(); });
   $("#at-fechar").addEventListener("click", function () { $("#dlg-atualizar").close(); });
+
+  /* ---------- carregar todas as capas neste aparelho ---------- */
+  var CHAVE_ESCONDER = "mbr-capas-oculto", CHAVE_SEM = "mbr-sem-capa";
+  var capasRodando = false, capasPausar = false, travaTela = null;
+  function mostrarBotaoCapas(forcar) {
+    if (forcar) ls(function () { localStorage.removeItem(CHAVE_ESCONDER); });
+    $("#capas-btn").hidden = !DriveBR.configurado() || ls(function () { return localStorage.getItem(CHAVE_ESCONDER); }) === "1";
+  }
+  function semCapa() { return ls(function () { return JSON.parse(localStorage.getItem(CHAVE_SEM)); }) || {}; }
+  function fmtN(n) { return Number(n).toLocaleString("pt-BR"); }
+  function fmtTempo(s) {
+    if (!isFinite(s) || s <= 0) return "";
+    var h = Math.floor(s / 3600), m = Math.round((s % 3600) / 60);
+    return h ? h + "h" + String(m).padStart(2, "0") : Math.max(1, m) + " min";
+  }
+  function pintarCapas(feitas, sem, total, extra) {
+    var pc = total ? (feitas + sem) / total * 100 : 0;
+    $("#cp-progresso").style.width = pc.toFixed(1) + "%";
+    $("#cp-num").textContent = fmtN(feitas) + " de " + fmtN(total) + " capas neste aparelho" +
+      (sem ? " · " + fmtN(sem) + " discos sem capa no Drive" : "") + (extra ? " · " + extra : "");
+  }
+  function contarCapas() {
+    return DriveBR.capasGuardadas().then(function (ids) {
+      var sem = semCapa(), feitas = 0, nSem = 0;
+      DB.discos.forEach(function (d) { if (ids[d.id]) feitas++; else if (sem[d.id]) nSem++; });
+      return { ids: ids, sem: sem, feitas: feitas, nSem: nSem };
+    });
+  }
+  function abrirCapas() {
+    var dlg = $("#dlg-capas");
+    if (!dlg.open) dlg.showModal();
+    if (capasRodando) return;
+    $("#cp-msg").textContent = "";
+    $("#cp-ir").textContent = DriveBR.conectado() ? "Iniciar" : "Conectar e iniciar";
+    contarCapas().then(function (c) {
+      pintarCapas(c.feitas, c.nSem, DB.discos.length);
+      if (c.feitas + c.nSem >= DB.discos.length) { $("#cp-msg").textContent = "Pronto: todas as capas estão neste aparelho."; $("#cp-ir").textContent = "Verificar de novo"; }
+      else if (c.feitas) $("#cp-ir").textContent = DriveBR.conectado() ? "Continuar" : "Conectar e continuar";
+    });
+  }
+  function rodarCapas() {
+    if (capasRodando) { capasPausar = true; $("#cp-ir").textContent = "Pausando…"; return; }
+    var inicio = DriveBR.conectado() ? Promise.resolve() : DriveBR.conectar();
+    inicio.then(function () {
+      if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(function () {}); // pede para o navegador não apagar
+      if (navigator.wakeLock) navigator.wakeLock.request("screen").then(function (t) { travaTela = t; }, function () {}); // tela não apaga
+      return contarCapas();
+    }).then(function (c) {
+      if (c.feitas + c.nSem >= DB.discos.length && c.nSem) { c.sem = {}; c.nSem = 0; } // "Verificar de novo": tenta outra vez os sem capa
+      capasRodando = true; capasPausar = false;
+      $("#cp-ir").textContent = "Pausar";
+      $("#cp-msg").textContent = "";
+      var total = DB.discos.length, sem = c.sem, feitas = c.feitas, nSem = c.nSem, erros = 0;
+      // mais recentes primeiro, como no site
+      var fila = DB.discos.slice().reverse().filter(function (d) { return !c.ids[d.id] && !sem[d.id]; });
+      var t0 = Date.now(), nesta = 0, i = 0, PARALELO = 6, parouPorLogin = false;
+      function proximo() {
+        if (capasPausar || parouPorLogin || i >= fila.length) return Promise.resolve();
+        var d = fila[i++];
+        return DriveBR.guardarCapaDisco(d).then(function (r) {
+          if (r === "sem") { sem[d.id] = 1; nSem++; } else feitas++;
+        }, function (e) {
+          if (e && e.semLogin) { parouPorLogin = true; i--; return; }
+          erros++;
+        }).then(function () {
+          nesta++;
+          if (nesta % 6 === 0 || i >= fila.length) {
+            var resta = (fila.length - i) * (Date.now() - t0) / 1000 / nesta;
+            pintarCapas(feitas, nSem, total, fmtTempo(resta) ? "faltam ~" + fmtTempo(resta) : "");
+            if (nesta % 60 === 0) ls(function () { localStorage.setItem(CHAVE_SEM, JSON.stringify(sem)); });
+          }
+          return proximo();
+        });
+      }
+      var trilhas = [];
+      for (var k = 0; k < PARALELO; k++) trilhas.push(proximo());
+      return Promise.all(trilhas).then(function () {
+        ls(function () { localStorage.setItem(CHAVE_SEM, JSON.stringify(sem)); });
+        capasRodando = false;
+        if (travaTela) { travaTela.release().catch(function () {}); travaTela = null; }
+        pintarCapas(feitas, nSem, total);
+        if (parouPorLogin) { $("#cp-msg").textContent = "O login do Google expirou (dura 1 hora). Clique para conectar de novo e continuar."; $("#cp-ir").textContent = "Conectar e continuar"; }
+        else if (capasPausar) { $("#cp-msg").textContent = "Pausado. O que já foi baixado fica guardado."; $("#cp-ir").textContent = "Continuar"; }
+        else { $("#cp-msg").textContent = "Pronto" + (erros ? ", com " + erros + " discos que falharam (clique em Continuar para tentar de novo)." : ": todas as capas estão neste aparelho. Você já pode esconder o botão."); $("#cp-ir").textContent = erros ? "Continuar" : "Verificar de novo"; }
+        if (!parouPorLogin && !capasPausar) hidratarCapas();
+      });
+    }).catch(function (e) {
+      capasRodando = false;
+      $("#cp-msg").textContent = (e && e.message) || "Não consegui começar.";
+      $("#cp-ir").textContent = "Tentar de novo";
+    });
+  }
+  $("#capas-btn").addEventListener("click", abrirCapas);
+  $("#dlg-capas form").addEventListener("submit", function (e) { e.preventDefault(); rodarCapas(); });
+  $("#cp-fechar").addEventListener("click", function () { $("#dlg-capas").close(); });
+  $("#cp-esconder").addEventListener("click", function () {
+    ls(function () { localStorage.setItem(CHAVE_ESCONDER, "1"); });
+    mostrarBotaoCapas();
+    $("#cp-msg").textContent = "Botão escondido. Para trazer de volta, abra o endereço do site com #/capas no final.";
+  });
+  mostrarBotaoCapas();
 
   /* ---------- tema ---------- */
   $("#tema").onclick = function () {

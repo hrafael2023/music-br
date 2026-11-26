@@ -196,13 +196,13 @@
   var memoDisco = {};
   // só guarda pasta achada e com faixas: pasta vazia pode ser compartilhamento do Drive ainda propagando
   function util(v) { return !!(v && v.faixas && v.faixas.length); }
-  function disco(d) {
+  function disco(d, semGuardar) {
     if (memoDisco[d.id]) return memoDisco[d.id];
     var salvo = ls(function () { return JSON.parse(localStorage.getItem(CHAVE_PASTA + d.id)); });
     // só vale o que foi achado (um "não achei" antigo pode ser de antes de a conta ter acesso à pasta)
     if (salvo && util(salvo.v) && salvo.t > Date.now() - VALIDADE_PASTA) return (memoDisco[d.id] = Promise.resolve(salvo.v));
     memoDisco[d.id] = acharPastaDisco(d).then(function (p) { return p ? conteudo(p) : null; }).then(function (v) {
-      if (util(v)) ls(function () { localStorage.setItem(CHAVE_PASTA + d.id, JSON.stringify({ t: Date.now(), v: v })); });
+      if (util(v) && !semGuardar) ls(function () { localStorage.setItem(CHAVE_PASTA + d.id, JSON.stringify({ t: Date.now(), v: v })); });
       else { ls(function () { localStorage.removeItem(CHAVE_PASTA + d.id); }); setTimeout(function () { delete memoDisco[d.id]; }, 0); }
       return v;
     }, function (e) { delete memoDisco[d.id]; throw e; });
@@ -278,11 +278,11 @@
   }
   function capaEmbutida(faixa) {
     var LIMITE = 4 * 1024 * 1024;
-    var ultimo = Math.max(0, Math.min(faixa.tam || LIMITE, 262144) - 1);
+    var ultimo = Math.max(0, Math.min(faixa.tam || LIMITE, 65536) - 1);
     return trecho(faixa.id, 0, ultimo).then(function (b) {
       if (latin(b, 0, 4) === "fLaC") {
         var img = imagemFlac(b);
-        if (img || b.length < 262144) return img;
+        if (img || b.length < 65536) return img;
         return trecho(faixa.id, 0, Math.min(LIMITE, (faixa.tam || LIMITE)) - 1).then(imagemFlac);
       }
       if (latin(b, 0, 3) !== "ID3") return null;
@@ -300,8 +300,55 @@
       .then(function (r) { return r ? r.blob() : null; }).catch(function () { return null; });
   }
   function guardarCapa(id, blob) {
-    if (!window.caches || !blob) return;
-    caches.open(CACHE_CAPAS).then(function (c) { return c.put("/capa/" + id, new Response(blob, { headers: { "Content-Type": blob.type } })); }).catch(function () {});
+    if (!window.caches || !blob) return Promise.resolve();
+    return reduzir(blob).then(function (b) {
+      return caches.open(CACHE_CAPAS).then(function (c) { return c.put("/capa/" + id, new Response(b, { headers: { "Content-Type": b.type } })); });
+    }).catch(function () {});
+  }
+  var LADO = 640;
+  function reduzir(blob) {
+    if (!window.createImageBitmap) return Promise.resolve(blob);
+    return createImageBitmap(blob).then(function (img) {
+      var maior = Math.max(img.width, img.height);
+      if (maior <= LADO && blob.size < 150000) { img.close && img.close(); return blob; }
+      var k = Math.min(1, LADO / maior), w = Math.round(img.width * k), h = Math.round(img.height * k);
+      var cv = document.createElement("canvas");
+      cv.width = w; cv.height = h;
+      cv.getContext("2d").drawImage(img, 0, 0, w, h);
+      img.close && img.close();
+      return new Promise(function (ok) { cv.toBlob(function (b) { ok(b && b.size < blob.size ? b : blob); }, "image/jpeg", 0.85); });
+    }).catch(function () { return blob; });
+  }
+  function temCapaGuardada(id) {
+    if (!window.caches) return Promise.resolve(false);
+    return caches.open(CACHE_CAPAS).then(function (c) { return c.match("/capa/" + id); }).then(function (r) { return !!r; }).catch(function () { return false; });
+  }
+  function capasGuardadas() { // ids de todas as capas já neste aparelho
+    if (!window.caches) return Promise.resolve({});
+    return caches.open(CACHE_CAPAS).then(function (c) { return c.keys(); }).then(function (ks) {
+      var ids = {};
+      ks.forEach(function (r) { ids[new URL(r.url).pathname.split("/").pop()] = 1; });
+      return ids;
+    }).catch(function () { return {}; });
+  }
+  // usado pelo "Carregar capas": baixa e guarda a capa de um disco, sem criar imagem na tela.
+  // devolve "tinha", "baixou" ou "sem" (pasta não achada ou disco sem imagem)
+  function guardarCapaDisco(d) {
+    return temCapaGuardada(d.id).then(function (tem) {
+      if (tem) return "tinha";
+      return disco(d, true).then(function (info) {
+        delete memoDisco[d.id]; // não acumula 25 mil pastas na memória
+        if (!info) return "sem";
+        var embutida = info.faixas && info.faixas[0] ? capaEmbutida(info.faixas[0]) : Promise.resolve(null);
+        return embutida.then(function (blob) {
+          if (blob) return blob;
+          return info.capa ? chamar(API + "/" + info.capa + "?alt=media", true) : null;
+        }).then(function (blob) {
+          if (!blob) return "sem";
+          return guardarCapa(d.id, blob).then(function () { return "baixou"; });
+        });
+      });
+    });
   }
 
   var memoCapa = {};
@@ -350,6 +397,8 @@
     aoMudar: function (f) { ouvintes.push(f); },
     disco: disco,
     capa: capa,
+    capasGuardadas: capasGuardadas,
+    guardarCapaDisco: guardarCapaDisco,
     audio: audio
   };
 })();
