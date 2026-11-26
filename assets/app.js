@@ -17,7 +17,7 @@
   function ls(fn) { try { return fn(); } catch (e) { return null; } }
 
   /* ---------- dados ---------- */
-  var DB = { discos: [], porId: {}, artistas: {}, atualizado: null };
+  var DB = { discos: [], porId: {}, artistas: {}, atualizado: null, playlists: [] };
   var TIPOS = ["EP", "SINGLE", "DEMO", "BOOTLEG", "OST", "SPLIT", "MIXTAPE", "DELUXE", "BOX", "DVD"];
 
   function tipoDe(titulo) {
@@ -45,8 +45,169 @@
         (DB.artistas[d.artista] = DB.artistas[d.artista] || []).push(d);
         return d;
       });
+    }).then(carregarPlaylists);
+  }
+
+  /* ---------- playlists ----------
+   * Criadas pelo Claude (scripts/playlist.py) em data/playlists.json. Editar (capa / apagar) roda a
+   * Action "Editar playlist" com o token do GitHub; enquanto o site não republica, a edição fica
+   * guardada neste aparelho e já aparece aplicada. */
+  var CHAVE_PEND = "mbr-pl-pendentes";
+  function carregarPlaylists() {
+    return fetch("data/playlists.json?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : { playlists: [] }; })
+      .catch(function () { return { playlists: [] }; })
+      .then(function (j) { DB.playlists = aplicarPendentes(j.playlists || []); });
+  }
+  function pendentes() { return ls(function () { return JSON.parse(localStorage.getItem(CHAVE_PEND)); }) || []; }
+  function aplicarPendentes(pls) {
+    var resta = [];
+    pendentes().forEach(function (e) {
+      if (Date.now() - e.t > 30 * 60e3) return; // se a Action não publicou em 30 min, vale o que está no site
+      var pl = pls.filter(function (p) { return p.id === e.id; })[0];
+      if (!pl) return; // já apagada (ou nunca existiu)
+      if (e.acao === "apagar") { pls = pls.filter(function (p) { return p !== pl; }); resta.push(e); }
+      else if (JSON.stringify(pl.capa) !== JSON.stringify(e.capa)) { pl.capa = e.capa; resta.push(e); }
+    });
+    ls(function () { localStorage.setItem(CHAVE_PEND, JSON.stringify(resta)); });
+    return pls;
+  }
+  function acharPl(id) { return DB.playlists.filter(function (p) { return p.id === id; })[0]; }
+  function mmss(s) { s = Math.round(s || 0); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); }
+  function duracaoTotal(s) {
+    var m = Math.round((s || 0) / 60);
+    return m >= 60 ? Math.floor(m / 60) + "h" + String(m % 60).padStart(2, "0") : m + " min";
+  }
+  // faixas da playlist no formato do player (cada uma com o seu disco)
+  function itensPl(pl) {
+    return pl.faixas.map(function (f) {
+      return { id: f.arq, exibir: titleCase(desembaralha(f.titulo || "")), artista: f.artista, dur: f.dur,
+               d: DB.porId[f.disco] || { id: f.disco, disco: "", artista: f.artista } };
     });
   }
+  function discosDaPl(pl) {
+    var vistos = {}, out = [];
+    pl.faixas.forEach(function (f) { var d = DB.porId[f.disco]; if (d && !vistos[d.id]) { vistos[d.id] = 1; out.push(d); } });
+    return out;
+  }
+  function matizPl(id) { var h = 0; for (var k = 0; k < id.length; k++) h = (h * 31 + id.charCodeAt(k)) % 360; return h; }
+  function capaTexto(pl) { return '<div class="capa ok pl-texto" style="--h:' + matizPl(pl.id) + '"><span>' + esc(pl.titulo) + "</span></div>"; }
+  function capaPl(pl, tipo) {
+    var c = tipo || pl.capa || { tipo: "mosaico" };
+    if (c.tipo === "disco" && DB.porId[c.disco]) return capa(DB.porId[c.disco]);
+    if (c.tipo === "texto") return capaTexto(pl);
+    var ds = discosDaPl(pl);
+    if (ds.length >= 4) return '<div class="capa ok pl-mosaico">' + ds.slice(0, 4).map(capa).join("") + "</div>";
+    return ds.length ? capa(ds[0]) : capaTexto(pl);
+  }
+  function totalPl(pl) { return pl.faixas.reduce(function (s, f) { return s + (f.dur || 0); }, 0); }
+  function cardPl(pl) {
+    return '<div class="card-disco card-pl"><a class="card-pl-link" href="#/playlist/' + encodeURIComponent(pl.id) + '">' + capaPl(pl) +
+      '<div class="t">' + esc(pl.titulo) + '</div><div class="y">' + n(pl.faixas.length) + " músicas · " + duracaoTotal(totalPl(pl)) + "</div></a>" +
+      '<button type="button" class="pl-mais" data-editar-pl="' + esc(pl.id) + '" title="Editar playlist" aria-label="Editar playlist ' + esc(pl.titulo) + '">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></svg></button></div>';
+  }
+  function paginaPlaylists() {
+    var pls = DB.playlists.slice().reverse(); // mais novas primeiro
+    app.innerHTML = '<section class="painel-box"><div class="secao-topo"><div><h2>' + n(pls.length) + (pls.length === 1 ? " Playlist" : " Playlists") + "</h2></div></div>" +
+      (pls.length ? avisoDrive("Entre com a conta Google que tem acesso à pasta MUSICBR para ver as capas e ouvir as playlists.") +
+        '<div class="grade-capas">' + pls.map(cardPl).join("") + "</div>"
+        : '<div class="vazio">Nenhuma playlist ainda. Peça uma ao Claude (por exemplo, "30 músicas de 1980 a 1985") e ela aparece aqui.</div>') + "</section>";
+    hidratarCapas();
+  }
+  function paginaPlaylist(id) {
+    var pl = acharPl(id);
+    if (!pl) { app.innerHTML = '<div class="vazio">Playlist não encontrada. Ela pode ter sido apagada. <a href="#/playlists">Ver as playlists</a></div>'; return; }
+    var itens = itensPl(pl), data = (pl.criada || "").split("-").reverse().join("/");
+    app.innerHTML = '<div class="voltar-linha">' + botaoVoltar("#/playlists") + "</div>" +
+      '<section class="painel-box"><div class="ficha"><div class="ficha-capa">' + capaPl(pl) + '</div><div class="ficha-info">' +
+      '<span class="rotulo">Playlist</span><h1>' + esc(pl.titulo) + "</h1>" +
+      (pl.descricao ? '<p class="pl-desc">' + esc(pl.descricao) + "</p>" : "") +
+      '<div class="meta"><span>' + n(itens.length) + (itens.length === 1 ? " música" : " músicas") + "</span><span>" + duracaoTotal(totalPl(pl)) + "</span>" +
+      (data ? "<span>criada em " + data + "</span>" : "") + "</div>" +
+      '<div class="acoes"><button type="button" class="btn" id="pl-ouvir">▶ Ouvir a playlist</button>' +
+      '<button type="button" class="btn sec" data-editar-pl="' + esc(pl.id) + '">Editar</button></div></div></div>' +
+      (avisoDrive("Entre com a conta Google que tem acesso à pasta MUSICBR para ouvir esta playlist.") ? '<div class="faixas-vazio">' + avisoDrive("Entre com a conta Google que tem acesso à pasta MUSICBR para ouvir esta playlist.") + "</div>" : "") +
+      '<div id="faixas"><ol class="faixas pl-faixas">' + itens.map(function (f, k) {
+        var linkArt = DB.artistas[f.artista] ? urlArtista(f.artista) : urlArtista(f.d.artista);
+        return '<li data-i="' + k + '" data-id="' + esc(f.id) + '"><span class="n">' + (k + 1) + '</span><span class="pf-t"><b>' + esc(f.exibir) + "</b>" +
+          '<small><a href="' + linkArt + '">' + esc(f.artista) + "</a>" + (f.d.disco ? ' · <a href="' + urlDisco(f.d) + '">' + esc(f.d.disco) + "</a>" + (f.d.ano ? " · " + f.d.ano : "") : "") + "</small></span>" +
+          '<span class="tam">' + (f.dur ? mmss(f.dur) : "") + "</span></li>";
+      }).join("") + "</ol></div></section>";
+    $$("#faixas li").forEach(function (li) {
+      li.onclick = function (e) { if (e.target.closest("a")) return; Player.tocarLista(pl, itens, Number(li.dataset.i)); };
+    });
+    $("#pl-ouvir").onclick = function () { Player.tocarLista(pl, itens, 0); };
+    Player.marcar();
+    hidratarCapas();
+  }
+
+  /* editar playlist: trocar a capa ou apagar */
+  var plEditando = null, capaEscolhida = null;
+  function abrirEditarPl(id) {
+    var pl = acharPl(id);
+    if (!pl) return;
+    plEditando = pl; capaEscolhida = pl.capa || { tipo: "mosaico" };
+    $("#pe-nome").textContent = pl.titulo + " · " + n(pl.faixas.length) + " músicas";
+    $("#pe-token-box").hidden = !!tokenGH();
+    msgPl("");
+    var apagar = $("#pe-apagar");
+    apagar.classList.remove("confirmar"); apagar.textContent = "Apagar playlist"; apagar.disabled = false;
+    $("#pe-salvar").disabled = false;
+    var opcoes = [{ tipo: "mosaico", rot: "Mosaico" }, { tipo: "texto", rot: "Só o nome" }]
+      .concat(discosDaPl(pl).slice(0, 30).map(function (d) { return { tipo: "disco", disco: d.id, rot: d.disco }; }));
+    $("#pe-capas").innerHTML = opcoes.map(function (o, k) {
+      var c = o.tipo === "disco" ? { tipo: "disco", disco: o.disco } : { tipo: o.tipo };
+      return '<button type="button" data-k="' + k + '" aria-pressed="' + (JSON.stringify(c) === JSON.stringify(capaEscolhida)) + '" title="' + esc(o.rot) + '">' +
+        capaPl(pl, c) + "<span>" + esc(o.rot) + "</span></button>";
+    }).join("");
+    $$("#pe-capas button").forEach(function (b) {
+      b.onclick = function () {
+        var o = opcoes[Number(b.dataset.k)];
+        capaEscolhida = o.tipo === "disco" ? { tipo: "disco", disco: o.disco } : { tipo: o.tipo };
+        $$("#pe-capas button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      };
+    });
+    $("#dlg-pl").showModal();
+    hidratarCapas();
+  }
+  function msgPl(t, tipo) { $("#pe-msg").textContent = t; $("#pe-msg").className = "dlg-msg " + (tipo || ""); }
+  async function salvarPl(acao) {
+    var pl = plEditando, token = tokenGH() || $("#pe-token").value.trim();
+    if (!token) { $("#pe-token-box").hidden = false; $("#pe-token").focus(); return msgPl("Cole o token do GitHub para salvar.", "erro"); }
+    $("#pe-salvar").disabled = true; $("#pe-apagar").disabled = true;
+    msgPl("Salvando…");
+    try {
+      var r = await ghApi("actions/workflows/playlist.yml/dispatches", token, { method: "POST", body: JSON.stringify({
+        ref: "main", inputs: { acao: acao, id: pl.id, capa: acao === "capa" ? JSON.stringify(capaEscolhida) : "" } }) });
+      if (r.status === 403 || r.status === 404) throw Object.assign(new Error("O token não tem permissão para rodar ações no music-br (Actions: Read and write)."), { token: true });
+      if (!r.ok) throw new Error("GitHub respondeu " + r.status + ".");
+      ls(function () { localStorage.setItem(CHAVE_GH, token); });
+      var p = pendentes().filter(function (e) { return e.id !== pl.id; });
+      p.push({ acao: acao, id: pl.id, capa: acao === "capa" ? capaEscolhida : null, t: Date.now() });
+      ls(function () { localStorage.setItem(CHAVE_PEND, JSON.stringify(p)); });
+      if (acao === "apagar") DB.playlists = DB.playlists.filter(function (x) { return x !== pl; });
+      else pl.capa = capaEscolhida;
+      $("#dlg-pl").close();
+      if (acao === "apagar") { if (location.hash === "#/playlists") rota(); else location.hash = "#/playlists"; }
+      else rota();
+    } catch (e) {
+      if (e.token) { ls(function () { localStorage.removeItem(CHAVE_GH); }); $("#pe-token-box").hidden = false; $("#pe-token").value = ""; }
+      msgPl(e.message, "erro");
+      $("#pe-salvar").disabled = false; $("#pe-apagar").disabled = false;
+    }
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-editar-pl]");
+    if (b) { e.preventDefault(); abrirEditarPl(b.getAttribute("data-editar-pl")); }
+  });
+  $("#dlg-pl form").addEventListener("submit", function (e) { e.preventDefault(); salvarPl("capa"); });
+  $("#pe-fechar").addEventListener("click", function () { $("#dlg-pl").close(); });
+  $("#pe-apagar").addEventListener("click", function () {
+    var b = this;
+    if (!b.classList.contains("confirmar")) { b.classList.add("confirmar"); b.textContent = "Clique de novo para apagar"; return; }
+    salvarPl("apagar");
+  });
 
   var memoStats = null;
   function stats() {
@@ -502,28 +663,47 @@
   /* ---------- player ---------- */
   // Mini player fixo no rodapé + tela cheia (abre ao tocar no mini player, como nos apps de música).
   var Player = (function () {
-    var audio = $("#audio"), box = $("#player"), full = $("#full"), fila = [], i = -1, disco = null, pedido = 0;
+    var audio = $("#audio"), box = $("#player"), full = $("#full"), fila = [], i = -1, disco = null, lista = null, pedido = 0, capaMostrada = null;
+    function discoDe(f) { return (f && f.d) || disco; }
+    function artistaDe(f) { return (f && f.artista) || (discoDe(f) || {}).artista || ""; }
     function fmtT(s) { s = Math.floor(s || 0); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); }
     function marcar() {
-      var id = disco && fila[i] ? fila[i].id : null;
-      $$("#faixas li").forEach(function (li) { li.classList.toggle("atual", li.dataset.id === id); });
+      var id = fila[i] ? fila[i].id : null;
+      $$("#faixas li, #full-lista li").forEach(function (li) { li.classList.toggle("atual", li.dataset.id === id); });
     }
     function tocar(d, faixas, k) {
-      var mudouDisco = disco !== d;
-      disco = d; fila = faixas;
-      if (mudouDisco) montarDisco();
+      lista = null; disco = d; fila = faixas;
+      montarFila();
       ir(k);
     }
-    // o que só muda quando troca o disco: capas, cor de fundo da tela cheia, lista "a seguir"
-    function montarDisco() {
-      $("#pl-capa").innerHTML = capa(disco);
-      $("#full-capa").innerHTML = capa(disco);
-      $("#full-disco").textContent = disco.disco;
-      $("#full-artista").textContent = disco.artista;
-      $("#full-artista").href = urlArtista(disco.artista);
-      var d = disco;
+    function tocarLista(pl, itens, k) {
+      lista = pl; disco = null; fila = itens;
+      montarFila();
+      ir(k);
+    }
+    // cabeçalho da tela cheia e, numa playlist, a lista de todas as músicas abaixo do player
+    function montarFila() {
+      $("#full-de-rot").textContent = lista ? "Tocando da playlist" : "Tocando do disco";
+      $("#full-disco").textContent = lista ? lista.titulo : disco.disco;
+      var caixa = $("#full-lista");
+      full.classList.toggle("com-lista", !!lista);
+      if (!lista) { caixa.hidden = true; caixa.innerHTML = ""; return; }
+      caixa.hidden = false;
+      caixa.innerHTML = '<div class="full-lista-cab"><span>Nesta playlist</span><span>' + n(fila.length) + " músicas</span></div><ol>" +
+        fila.map(function (f, k) {
+          return '<li data-i="' + k + '" data-id="' + esc(f.id) + '"><span class="n">' + (k + 1) + '</span><span class="t"><b>' + esc(f.exibir) +
+            "</b><small>" + esc(artistaDe(f)) + '</small></span><span class="dur">' + (f.dur ? mmss(f.dur) : "") + "</span></li>";
+        }).join("") + "</ol>";
+      $$("#full-lista li").forEach(function (li) { li.onclick = function () { ir(Number(li.dataset.i)); }; });
+    }
+    // capa do disco da faixa atual (numa playlist muda a cada música)
+    function mostrarCapa(d) {
+      if (capaMostrada === d) return;
+      capaMostrada = d;
+      $("#pl-capa").innerHTML = capa(d);
+      $("#full-capa").innerHTML = capa(d);
       DriveBR.capa(d).then(function (u) {
-        if (!u || d !== disco) return;
+        if (!u || d !== capaMostrada) return;
         var img = '<div class="capa ok"><img alt="" src="' + u + '"></div>';
         $("#pl-capa").innerHTML = img;
         $("#full-capa").innerHTML = img;
@@ -532,7 +712,10 @@
     function ir(k) {
       if (k < 0 || k >= fila.length) return;
       i = k;
-      var f = fila[i], meu = ++pedido, nome = nomeExibido(f, disco.artista);
+      var f = fila[i], meu = ++pedido, d = discoDe(f), art = artistaDe(f), nome = nomeExibido(f, d.artista);
+      mostrarCapa(d);
+      $("#full-artista").textContent = art;
+      $("#full-artista").href = DB.artistas[art] ? urlArtista(art) : urlArtista(d.artista);
       box.hidden = false; document.body.classList.add("tocando");
       botoesNavegacao();
       titulo($("#pl-titulo"), nome);
@@ -540,18 +723,18 @@
       marcar();
       var li = $('#faixas li[data-id="' + f.id + '"]');
       if (li) li.classList.add("carregando-faixa");
-      $("#pl-sub").textContent = "carregando… · " + disco.artista;
+      $("#pl-sub").textContent = "carregando… · " + art;
       full.classList.add("baixando");
       DriveBR.audio(f.id).then(function (url) {
         if (li) li.classList.remove("carregando-faixa");
         if (meu !== pedido) return;
         full.classList.remove("baixando");
-        $("#pl-sub").textContent = disco.artista + " — " + disco.disco;
+        $("#pl-sub").textContent = art + (d.disco ? " — " + d.disco : "");
         audio.src = url;
         audio.play().catch(function () {});
         if (fila[i + 1]) DriveBR.audio(fila[i + 1].id).catch(function () {}); // já baixa a próxima
         if ("mediaSession" in navigator) {
-          navigator.mediaSession.metadata = new MediaMetadata({ title: nome, artist: disco.artista, album: disco.disco });
+          navigator.mediaSession.metadata = new MediaMetadata({ title: nome, artist: art, album: lista ? lista.titulo : d.disco });
         }
       }).catch(function (e) {
         if (li) li.classList.remove("carregando-faixa");
@@ -572,7 +755,7 @@
         b.classList.add("mover");
       });
     }
-    function retitular() { if (fila[i]) { var t = nomeExibido(fila[i], disco.artista); titulo($("#pl-titulo"), t); titulo($("#full-titulo"), t); } }
+    function retitular() { if (fila[i]) { var t = nomeExibido(fila[i], discoDe(fila[i]).artista); titulo($("#pl-titulo"), t); titulo($("#full-titulo"), t); } }
     var larguraJanela = window.innerWidth, tResize;
     window.addEventListener("resize", function () { // no celular a barra do navegador dispara resize: só refaz se a largura mudou
       if (window.innerWidth === larguraJanela) return;
@@ -658,7 +841,7 @@
       navigator.mediaSession.setActionHandler("previoustrack", anterior);
       navigator.mediaSession.setActionHandler("nexttrack", proxima);
     }
-    return { tocar: tocar, marcar: marcar };
+    return { tocar: tocar, tocarLista: tocarLista, marcar: marcar };
   })();
 
   /* ---------- rotas ---------- */
@@ -666,16 +849,19 @@
     var h = location.hash.replace(/^#\/?/, "");
     var partes = h.split("?"), caminho = partes[0], params = new URLSearchParams(partes[1] || "");
     var seg = caminho.split("/");
-    $$(".menu a").forEach(function (a) { a.classList.toggle("ativo", a.dataset.rota === (seg[0] === "artista" ? "artistas" : seg[0] === "disco" ? "discos" : seg[0])); });
+    $$(".menu a").forEach(function (a) { a.classList.toggle("ativo", a.dataset.rota === (seg[0] === "artista" ? "artistas" : seg[0] === "disco" ? "discos" : seg[0] === "playlist" ? "playlists" : seg[0])); });
     if (seg[0] !== "discos") $("#q").value = "";
     if (seg[0] === "discos") paginaDiscos(params);
     else if (seg[0] === "artistas") paginaArtistas(params);
     else if (seg[0] === "artista") paginaArtista(decodeURIComponent(seg.slice(1).join("/")));
     else if (seg[0] === "disco") paginaDisco(seg[1]);
     else if (seg[0] === "numeros") paginaNumeros(params);
+    else if (seg[0] === "playlists") paginaPlaylists();
+    else if (seg[0] === "playlist") paginaPlaylist(decodeURIComponent(seg[1] || ""));
     else if (seg[0] === "capas") { paginaInicio(); mostrarBotaoCapas(true); abrirCapas(); }
     else paginaInicio();
-    document.title = (seg[0] === "artista" ? decodeURIComponent(seg.slice(1).join("/")) + " · " : seg[0] === "disco" && DB.porId[seg[1]] ? DB.porId[seg[1]].disco + " · " : "") + "Music BR";
+    var plAtual = seg[0] === "playlist" ? acharPl(decodeURIComponent(seg[1] || "")) : null;
+    document.title = (plAtual ? plAtual.titulo + " · " : "") + (seg[0] === "artista" ? decodeURIComponent(seg.slice(1).join("/")) + " · " : seg[0] === "disco" && DB.porId[seg[1]] ? DB.porId[seg[1]].disco + " · " : "") + "Music BR";
   }
   window.addEventListener("hashchange", function () {
     var h = location.hash || "#/";

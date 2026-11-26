@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=3.33">
+  <link rel="stylesheet" href="assets/style.css?v=3.34">
 </head>
 <body>
   <header class="topo">
@@ -32,6 +32,7 @@
         <a href="#/discos" data-rota="discos">Discos</a>
         <a href="#/artistas" data-rota="artistas">Artistas</a>
         <a href="#/numeros" data-rota="numeros">Números</a>
+        <a href="#/playlists" data-rota="playlists">Playlists</a>
       </nav>
       <form class="busca-topo" id="busca" role="search" autocomplete="off">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
@@ -64,7 +65,7 @@
   <footer>
     <div class="in">
       <span><b>Music BR</b> · dados da <a id="link-planilha" target="_blank" rel="noopener">planilha MUSICBR</a> · capas e músicas do Google Drive</span>
-      <span><span id="atualizado"></span> · <b class="versao">v3.33</b></span>
+      <span><span id="atualizado"></span> · <b class="versao">v3.34</b></span>
     </div>
   </footer>
 
@@ -92,7 +93,7 @@
     <div class="full-in">
       <div class="full-topo">
         <span aria-hidden="true"></span>
-        <div class="full-de"><small>Tocando do disco</small><b id="full-disco"></b></div>
+        <div class="full-de"><small id="full-de-rot">Tocando do disco</small><b id="full-disco"></b></div>
         <button type="button" class="full-btn" id="full-x" aria-label="Fechar o player"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
       </div>
       <div class="full-capa" id="full-capa"></div>
@@ -110,6 +111,7 @@
         <button type="button" id="full-prox" aria-label="Próxima faixa"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
       </div>
     </div>
+    <div class="full-lista" id="full-lista" hidden></div>
   </section>
 
   <dialog class="dlg" id="dlg-atualizar" aria-labelledby="at-titulo">
@@ -146,9 +148,31 @@
     </form>
   </dialog>
 
+  <dialog class="dlg" id="dlg-pl" aria-labelledby="pe-titulo">
+    <form method="dialog">
+      <h3 id="pe-titulo">Editar playlist</h3>
+      <p class="dlg-sub" id="pe-nome"></p>
+      <div>
+        <span class="rotulo">Capa</span>
+        <div class="pe-capas" id="pe-capas" role="group" aria-label="Escolha a capa"></div>
+      </div>
+      <div id="pe-token-box" class="dlg-token" hidden>
+        <label>Token do GitHub <small>(o mesmo do botão de atualizar)</small>
+          <input id="pe-token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+        </label>
+      </div>
+      <p class="dlg-msg" id="pe-msg" role="status"></p>
+      <div class="dlg-botoes">
+        <button type="button" class="btn perigo" id="pe-apagar">Apagar playlist</button>
+        <button type="button" class="btn sec" id="pe-fechar">Fechar</button>
+        <button type="submit" class="btn" id="pe-salvar">Salvar capa</button>
+      </div>
+    </form>
+  </dialog>
+
   <div class="dica-flutuante" id="dica" role="tooltip"></div>
-  <script src="assets/config.js?v=3.33"></script>
-  <script src="assets/drive.js?v=3.33"></script>
-  <script src="assets/app.js?v=3.33"></script>
+  <script src="assets/config.js?v=3.34"></script>
+  <script src="assets/drive.js?v=3.34"></script>
+  <script src="assets/app.js?v=3.34"></script>
 </body>
 </html>

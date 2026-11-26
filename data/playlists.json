@@ -1,0 +1,260 @@
+{
+ "playlists": [
+  {
+   "id": "anos-80",
+   "titulo": "Anos 80",
+   "descricao": "25 músicas lançadas entre 1980 e 1989, uma por artista, em ordem de lançamento.",
+   "pedido": "Playlist de teste, feita com a amostra de 500 discos",
+   "criada": "2026-11-26",
+   "capa": {
+    "tipo": "mosaico"
+   },
+   "faixas": [
+    {
+     "arq": "1hWtFansjrXNtAw7Ypdcs_byUEy762l8P",
+     "disco": "e80308ec",
+     "titulo": "A Bomba Z- de Repente",
+     "artista": "Ednardo",
+     "dur": 517
+    },
+    {
+     "arq": "1TL2iIsA6gM-8zjfCIccMHvP3GTcRC1-g",
+     "disco": "aa289e74",
+     "titulo": "Chega de Sujeira",
+     "artista": "Tião Carreiro & Pardinho",
+     "dur": 207
+    },
+    {
+     "arq": "1tneEo5FPzN0lB2fH5tMOSdoSnv0vJNQM",
+     "disco": "dc5fd832",
+     "titulo": "Peleja",
+     "artista": "Herman Torres",
+     "dur": 250
+    },
+    {
+     "arq": "1Fpx9qMaxyvZ1xvrahwbXkBZX4iaurSa6",
+     "disco": "1b3d93ed",
+     "titulo": "Ave Maria",
+     "artista": "Luiz Claudio Ramos",
+     "dur": 93
+    },
+    {
+     "arq": "1qIBSphRg_bIF2FVjTdtdeyqZjC3lqC1t",
+     "disco": "65090a96",
+     "titulo": "Samba Do Buraco Quente",
+     "artista": "João Roberto Kelly",
+     "dur": 164
+    },
+    {
+     "arq": "1-x---U23SQylOiBBRvxxT7wqJcSitgbY",
+     "disco": "8719a0c8",
+     "titulo": "errância - bruno kiefer",
+     "artista": "Iberê Gomes Grosso",
+     "dur": 264
+    },
+    {
+     "arq": "1VHZF-8q2ROgl5z0SrynF95dogRkTDqML",
+     "disco": "ae41d765",
+     "titulo": "Tribo",
+     "artista": "Vitor Ramil",
+     "dur": 176
+    },
+    {
+     "arq": "1FcNdNOHU2dilGdQhfkWx9iSzKtZoyN2Z",
+     "disco": "8c5ed684",
+     "titulo": "Balada para voz e esperança",
+     "artista": "Tavito",
+     "dur": 207
+    },
+    {
+     "arq": "1YtF3iIQZvssvF504i1_RT6KrdVxR5sby",
+     "disco": "f3868bab",
+     "titulo": "La Barca",
+     "artista": "Trio Cristal",
+     "dur": 170
+    },
+    {
+     "arq": "13FlrUqp6gJEHZtqjgumFOKwFTBkNa8za",
+     "disco": "84109aa8",
+     "titulo": "Tarde em Itapuã",
+     "artista": "Maria Creuza",
+     "dur": 226
+    },
+    {
+     "arq": "1Nx56Lhagft5Yy5I-QR64KMhWh1yronR5",
+     "disco": "53e70d35",
+     "titulo": "Estradas",
+     "artista": "Amado Batista",
+     "dur": 215
+    },
+    {
+     "arq": "1FpaTspqWRVtshcf7z8aXxpit9z1d_r1p",
+     "disco": "15441b80",
+     "titulo": "Marreco Quer Água",
+     "artista": "Camerata Carioca",
+     "dur": 157
+    },
+    {
+     "arq": "1r45FV54KU2M1_svx3sYtqAILaeHB3Oyu",
+     "disco": "4bb9efcd",
+     "titulo": "Sentado à beira do caminho",
+     "artista": "Erasmo Carlos",
+     "dur": 324
+    },
+    {
+     "arq": "1talZ6_qmzc6kR058ONCnwNnNIEaWErVh",
+     "disco": "0f9d174e",
+     "titulo": "Coração Aprendiz",
+     "artista": "Simone",
+     "dur": 244
+    },
+    {
+     "arq": "1NtYXiURjXKsvgubBoyscgPAVBc6i8H55",
+     "disco": "292abcd4",
+     "titulo": "Sublime Tortura",
+     "artista": "Nara Leão",
+     "dur": 202
+    },
+    {
+     "arq": "1jndIL8kCGq5YcN3dxikVMtrbXpciM457",
+     "disco": "a5cffbdc",
+     "titulo": "Amor Vazio",
+     "artista": "Celso Blues Boy",
+     "dur": 259
+    },
+    {
+     "arq": "1dRBIiTGX2bJTJPgO7Ms0yuAmItD1LeI0",
+     "disco": "aaded93d",
+     "titulo": "heitor alimonda",
+     "artista": "Maria Helena Coelho de Andrade",
+     "dur": 322
+    },
+    {
+     "arq": "1CiA7UT60eAhteTIJGsPFDd9l8d_f1Ds_",
+     "disco": "37e0de2c",
+     "titulo": "Rivalidade",
+     "artista": "Martinho da Vila",
+     "dur": 186
+    },
+    {
+     "arq": "1MTDMi51if8Imke7dwzERGkfJcbOnpT4D",
+     "disco": "32694384",
+     "titulo": "Adeus Timidez",
+     "artista": "Roberto Ribeiro",
+     "dur": 196
+    },
+    {
+     "arq": "1Z1V8Umh_PfAqzQaM1s_thM0B8s-_tRU8",
+     "disco": "e9c8fd7f",
+     "titulo": "Maioridade",
+     "artista": "Barão Vermelho",
+     "dur": 216
+    },
+    {
+     "arq": "196xtKB-PbdBm65VuHKsvv6WD2EgSQw5C",
+     "disco": "c9532c9f",
+     "titulo": "Rosas",
+     "artista": "Arte no Escuro",
+     "dur": 235
+    },
+    {
+     "arq": "1Kw7DJB4fGlKDWRHS0yNkL1v92cu9ZcSf",
+     "disco": "08f56235",
+     "titulo": "Mar de Espanha",
+     "artista": "Aline, Toninho Horta, Beto Lopes, Helvius Vilela & Bernard Aygaoux",
+     "dur": 273
+    },
+    {
+     "arq": "1apt27-s8Q6s4G7S3X6rZlHDeObhcRB0s",
+     "disco": "0f068d86",
+     "titulo": "Prossição de Gado",
+     "artista": "Pena Branca & Xavantinho",
+     "dur": 172
+    },
+    {
+     "arq": "1omN8CMVCeYz9F2J-HRGU3AxQl8GNo2if",
+     "disco": "4875feff",
+     "titulo": "Attomica - Lost Time",
+     "artista": "Attomica",
+     "dur": 403
+    },
+    {
+     "arq": "13KMb4VK7kAJ_e0TNws38hbnRTUxzjmOv",
+     "disco": "d15f6c96",
+     "titulo": "Apenas recordações",
+     "artista": "Raimundinho do Acordeon",
+     "dur": 201
+    }
+   ]
+  },
+  {
+   "id": "30-minutos-do-rio-de-janeiro",
+   "titulo": "30 minutos do Rio de Janeiro",
+   "descricao": "Artistas nascidos ou formados no estado do Rio de Janeiro.",
+   "pedido": "Playlist de teste, feita com a amostra de 500 discos",
+   "criada": "2026-11-26",
+   "capa": {
+    "tipo": "mosaico"
+   },
+   "faixas": [
+    {
+     "arq": "12-W6pXtRD6o53U7tQ1iTHOuu0Ta-FyaS",
+     "disco": "e521e3f6",
+     "titulo": "Vaca de Presépio",
+     "artista": "Elza Soares",
+     "dur": 162
+    },
+    {
+     "arq": "1zFslCtcMQckG6abhQaZ3s8724ZtcDb3f",
+     "disco": "99e18bc0",
+     "titulo": "Suite: Parte 1-Memorias Do Porvir Suite: Parte 2. Visões Do Amanhecer (Visions of Dawn)",
+     "artista": "Joyce",
+     "dur": 399
+    },
+    {
+     "arq": "1VqZAeAdTbCvnn_kfYKDoua70mBMRrB_c",
+     "disco": "8a0b91c4",
+     "titulo": "Flammes Sombres",
+     "artista": "Ivan Lins",
+     "dur": 217
+    },
+    {
+     "arq": "1hxGBnn9FQD8hEdVr9AyYonrrhBWcJMFq",
+     "disco": "2725b147",
+     "titulo": "Viola Quebrada",
+     "artista": "Heitor Villa-Lobos",
+     "dur": 357
+    },
+    {
+     "arq": "1GvpnmgNq_f8JvO7KbBi81mSbI138kY8K",
+     "disco": "b2c4063e",
+     "titulo": "magoado",
+     "artista": "Waldir Azevedo",
+     "dur": 125
+    },
+    {
+     "arq": "1K_EEZUubzvVzJvt_Z08RENvhOtvYt7sW",
+     "disco": "ed156795",
+     "titulo": "Chove Lµ Fora - Cansei de Ilusâe",
+     "artista": "Emilio Santiago",
+     "dur": 229
+    },
+    {
+     "arq": "1XyUoGKkPSQK2hr79YGGCTpOsB7F7kbPw",
+     "disco": "37e0de2c",
+     "titulo": "Santo Antônio Padroeiro",
+     "artista": "Martinho da Vila",
+     "dur": 166
+    },
+    {
+     "arq": "1H0oFgiFTojwqyTMghdMe9_1ejVk2Ok1K",
+     "disco": "58d098da",
+     "titulo": "Your Gotta Be",
+     "artista": "Letuce",
+     "dur": 178
+    }
+   ]
+  }
+ ],
+ "atualizado": "2026-11-26T13:43:35Z"
+}
