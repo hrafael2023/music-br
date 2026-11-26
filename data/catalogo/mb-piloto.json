@@ -1,0 +1,8298 @@
+{
+"gerado": "2026-11-26T03:15:24Z",
+"semente": 2026,
+"albuns": [
+{
+"disco_id": "6740db64",
+"artista": "Woyzeck",
+"disco": "Quebra-Queixo",
+"ano": 1998,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5623b3a1",
+"artista": "Talita Avelino",
+"disco": "Azul Bahia",
+"ano": 2017,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "545ad757",
+"artista": "Violins",
+"disco": "Grandes infiéis",
+"ano": 2005,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2850828e",
+"artista": "Kika Deeke",
+"disco": "Céu Aberto [EP]",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "453234ee",
+"artista": "Mart'nália",
+"disco": "Menino Do Rio",
+"ano": 2006,
+"mb": {
+"mbid": "aaccfe50-fc1e-3c91-a677-e9b9bcc4d057",
+"titulo": "Menino do Rio",
+"primeiro_lancamento": "2005",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "a36e4f1f-aaba-427d-bab0-0b9535c8fb7f"
+},
+"erro": null
+},
+{
+"disco_id": "83a242f3",
+"artista": "Marcio Greyck",
+"disco": "Marcio Greyck [SINGLE]",
+"ano": 1967,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1e2fe7cf",
+"artista": "Irmandade",
+"disco": "Anjos De Metal [EP]",
+"ano": 1997,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b4b1eea5",
+"artista": "Claudia",
+"disco": "Jesus Cristo",
+"ano": 1971,
+"mb": {
+"mbid": "0dca7892-07e8-4866-a438-b9a5c392a656",
+"titulo": "Jesus Cristo",
+"primeiro_lancamento": "1971",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "e9ccdca1-156a-4a08-9e07-bf0019453511"
+},
+"erro": null
+},
+{
+"disco_id": "dbaafbd1",
+"artista": "Frito Sampler",
+"disco": "Aladins Bakunins",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d3d5797a",
+"artista": "Boca Livre",
+"disco": "Boca Livre",
+"ano": 1983,
+"mb": {
+"mbid": "ae2ff015-d91e-4ae9-a7ce-30ab1f9d630c",
+"titulo": "Boca Livre",
+"primeiro_lancamento": "1979",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "6fa56da3-9e74-4920-8c76-947a43dd7fab"
+},
+"erro": null
+},
+{
+"disco_id": "f9875f45",
+"artista": "Mácleim",
+"disco": "H'cordas",
+"ano": 2023,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "fddb61d2",
+"artista": "Barulhista",
+"disco": "Batismo",
+"ano": 2023,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "83179650",
+"artista": "Jards Macalé",
+"disco": "Aprender a nadar",
+"ano": 1974,
+"mb": {
+"mbid": "8cf774c4-5f5c-4266-b751-8ba53a9098f8",
+"titulo": "Aprender a Nadar",
+"primeiro_lancamento": "1974",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "bf6e292a-d95c-434c-b721-0a9ea9a466a3"
+},
+"erro": null
+},
+{
+"disco_id": "a5f1fd76",
+"artista": "Rogério Skylab",
+"disco": "Nas Portas do Cu",
+"ano": 2019,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "97db3710",
+"artista": "Cerberus",
+"disco": "Stay With Me [DEMO]",
+"ano": 1997,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "717d0434",
+"artista": "Cadu Tenório",
+"disco": "Isekai - Blue Thirty-Four",
+"ano": 2019,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "28b40828",
+"artista": "Douglas Scalioni Domingues",
+"disco": "Como Queremos Demonstrar",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2db6a68f",
+"artista": "Moacyr Peixoto",
+"disco": "Pra Balançar",
+"ano": 1963,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "539474ba",
+"artista": "Moreira da Silva",
+"disco": "Consagração (Ao Vivo)",
+"ano": 1973,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6b3926d2",
+"artista": "Jacinto Limeira",
+"disco": "Carreiro Apaixonado",
+"ano": 1983,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0ee18bcb",
+"artista": "The Funk Fuckers",
+"disco": "Intrô Tudim [DEMO]",
+"ano": 1996,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4cbfc67f",
+"artista": "Yangprj",
+"disco": "Prj Mixtape",
+"ano": 2026,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "943540ea",
+"artista": "Tião Carreiro & Pardinho",
+"disco": "Seleção de Ouro",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a4fccb52",
+"artista": "Roberto Ribeiro",
+"disco": "Roberto Ribeiro",
+"ano": 1973,
+"mb": {
+"mbid": "29bf8f25-02b9-4ecc-92f1-72f076d5eb8b",
+"titulo": "Roberto Ribeiro",
+"primeiro_lancamento": "1978-04-03",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "70d13364-265a-4961-856e-fd3d8bcfaf25"
+},
+"erro": null
+},
+{
+"disco_id": "ac222f6a",
+"artista": "Kid Vinil",
+"disco": "Kid Vinil e os Heróis do Brasil",
+"ano": 1987,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4eee64b8",
+"artista": "Zimbra",
+"disco": "Verniz",
+"ano": 2019,
+"mb": {
+"mbid": "1ee9fa56-ddae-469e-8786-9f6136ee98d2",
+"titulo": "Verniz",
+"primeiro_lancamento": "2019-04-05",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "9d96f584-c3c9-4b89-a101-7c021663eabb"
+},
+"erro": null
+},
+{
+"disco_id": "bb9161d1",
+"artista": "Wilson Miranda",
+"disco": "Wilson Miranda [SINGLE]",
+"ano": 1965,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c21f583e",
+"artista": "Thiagão",
+"disco": "Só Tua Graça Me Basta",
+"ano": 2014,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b2c4063e",
+"artista": "Waldir Azevedo",
+"disco": "Waldir Azevedo",
+"ano": 1977,
+"mb": {
+"mbid": "8198017d-ac36-4c9f-bd47-016695cec1c1",
+"titulo": "Waldir Azevedo",
+"primeiro_lancamento": "1977",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "7185a825-204f-45d6-9c5a-87c2f5c1efa6"
+},
+"erro": null
+},
+{
+"disco_id": "0e99cd1d",
+"artista": "O Surto",
+"disco": "Equalizando As Idéias",
+"ano": 2003,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "077950f1",
+"artista": "Alpha Asian Malaria",
+"disco": "Ensaio Medíocre [DEMO]",
+"ano": 1994,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "3c622303",
+"artista": "Lenine",
+"disco": "Baque Solto",
+"ano": 1983,
+"mb": {
+"mbid": "fb1ee560-add1-36af-8a89-71d7348be1d7",
+"titulo": "Baque Solto",
+"primeiro_lancamento": "1983",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "da61fb5d-9543-4e36-9fa7-dad3111f7e8e"
+},
+"erro": null
+},
+{
+"disco_id": "24a82100",
+"artista": "VA",
+"disco": "Aperte o Play, A Festa Vol 1",
+"ano": 2005,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "57f97dea",
+"artista": "Negro Leo, Rodrigo Coelho & Thomas Harres",
+"disco": "Balancete Vol 1",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "05222cc6",
+"artista": "Macunamassa",
+"disco": "Abrasileirada",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b4b7752a",
+"artista": "Dadá Joãozinho & Mundo Video",
+"disco": "Sustos",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2c3b9ba3",
+"artista": "Hermeto Pascoal & Aline Morena",
+"disco": "Bodas de Latão",
+"ano": 2010,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6cb3f664",
+"artista": "Nosso Querido Figueiredo",
+"disco": "Eu Não Estou Em Sintonia",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6bb5ddd2",
+"artista": "Luiz Bonfá",
+"disco": "Luiz Bonfá e Conjunto [SINGLE]",
+"ano": 1950,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5ca29df5",
+"artista": "Paulo Moura",
+"disco": "K-XimBlues",
+"ano": 2002,
+"mb": {
+"mbid": "b43405fb-e326-3869-9341-69b3d36c80f0",
+"titulo": "K-Ximblues",
+"primeiro_lancamento": "2002-12-30",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "73756fb8-c195-4d3c-89b9-f9c5b5af9639"
+},
+"erro": null
+},
+{
+"disco_id": "912d6b2d",
+"artista": "Luiz Roberto",
+"disco": "Velha Guarda em Bossa Nova",
+"ano": 1960,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a5cffbdc",
+"artista": "Celso Blues Boy",
+"disco": "Som Na Guitarra",
+"ano": 1984,
+"mb": {
+"mbid": "66ee33eb-fa23-401f-bdfb-33cc0d446ce3",
+"titulo": "Som Na Guitarra",
+"primeiro_lancamento": "1984-04-24",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "7b30d395-b9c7-4263-a7f5-6407cf7ebd4b"
+},
+"erro": null
+},
+{
+"disco_id": "fd40a6b3",
+"artista": "Lindomar Castilho",
+"disco": "Lindomar Castilho",
+"ano": 1967,
+"mb": {
+"mbid": "cc6719be-4e0e-488d-9506-0afc773379f1",
+"titulo": "Lindomar Castilho",
+"primeiro_lancamento": "1978",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "3cc70f2b-224b-4e4b-85f0-a14cac596535"
+},
+"erro": null
+},
+{
+"disco_id": "1df85c1d",
+"artista": "Quinteto Violado",
+"disco": "Antologia do Baião",
+"ano": 1977,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "55e9138c",
+"artista": "Leny Andrade",
+"disco": "Alma Mia",
+"ano": 2010,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e18df5df",
+"artista": "Tape Rec",
+"disco": "Death Friends",
+"ano": 2013,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6d26cff8",
+"artista": "Ian Ramil",
+"disco": "Derivacivilização",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b52b54a5",
+"artista": "Carne Doce",
+"disco": "Dos Namorados [EP]",
+"ano": 2013,
+"mb": {
+"mbid": "aff2a244-1ac1-4100-b5a7-8f27e42a0669",
+"titulo": "Dos Namorados",
+"primeiro_lancamento": "2013-04-08",
+"tipo": "EP",
+"ano_confere": true,
+"artista_mbid": "79db020c-b8d7-43e8-bf8e-d3dda7fe0f73"
+},
+"erro": null
+},
+{
+"disco_id": "99a8532d",
+"artista": "Nara Leão",
+"disco": "Opinião de Nara",
+"ano": 1964,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "170df05a",
+"artista": "Nara Leão, Zé Keti & João Do Vale",
+"disco": "Show Opinião",
+"ano": 1965,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "47779f95",
+"artista": "Elza Soares",
+"disco": "Lição de Vida",
+"ano": 1976,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2381c898",
+"artista": "Martinho da Vila",
+"disco": "Da Roça e da Cidade",
+"ano": 2001,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5bae8a16",
+"artista": "Luiz Caldas",
+"disco": "O Filtro De Sonhos",
+"ano": 2015,
+"mb": {
+"mbid": "8af5850d-27b7-4eab-9a02-5669f8b25ddf",
+"titulo": "O Filtro de Sonhos",
+"primeiro_lancamento": "2015-03-01",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "24ca9b35-f389-4472-bb62-37743dbd5d1c"
+},
+"erro": null
+},
+{
+"disco_id": "e21f9dc0",
+"artista": "Orquestra Afro Brasileira",
+"disco": "80 Anos (Remixes)",
+"ano": 2025,
+"mb": {
+"mbid": "fc2776f1-77d0-461e-a430-c7270ee2b2b7",
+"titulo": "80 Anos (Remixes)",
+"primeiro_lancamento": "2025-07-31",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "2c7311a7-14f8-4690-8a0f-66c66b36665a"
+},
+"erro": null
+},
+{
+"disco_id": "7740d471",
+"artista": "André Barbosa Filho",
+"disco": "Tradição",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "60db9f5b",
+"artista": "Torture Squad",
+"disco": "Pandemonium",
+"ano": 2003,
+"mb": {
+"mbid": "0c8de36c-0ce8-3638-adc0-49696d630f5c",
+"titulo": "Pandemonium",
+"primeiro_lancamento": "2003-10-14",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "8f2dbc82-6dea-4432-88c7-afc9e9efc44c"
+},
+"erro": null
+},
+{
+"disco_id": "737d82d7",
+"artista": "Rua do Absurdo",
+"disco": "Queda",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "f52cd030",
+"artista": "Tom Zé",
+"disco": "Compacto Continental (& Tiago Araripe)",
+"ano": 1974,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "30b68003",
+"artista": "Superafim",
+"disco": "Mouth",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1aa039a4",
+"artista": "Eduardo Pereira",
+"disco": "Canções De Amor Ao Vento",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ec3e853d",
+"artista": "Torture Squad",
+"disco": "AEquilibrium",
+"ano": 2010,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1976f19f",
+"artista": "Armandinho (2)",
+"disco": "Semente",
+"ano": 2008,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8b23a09f",
+"artista": "Pedro Lima",
+"disco": "Pedro Lima E Sua Sanfona De 8 Baixos",
+"ano": 1972,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e6ac11f0",
+"artista": "Dr Sin",
+"disco": "Original Sin",
+"ano": 2009,
+"mb": {
+"mbid": "6690eba5-8dd4-4a94-913c-94bb2959643a",
+"titulo": "Original Sin",
+"primeiro_lancamento": "2009",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "768e044a-80c3-4a41-8eb2-3a7c3342445f"
+},
+"erro": null
+},
+{
+"disco_id": "32bbb188",
+"artista": "Ana Mazzotti",
+"disco": "Ana Mazzotti",
+"ano": 1977,
+"mb": {
+"mbid": "f26c70b2-7cec-4b7f-b8ca-ce3052d44b2f",
+"titulo": "Ana Mazzotti",
+"primeiro_lancamento": "1977",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "73df7f01-b8d6-4263-8e8f-0aae8037348d"
+},
+"erro": null
+},
+{
+"disco_id": "942c8343",
+"artista": "Wanda Sá e João Donato",
+"disco": "Cartão de Visita",
+"ano": 2004,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ab529d18",
+"artista": "Eduardo Araujo",
+"disco": "Lado a Lado",
+"ano": 2014,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c9532c9f",
+"artista": "Arte no Escuro",
+"disco": "Arte no Escuro",
+"ano": 1987,
+"mb": {
+"mbid": "af36a6ba-e279-41d8-984e-5b3d028660b4",
+"titulo": "Arte no Escuro",
+"primeiro_lancamento": "1988",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "efdb43bc-afe6-41ee-848b-fa17cb3ea68f"
+},
+"erro": null
+},
+{
+"disco_id": "1c40b7d6",
+"artista": "Rainer Pappon",
+"disco": "O Alemão da Guitarra Verde",
+"ano": 1993,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1e9574fd",
+"artista": "Banda de Pífanos de Caruaru",
+"disco": "A Bandinha Vai Tocar",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ad275c15",
+"artista": "Ruinas",
+"disco": "Órfãos",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b02a8ab7",
+"artista": "Trio Sabiá",
+"disco": "Incendiado",
+"ano": 1995,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8251711c",
+"artista": "Luis de Santana",
+"disco": "Gonzagão Meu Professor",
+"ano": 1992,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2ca83898",
+"artista": "Criminal Bass",
+"disco": "O Gueto Destrói Sonhos",
+"ano": 1998,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6b3a557f",
+"artista": "Dibigode",
+"disco": "Plano",
+"ano": 2014,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a660ba43",
+"artista": "Aloysio de Oliveira",
+"disco": "Samba These Days",
+"ano": 1957,
+"mb": {
+"mbid": "72713796-80b4-45a5-b637-f02b9f7812a8",
+"titulo": "Samba These Days",
+"primeiro_lancamento": "1957",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "77314804-e379-4046-8992-8e88bd63182b"
+},
+"erro": null
+},
+{
+"disco_id": "7907eb69",
+"artista": "Luiz Bonfá, Eydie Gormé & Steve Lawrence",
+"disco": "Steve & Eydie, Bonfá & Brazil",
+"ano": 1967,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "f76fc000",
+"artista": "Penna & Paulinho",
+"disco": "Penna & Paulinho [SINGLE]",
+"ano": 1983,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5fe40a72",
+"artista": "Velho",
+"disco": "Senhor De Tudo (The Satanist Sessions)",
+"ano": 2012,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e9c69b1f",
+"artista": "Sepultura",
+"disco": "Primitive Future [BOOTLEG]",
+"ano": 1990,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d60ba74e",
+"artista": "Céu",
+"disco": "Apká!",
+"ano": 2019,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a9e2cacc",
+"artista": "Marcos Valle",
+"disco": "The Remix Album Vol 1",
+"ano": 2002,
+"mb": {
+"mbid": "276a8c37-4d5b-3943-81b6-7201500c8265",
+"titulo": "The Remix Album, Vol. 1",
+"primeiro_lancamento": "2007-08-21",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "1ba347eb-58e8-45d6-b7e3-09873dc2506a"
+},
+"erro": null
+},
+{
+"disco_id": "587b163f",
+"artista": "Vulcano",
+"disco": "The Awakening of an Ancient and Wicked Soul [SINGLE]",
+"ano": 2014,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4cba0767",
+"artista": "Tom Zé",
+"disco": "Compacto Continental",
+"ano": 1975,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8b04d6c7",
+"artista": "Poemátrio",
+"disco": "Perturbações Planetárias",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "044d85ba",
+"artista": "Martinha",
+"disco": "Martinha [SINGLE]",
+"ano": 1968,
+"mb": {
+"mbid": "da66c679-cbf6-49e2-9dd2-8426d2928c44",
+"titulo": "Martinha",
+"primeiro_lancamento": "1969",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "92b3d264-59b9-4daf-b494-c811c8ba34e7"
+},
+"erro": null
+},
+{
+"disco_id": "3c487f95",
+"artista": "Cinval Coco Grude",
+"disco": "Nordestina",
+"ano": 2003,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c39e3759",
+"artista": "Sant & LP Beatzz",
+"disco": "Fazendo Arte [EP]",
+"ano": 2019,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e56a3b14",
+"artista": "Baco Exú do Blues",
+"disco": "Bluesman",
+"ano": 2018,
+"mb": {
+"mbid": "e2ea8f69-d1af-4807-b860-7f129206b1f6",
+"titulo": "Bluesman",
+"primeiro_lancamento": "2018-11-23",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "d316f174-4056-4d7c-b551-99da9925932f"
+},
+"erro": null
+},
+{
+"disco_id": "22ce9b48",
+"artista": "Dori Caymmi",
+"disco": "Contemporaneos",
+"ano": 2003,
+"mb": {
+"mbid": "6cf5dddc-762d-3c36-b1cb-6fa4ca9dfd9c",
+"titulo": "Contemporâneos",
+"primeiro_lancamento": "2002",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "aaaaab61-aa05-47e9-a607-5da742148efb"
+},
+"erro": null
+},
+{
+"disco_id": "57b7abb0",
+"artista": "Silvio Caldas",
+"disco": "Silvio Caldas",
+"ano": 1957,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1b3d93ed",
+"artista": "Luiz Claudio Ramos",
+"disco": "MPBC",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "632ecd0e",
+"artista": "Certo Porcos!",
+"disco": "Ódio 666",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ee4f10a0",
+"artista": "Marcelo D2",
+"disco": "Assim Tocam os Meus Tambores",
+"ano": 2020,
+"mb": {
+"mbid": "29d756d9-d218-408b-87b3-8f19c475a005",
+"titulo": "Assim Tocam os MEUS TAMBORES",
+"primeiro_lancamento": "2020-09-27",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "8c1f7395-61b6-43bf-bb62-55d2c669f0e0"
+},
+"erro": null
+},
+{
+"disco_id": "f9b1f149",
+"artista": "Hebe Camargo",
+"disco": "Pra Você",
+"ano": 1998,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4259e091",
+"artista": "Anthares",
+"disco": "No Limite da Força",
+"ano": 1987,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "cd313253",
+"artista": "Orquestra Zezinho da TV",
+"disco": "Seleções De Ouro - Minha Noite De Debut",
+"ano": 1967,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "727d2fb7",
+"artista": "Paulinho Moska",
+"disco": "Através do Espelho",
+"ano": 1997,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "320129a7",
+"artista": "Aloyr Mendes",
+"disco": "Aponta O Sucesso",
+"ano": 1968,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "3263faa4",
+"artista": "Marcelo Callado",
+"disco": "Brado",
+"ano": 2026,
+"mb": {
+"mbid": "ca793d75-c7d9-4b78-88c4-90636437fe2f",
+"titulo": "Brado",
+"primeiro_lancamento": "2026-03-06",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "ea6f399b-9b8e-4e8a-a6c0-5b034e44be50"
+},
+"erro": null
+},
+{
+"disco_id": "eca50063",
+"artista": "Sulamericana",
+"disco": "Sula",
+"ano": 2022,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2b78a21a",
+"artista": "Hareton Salvanini",
+"disco": "S.P. 73",
+"ano": 1973,
+"mb": {
+"mbid": "b0bedf14-415a-4143-b943-4ec30b985059",
+"titulo": "S.P. 73",
+"primeiro_lancamento": "1973",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "9e62e65c-2644-46b9-a9a9-f9c37da4c1f5"
+},
+"erro": null
+},
+{
+"disco_id": "7a91036f",
+"artista": "Rogério Skylab",
+"disco": "Abismo e Carnaval",
+"ano": 2012,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1685bbe6",
+"artista": "Coronel Narcizinho",
+"disco": "Forró No Cerrado",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0113bd60",
+"artista": "Wanderley Cardoso",
+"disco": "Quando O Amor Se Tranforma Em Poesia [EP]",
+"ano": 1969,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "86ba8d1d",
+"artista": "Milionário & José Rico",
+"disco": "Vol 11 - Escravo do Amor",
+"ano": 1981,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "cb4b986e",
+"artista": "Jana Vasconcellos",
+"disco": "Vida Em Cordas",
+"ano": 2022,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "824cd7c8",
+"artista": "Lelo Nazario",
+"disco": "Africasiamerica",
+"ano": 2007,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1c8ee5a0",
+"artista": "Claudia Telles",
+"disco": "Claudia Telles",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c90e8a2e",
+"artista": "Roberto Luna",
+"disco": "Roberto Luna",
+"ano": 1977,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "7810f4ab",
+"artista": "The Fevers",
+"disco": "The Fevers 80",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c9969931",
+"artista": "Emerson Faria",
+"disco": "A Dança De Pensamentos",
+"ano": 2026,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5a590df5",
+"artista": "Maysa",
+"disco": "Maysa Sings Songs Before Dawn",
+"ano": 1961,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "56b9ce78",
+"artista": "Raça Negra",
+"disco": "Dou a Vida Por um Beijo",
+"ano": 2003,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "f75aad71",
+"artista": "Carlos Lyra",
+"disco": "Carlos Lyra",
+"ano": 1961,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "18566ba5",
+"artista": "A Barata Oriental",
+"disco": "Volume 10",
+"ano": 2008,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b2aaf0ac",
+"artista": "Surface",
+"disco": "Anverso",
+"ano": 2014,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "49bf448e",
+"artista": "Liverpool Sound",
+"disco": "Liverpool Sound [SINGLE]",
+"ano": 1971,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "bb4aeb43",
+"artista": "Jamelão",
+"disco": "Jamelão",
+"ano": 1971,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c9a2054e",
+"artista": "Tiganá Santana",
+"disco": "The Invention of Colour",
+"ano": 2013,
+"mb": {
+"mbid": "45f4b268-1d72-4b10-bd06-99b537ab1741",
+"titulo": "The Invention of Colour",
+"primeiro_lancamento": "2013-06-13",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "9278996f-e0c6-4c6c-8412-89ce8c6a7890"
+},
+"erro": null
+},
+{
+"disco_id": "47aa1b1b",
+"artista": "Fish Magic",
+"disco": "Songs From the Night Shift",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "17997e12",
+"artista": "Luisa Lacerda",
+"disco": "Zigue Zague [EP]",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "23852a69",
+"artista": "O Grande Ogro",
+"disco": "O Grande Ogro [EP]",
+"ano": 2026,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5835eb84",
+"artista": "Almir Guineto",
+"disco": "A Chave do Perdão",
+"ano": 1982,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "37e0de2c",
+"artista": "Martinho da Vila",
+"disco": "Martinho da Vila Isabel",
+"ano": 1984,
+"mb": {
+"mbid": "6f0d258a-2c8c-4175-bfb8-5f4f342b7de6",
+"titulo": "Martinho Da Vila Isabel",
+"primeiro_lancamento": null,
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "88a13d24-7915-4b51-8d95-c8de00ab79ea"
+},
+"erro": null
+},
+{
+"disco_id": "76b81be7",
+"artista": "Zé Maria",
+"disco": "Bossa Nova e Balanco, Esquema 64",
+"ano": 1964,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "711c26be",
+"artista": "Selton",
+"disco": "Loreto Paradiso",
+"ano": 2016,
+"mb": {
+"mbid": "51da1fa0-9391-483e-bd30-0a08b68d3237",
+"titulo": "Loreto paradiso",
+"primeiro_lancamento": "2016",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "59e347ec-f2cc-4fd3-a9aa-3337ff811caa"
+},
+"erro": null
+},
+{
+"disco_id": "816af190",
+"artista": "VA",
+"disco": "Ultimate Brazilian Breaks & Beats 2",
+"ano": 2006,
+"mb": {
+"mbid": "a7684d85-0e5b-3433-bad5-9776db64b5d1",
+"titulo": "Ultimate Brazilian Breaks & Beats 2",
+"primeiro_lancamento": "2007",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "89ad4ac3-39f7-470e-963a-56509c546377"
+},
+"erro": null
+},
+{
+"disco_id": "ed190c20",
+"artista": "Descontrole",
+"disco": "É Disso Que Eu Tô Falando",
+"ano": 2011,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "3a7d3fab",
+"artista": "Persecuter",
+"disco": "Dissonante Harmonia",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d5178f55",
+"artista": "Hermeto Pascoal",
+"disco": "Zabumbé-bum-Á",
+"ano": 1979,
+"mb": {
+"mbid": "4a3cb6a7-3c3c-3a2f-a2eb-2c6b0dce0477",
+"titulo": "Zabumbê‐bum‐á",
+"primeiro_lancamento": "1979",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "c7a4c4a0-9544-44e3-87f2-5779d18b753f"
+},
+"erro": null
+},
+{
+"disco_id": "e4dc6e22",
+"artista": "Cascabulho",
+"disco": "O Dia Em Que O Samba Perdeu Pra Feijoada",
+"ano": 2014,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a8aa8f38",
+"artista": "Agregados FDR",
+"disco": "Sem Fronteiras",
+"ano": 2008,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "735ad41d",
+"artista": "Momo",
+"disco": "I Was Told to Be Quiet",
+"ano": 2019,
+"mb": {
+"mbid": "4a18d241-05be-4901-b912-5df05522f526",
+"titulo": "I Was Told to Be Quiet",
+"primeiro_lancamento": "2019-09-06",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "f613577f-6a48-4da2-8199-fdd0fbbc951f"
+},
+"erro": null
+},
+{
+"disco_id": "cca1702b",
+"artista": "Papa Poluição",
+"disco": "Papa Poluição (1977) [SINGLE]",
+"ano": 1977,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "370570a0",
+"artista": "Larry Goldings",
+"disco": "Caminhos Cruzados",
+"ano": 1994,
+"mb": {
+"mbid": "c765bef6-a549-457d-9401-af493064b995",
+"titulo": "Caminhos Cruzados",
+"primeiro_lancamento": "1994",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "c42811d0-8881-4bb0-ac42-300401e0a69c"
+},
+"erro": null
+},
+{
+"disco_id": "1dd7d123",
+"artista": "Ilessi & Diogo Sili",
+"disco": "Com os Pés no Futuro - Ilessi e Diogo Sili Interpretam Manduka",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "10d095e7",
+"artista": "Os Replicantes",
+"disco": "Go Ahead",
+"ano": 2003,
+"mb": {
+"mbid": "1a9eafd5-e128-495d-b7e4-e294bd0f9393",
+"titulo": "Go Ahead!",
+"primeiro_lancamento": "2003",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "c03332ff-829e-4d03-ad4a-41f4a4874d2a"
+},
+"erro": null
+},
+{
+"disco_id": "3a241ce3",
+"artista": "Cauby Peixoto",
+"disco": "Grandes Vozes",
+"ano": 2005,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0df348d6",
+"artista": "Dorsal Atlântica",
+"disco": "Antes Do Fim... Depois Do Fim",
+"ano": 2005,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a91dab10",
+"artista": "Chico Bezerra",
+"disco": "Pati",
+"ano": 1990,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "037829ba",
+"artista": "Quarto Sensorial",
+"disco": "A + B",
+"ano": 2012,
+"mb": {
+"mbid": "f6920e84-bcd3-438c-ac1e-c582e336aecc",
+"titulo": "A + B",
+"primeiro_lancamento": "2012-11-09",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "7394038b-849b-4f53-b4f1-a15b281ef28b"
+},
+"erro": null
+},
+{
+"disco_id": "ba0848f3",
+"artista": "Camarão",
+"disco": "O Quente Em São João",
+"ano": 1971,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8ddf4f8f",
+"artista": "Maria Augusta Calado",
+"disco": "Modinhas Goianas",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b49be92f",
+"artista": "Renata Lu",
+"disco": "Sandália de Рrаtа",
+"ano": 1976,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "53e70d35",
+"artista": "Amado Batista",
+"disco": "Pensando em Você",
+"ano": 1983,
+"mb": {
+"mbid": "f3d6627b-f62d-442e-959d-6954728be2a3",
+"titulo": "Pensando em você",
+"primeiro_lancamento": "1983",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "ae0b5f40-f185-4740-b488-437dc4c0faac"
+},
+"erro": null
+},
+{
+"disco_id": "2af70ac7",
+"artista": "Oswaldo Montenegro",
+"disco": "Oswaldo Montenegro",
+"ano": 1990,
+"mb": {
+"mbid": "dda165ec-4c4f-48ec-a90f-01f9741a1b82",
+"titulo": "Oswaldo Montenegro",
+"primeiro_lancamento": "1980",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "bbd0c071-d9c4-465f-bb6c-0be9d7844d5d"
+},
+"erro": null
+},
+{
+"disco_id": "abd333f3",
+"artista": "Bel Medula & Luczan",
+"disco": "Giro",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ffe74f5f",
+"artista": "Di Melo",
+"disco": "Di Melo",
+"ano": 1975,
+"mb": {
+"mbid": "d0900801-9471-4030-9715-80239d03f58c",
+"titulo": "Di Melo",
+"primeiro_lancamento": "1975",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "06f60a76-ffe5-44b8-b78b-2455e3850f0c"
+},
+"erro": null
+},
+{
+"disco_id": "a8520a5f",
+"artista": "Turma do Ganzá",
+"disco": "Turma do Ganzá",
+"ano": 1969,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "7cbd257e",
+"artista": "Gilberto Lima",
+"disco": "Gilberto Lima",
+"ano": 1967,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d2707b6c",
+"artista": "Provérbio X",
+"disco": "Não Perdi A Minha Fé Playback",
+"ano": 1999,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ec5efc23",
+"artista": "Kid Abelha",
+"disco": "Pega Vida",
+"ano": 2005,
+"mb": {
+"mbid": "63be99a9-7a8b-3ff3-87ec-ae97e6be3404",
+"titulo": "Pega vida",
+"primeiro_lancamento": "2005-05-19",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "e3e90633-b6f1-4376-b15b-2492c94b4cf7"
+},
+"erro": null
+},
+{
+"disco_id": "c1d668fd",
+"artista": "Thomas Roth",
+"disco": "Manchetes [SINGLE]",
+"ano": 1975,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a073f6e9",
+"artista": "Capilé",
+"disco": "Capital Mundial do Forró [SINGLE]",
+"ano": 1985,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8fd796f9",
+"artista": "Trio Irakitan",
+"disco": "Mais Uma Vez Boleros",
+"ano": 1963,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0c783ea2",
+"artista": "Odair José",
+"disco": "Ao Vivo",
+"ano": 1999,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0db02f33",
+"artista": "Pública",
+"disco": "Como Num Filme Sem Um Fim",
+"ano": 2008,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c80a99c7",
+"artista": "Tonico & Tinoco",
+"disco": "Os Maiores Sucessos",
+"ano": 1985,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5c625ed5",
+"artista": "Korzus",
+"disco": "Mass Illusion",
+"ano": 1991,
+"mb": {
+"mbid": "e359179f-f8fd-3955-9af6-a2221d5472c9",
+"titulo": "Mass Illusion",
+"primeiro_lancamento": "1991",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "4e413de0-0379-4c9b-bb48-712d27c7fd42"
+},
+"erro": null
+},
+{
+"disco_id": "e4e9afad",
+"artista": "Sh1ft",
+"disco": "Tudo Podia Ser Melhor [EP]",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d15d9ea7",
+"artista": "A6",
+"disco": "Sim [EP]",
+"ano": 2016,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "10287407",
+"artista": "YMA",
+"disco": "Sentimental Palace",
+"ano": 2025,
+"mb": {
+"mbid": "afe532ba-6319-4fe7-bcf5-07a12c046af8",
+"titulo": "Sentimental Palace",
+"primeiro_lancamento": "2025-10-23",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "82d89e35-6ff4-4c2e-8f39-039e5119e277"
+},
+"erro": null
+},
+{
+"disco_id": "47b0d945",
+"artista": "a_omori",
+"disco": "Cozy",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "cc89aa5e",
+"artista": "Sepultura",
+"disco": "Attitude 1 [SINGLE]",
+"ano": 1996,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "792d2cf5",
+"artista": "Manduka",
+"disco": "Caravana",
+"ano": 1978,
+"mb": {
+"mbid": "0202fe37-2b92-4f37-84f2-e3db8d90c6bc",
+"titulo": "Caravana",
+"primeiro_lancamento": "1978-07-03",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "aff43f79-f32f-403d-94f6-8123d0d7a2ad"
+},
+"erro": null
+},
+{
+"disco_id": "878ce8cc",
+"artista": "VA",
+"disco": "I Festival Universitario Musica Popular Brasileira",
+"ano": 1968,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "f5ec3c3d",
+"artista": "Laurindo Almeida",
+"disco": "New Directions",
+"ano": 1979,
+"mb": {
+"mbid": "6d824a20-8aa3-4053-ac11-71d803a7f90d",
+"titulo": "New Directions",
+"primeiro_lancamento": "1979",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "c23280a8-abc8-4435-ab44-43762ce0c89c"
+},
+"erro": null
+},
+{
+"disco_id": "99e18bc0",
+"artista": "Joyce",
+"disco": "Visions Of Dawn",
+"ano": 1976,
+"mb": {
+"mbid": "d33b2fa4-5541-334c-92c6-7dd31f92df2f",
+"titulo": "Visions of Dawn",
+"primeiro_lancamento": "2009-03-10",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "f47a0968-f2c1-4ec5-b0e3-0a15ae73b88d"
+},
+"erro": null
+},
+{
+"disco_id": "8ac1f241",
+"artista": "Gal Costa",
+"disco": "Gal Costa (1971) [SINGLE]",
+"ano": 1971,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2f132d79",
+"artista": "Arco Iris",
+"disco": "Coração Coração",
+"ano": 1982,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8b02c059",
+"artista": "Nervosa",
+"disco": "Victim of Yourself",
+"ano": 2014,
+"mb": {
+"mbid": "c37f0d8c-ea51-41fd-a0cd-7a87d50fbe1a",
+"titulo": "Victim of Yourself",
+"primeiro_lancamento": "2014-02-28",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "ea01b409-1ffc-4cd2-94a6-50c9a8a08a26"
+},
+"erro": null
+},
+{
+"disco_id": "3f34e0ec",
+"artista": "Heitor Villa-Lobos",
+"disco": "Quarteto de Cordas",
+"ano": 1991,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "42136b63",
+"artista": "Loomer",
+"disco": "Deserter",
+"ano": 2017,
+"mb": {
+"mbid": "6d171177-72e4-45d8-a78b-590e8cf264a1",
+"titulo": "Deserter",
+"primeiro_lancamento": "2017-10-27",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "7aec5060-e4df-490b-b190-23f1bb52b12b"
+},
+"erro": null
+},
+{
+"disco_id": "48c3aa7e",
+"artista": "Trio de Ouro",
+"disco": "O Famoso Trio de Ouro",
+"ano": 1969,
+"mb": {
+"mbid": "4209fb74-e7b9-4ea2-b7a9-760423e6d960",
+"titulo": "O Famoso Trio De Ouro",
+"primeiro_lancamento": "1969",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "4806c827-63ae-4b5a-b9f3-0ffaebc22487"
+},
+"erro": null
+},
+{
+"disco_id": "d6554162",
+"artista": "Alfa MCs",
+"disco": "Amor Sublime",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2f83b364",
+"artista": "Ndee Naldinho",
+"disco": "Menos um Irmão, Chega Disso",
+"ano": 1991,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ec6b85b9",
+"artista": "Neusa Maria",
+"disco": "O Disco do Ouro",
+"ano": 1957,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d3b7e60a",
+"artista": "Againe",
+"disco": "4 Songs [DEMO]",
+"ano": 1996,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "fdf62dc6",
+"artista": "A Corte",
+"disco": "Favela É Isso Aí",
+"ano": 2011,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "411e8be1",
+"artista": "Conjunto Arpoador",
+"disco": "Sambas De Todos Os Tempos",
+"ano": 1969,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "f7ce8723",
+"artista": "João Negrão",
+"disco": "Asfalto Selvagem",
+"ano": 1964,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "84109aa8",
+"artista": "Maria Creuza",
+"disco": "Poético",
+"ano": 1982,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4a37d12a",
+"artista": "Ed Maciel",
+"disco": "Na Onda Vol 3",
+"ano": 1967,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6c075f4c",
+"artista": "Quarto Astral",
+"disco": "Sideral [EP]",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2198b5a4",
+"artista": "Cristina Santos",
+"disco": "Estranho Poder [SINGLE]",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "78832568",
+"artista": "Luiz Gonzaga",
+"disco": "Sangue de Nordestino",
+"ano": 1972,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1bbffb50",
+"artista": "Sergio Mendes",
+"disco": "Sérgio Mendes [SINGLE]",
+"ano": 1982,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "602206d0",
+"artista": "Quinteto Violado",
+"disco": "Ilhas de Cabo Verde",
+"ano": 1989,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "29f8c638",
+"artista": "Luiz Caldas",
+"disco": "Olhar de Xamã",
+"ano": 2022,
+"mb": {
+"mbid": "fa0a490e-8729-4365-94ee-fe20df5c3e72",
+"titulo": "Olhar de Xamã",
+"primeiro_lancamento": "2022-02-01",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "24ca9b35-f389-4472-bb62-37743dbd5d1c"
+},
+"erro": null
+},
+{
+"disco_id": "292abcd4",
+"artista": "Nara Leão",
+"disco": "Abraços e Beijinhos e Carinhos Sem ter Fim",
+"ano": 1984,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b051d48a",
+"artista": "VA",
+"disco": "A História de 71 - Rádio Jornal Do Brasil",
+"ano": 1971,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "801d7614",
+"artista": "Volta da Jurema",
+"disco": "Em Paz",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0f068d86",
+"artista": "Pena Branca & Xavantinho",
+"disco": "Uma Dupla Brasileira",
+"ano": 1988,
+"mb": {
+"mbid": "5356387b-c481-44ae-88f1-93ccc9df6d9f",
+"titulo": "Uma Dupla Brasileira",
+"primeiro_lancamento": "1982",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "0d695e63-788e-4aef-ac8e-e4777440f6cb"
+},
+"erro": null
+},
+{
+"disco_id": "2f4323e9",
+"artista": "D.V.C",
+"disco": "O Perigo Está em Todos osm Lados",
+"ano": 2001,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "34e3e7b2",
+"artista": "José Roberto Bertrami",
+"disco": "Projecto III - Encontro",
+"ano": 1970,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "42f1c5cb",
+"artista": "João Silva",
+"disco": "Mixto Quente",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "eaa2b5f6",
+"artista": "Joãolima",
+"disco": "Na Borda",
+"ano": 2019,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e560d6bd",
+"artista": "Jair Rodrigues",
+"disco": "Samba Mesmo Vol 2",
+"ano": 2014,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ee9d5b16",
+"artista": "No Milk Today",
+"disco": "4 Years 4 That!!! [DEMO]",
+"ano": 1998,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "410294a9",
+"artista": "38MilManos",
+"disco": "Exército Dos 38 Mil [EP]",
+"ano": 2016,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c7a83817",
+"artista": "Som Nosso de Cada Dia",
+"disco": "Som Nosso de Cada Dia",
+"ano": 1977,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "82dcf955",
+"artista": "José Dias",
+"disco": "Galo Legal [EP]",
+"ano": 1969,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e5aad2ae",
+"artista": "Lobão",
+"disco": "Cuidado",
+"ano": 1988,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d4c2d0c0",
+"artista": "Maré Tardia",
+"disco": "Sem Diversão Pra Mim",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ff89c111",
+"artista": "Manassés",
+"disco": "Manassés",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "53f30f29",
+"artista": "VA",
+"disco": "Ritmos Da Panair",
+"ano": 1959,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0de7faea",
+"artista": "Baby Consuelo",
+"disco": "A Menina Ainda Dança",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ae41d765",
+"artista": "Vitor Ramil",
+"disco": "Estrela, Estrela",
+"ano": 1981,
+"mb": {
+"mbid": "b9dbf3ba-e642-3238-a196-78f8596d5d73",
+"titulo": "Estrela, estrela",
+"primeiro_lancamento": "1981",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "7f1b64e3-7396-42fb-98d2-08badf1e755c"
+},
+"erro": null
+},
+{
+"disco_id": "da6a127a",
+"artista": "Nitrominds",
+"disco": "Nitrominds [DEMO]",
+"ano": 1996,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1f7789ec",
+"artista": "Boogarins",
+"disco": "Elogio à Instituição do Cinismo [SINGLE]",
+"ano": 2016,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6567d0fa",
+"artista": "GI Joke & Test",
+"disco": "GI Joke & Test [SPLIT]",
+"ano": 2017,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0bcfba57",
+"artista": "Cidadão Instigado",
+"disco": "Cidadão Instigado [EP]",
+"ano": 2000,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e6a5ef7a",
+"artista": "Inezita Barroso",
+"disco": "Inezita Barroso",
+"ano": 1955,
+"mb": {
+"mbid": "6501a066-d230-44ca-b2b6-d24b037a9d37",
+"titulo": "Inezita Barroso",
+"primeiro_lancamento": "2005-01-04",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "cc1ac4fd-7df5-4389-b64f-5a9ac1ef0040"
+},
+"erro": null
+},
+{
+"disco_id": "ace624fb",
+"artista": "Pravda",
+"disco": "Pravda",
+"ano": 1995,
+"mb": {
+"mbid": "ee3880b6-f468-40c6-a074-14d93439460a",
+"titulo": "!Pravda",
+"primeiro_lancamento": "1995-12-05",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "75976b58-7721-4dcf-84bd-e58d0a564275"
+},
+"erro": null
+},
+{
+"disco_id": "8719a0c8",
+"artista": "Iberê Gomes Grosso",
+"disco": "Homenagem",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "005789b9",
+"artista": "Maria Bethânia",
+"disco": "As Canções Que Você Fez Pra Mim",
+"ano": 1993,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "623a3f7e",
+"artista": "Guitüx",
+"disco": "Versões e Reflexões",
+"ano": 2023,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6f3f1615",
+"artista": "Anna Maria Kieffer",
+"disco": "Viagem pelo Brasil",
+"ano": 1990,
+"mb": {
+"mbid": "37c7ea51-f064-41af-823b-66ba8cc064d1",
+"titulo": "Viagem pelo Brasil",
+"primeiro_lancamento": "2000",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "55cf3183-f338-4c15-a538-6a7cfbb3f9a9"
+},
+"erro": null
+},
+{
+"disco_id": "3a93566c",
+"artista": "Instiga",
+"disco": "Tenho Uma Banda",
+"ano": 2008,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "3787ea79",
+"artista": "Satanique Samba Trio",
+"disco": "Xenossamba",
+"ano": 2017,
+"mb": {
+"mbid": "97d0142a-44c0-4c56-8498-9d864ad7384c",
+"titulo": "Xenossamba",
+"primeiro_lancamento": "2017-05-25",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "fc59a717-edb2-463f-be7b-928f7dbda244"
+},
+"erro": null
+},
+{
+"disco_id": "213922df",
+"artista": "Desecration",
+"disco": "Chaotic Reality + bônus [DEMO]",
+"ano": 1995,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5925479a",
+"artista": "EricBeatz",
+"disco": "Expresso das Expressões",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "fc387294",
+"artista": "Mestre Salustiano",
+"disco": "Sonho da rabeca",
+"ano": 2000,
+"mb": {
+"mbid": "258cd08e-2c47-4a46-bc98-a1b8a142754b",
+"titulo": "Sonho Da Rabeca",
+"primeiro_lancamento": "1998",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "d15ca155-e0af-4e76-b36d-ae76c3238177"
+},
+"erro": null
+},
+{
+"disco_id": "98652b42",
+"artista": "Itamar Assumpção",
+"disco": "Ataulfo Alves por Itamar Assumpção",
+"ano": 1996,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "212306ca",
+"artista": "Código do Morro",
+"disco": "Entre a Paz e a Guerra",
+"ano": 2011,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "fe1de36e",
+"artista": "Jane Duboc",
+"disco": "Languidez",
+"ano": 1980,
+"mb": {
+"mbid": "42e52a67-db84-322c-81f9-f31cbed4257d",
+"titulo": "Languidez",
+"primeiro_lancamento": "1980",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "c8cf64ba-734b-479a-a39c-556fa76da955"
+},
+"erro": null
+},
+{
+"disco_id": "5dbc2284",
+"artista": "VA",
+"disco": "Mensagem Fernando Pessoa",
+"ano": 1968,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "7a6b4c79",
+"artista": "Trio Melodia",
+"disco": "Trio Melodia",
+"ano": 1966,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c2d6a0d9",
+"artista": "Orquestra Imperial",
+"disco": "Baile de São Sebastião - Parte 1",
+"ano": 2006,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1314d4f7",
+"artista": "Daniela Mercury",
+"disco": "Sol Da Liberdade",
+"ano": 2000,
+"mb": {
+"mbid": "e08b3ae6-581b-33ec-82f5-fc7de8fd90ac",
+"titulo": "Sol da Liberdade",
+"primeiro_lancamento": "2000-04-06",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "2cf241c0-0d6e-472c-be49-d7691a7aec61"
+},
+"erro": null
+},
+{
+"disco_id": "931fa0cd",
+"artista": "Bebê Feio",
+"disco": "Tragédia",
+"ano": 2026,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1bac6c5d",
+"artista": "Pesta",
+"disco": "Bring Out Your Dead",
+"ano": 2016,
+"mb": {
+"mbid": "0696b3df-1f03-45a1-9e3f-d4201749ce92",
+"titulo": "Bring Out Your Dead",
+"primeiro_lancamento": "2016-01-20",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "3262bf7d-3277-4e8a-8419-cfa06fb871ed"
+},
+"erro": null
+},
+{
+"disco_id": "ce6c3145",
+"artista": "Belchior",
+"disco": "Coração Selvagem",
+"ano": 1977,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6c7bb3f6",
+"artista": "Fernas Morais",
+"disco": "Terra D’água",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a520870c",
+"artista": "Norma Benguell",
+"disco": "O Homem do Sputnik [OST]",
+"ano": 1959,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "f3868bab",
+"artista": "Trio Cristal",
+"disco": "Apresenta As Mais Belas Músicas Paraguaias",
+"ano": 1982,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d7d334f8",
+"artista": "Sebastião do Rojão",
+"disco": "As Duas Faces De Sebastião",
+"ano": 1972,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "24a45ea2",
+"artista": "Autoramas",
+"disco": "Autoramas [DEMO]",
+"ano": 1998,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8cd99ecb",
+"artista": "Notorious Vinni NY",
+"disco": "Notorious Vinni NY",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "01a6646e",
+"artista": "Moacir Morales",
+"disco": "Moacir Morales",
+"ano": 1978,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "71c88507",
+"artista": "Radamés Gnattali & Camerata Carioca",
+"disco": "Tributo a Jacob do Bandolim",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e9d1b7a1",
+"artista": "Grenade",
+"disco": "Splinters",
+"ano": 2001,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "755a1df6",
+"artista": "Italo Azevedo",
+"disco": "Ensaio Sobre o Tempo",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d07c8db2",
+"artista": "Orquestra Som Bateau",
+"disco": "Som Bateau Ataca Novamente",
+"ano": 1971,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8a0b91c4",
+"artista": "Ivan Lins",
+"disco": "Dois Córregos",
+"ano": 1999,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e1515907",
+"artista": "VA",
+"disco": "Os Grandes Carnavais do Passado Vol 2",
+"ano": 1988,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "985a409e",
+"artista": "Cabruera",
+"disco": "Sons da Paraiba",
+"ano": 2005,
+"mb": {
+"mbid": "185e60b3-95a8-4ea6-95ba-23a22fc18f38",
+"titulo": "Sons da Paraíba",
+"primeiro_lancamento": "2008-03-10",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "e7a68a63-ee98-40c1-b3f4-a6a1702bb5c1"
+},
+"erro": null
+},
+{
+"disco_id": "edb1241a",
+"artista": "Luiz Caldas",
+"disco": "Leve",
+"ano": 2022,
+"mb": {
+"mbid": "6f653f82-b183-4659-9578-6c7743b266d7",
+"titulo": "Leve",
+"primeiro_lancamento": "2022-04-01",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "24ca9b35-f389-4472-bb62-37743dbd5d1c"
+},
+"erro": null
+},
+{
+"disco_id": "f91f9d78",
+"artista": "Marcelo Perdido",
+"disco": "Não Tô Aqui Para Te Influenciar",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c66788f7",
+"artista": "Scumbags",
+"disco": "So Many Ways...",
+"ano": 2023,
+"mb": {
+"mbid": "63a65a70-d18b-48be-89f9-305c54c2a812",
+"titulo": "So Many Ways...",
+"primeiro_lancamento": "2023-12-08",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "a7638cf3-a7dc-4235-a313-9312649857ef"
+},
+"erro": null
+},
+{
+"disco_id": "3e5764b8",
+"artista": "Nina Becker",
+"disco": "Azul",
+"ano": 2010,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "805b96c1",
+"artista": "VA",
+"disco": "SP 470",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "aa289e74",
+"artista": "Tião Carreiro & Pardinho",
+"disco": "Homem Até Debaixo D'água",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c6cc7bcd",
+"artista": "X-Rated",
+"disco": "Shaking Like A Bad Machine",
+"ano": 1990,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ccc52650",
+"artista": "Canto dos Malditos na Terra do Nunca",
+"disco": "Travessia",
+"ano": 2017,
+"mb": {
+"mbid": "f8bb3485-7921-4981-b7c5-eefc3c1b4136",
+"titulo": "Travessia",
+"primeiro_lancamento": "2017-08-29",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "eaf32174-b7c0-4b93-800a-49fd68f48a45"
+},
+"erro": null
+},
+{
+"disco_id": "b631b876",
+"artista": "Julia Albook",
+"disco": "Waterproof",
+"ano": 2023,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "06a5aea4",
+"artista": "VA",
+"disco": "Seleção De Ouro",
+"ano": 1962,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1df74e68",
+"artista": "Dulce Nunes",
+"disco": "Samba do Escritor",
+"ano": 1968,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "bd06eb45",
+"artista": "Joyce",
+"disco": "Saudades do Futuro",
+"ano": 1985,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "cd1e7c33",
+"artista": "Luiz Caldas",
+"disco": "Queira Deus",
+"ano": 2022,
+"mb": {
+"mbid": "2aeae34d-6db9-48d4-b656-1621e858568d",
+"titulo": "Queira Deus",
+"primeiro_lancamento": "2022-06-01",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "24ca9b35-f389-4472-bb62-37743dbd5d1c"
+},
+"erro": null
+},
+{
+"disco_id": "96e75932",
+"artista": "Cerberus",
+"disco": "Shadows of Hate [DEMO]",
+"ano": 1996,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "49fa7d25",
+"artista": "Paralamas do Sucesso",
+"disco": "D",
+"ano": 1987,
+"mb": {
+"mbid": "407b4252-22fa-31a2-b5e5-2c3d55d39001",
+"titulo": "D",
+"primeiro_lancamento": "1987-12-21",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "f197a8df-ac2b-4e78-9913-4abf13741f12"
+},
+"erro": null
+},
+{
+"disco_id": "8b1f3439",
+"artista": "Againe",
+"disco": "A Sutil Arte de Fazer Inimigos",
+"ano": 2000,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5a0ffd66",
+"artista": "Gueersh",
+"disco": "Tempo Elástico",
+"ano": 2023,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "33f16a87",
+"artista": "Victor Assis Brasil",
+"disco": "1° Festival de Jazz de São Paulo",
+"ano": 1978,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9ab4f41d",
+"artista": "Expressão Ativa",
+"disco": "Na Dor de uma Lágrima",
+"ano": 2002,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9c517cf4",
+"artista": "Mariã",
+"disco": "Raia Luz [EP]",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "597276c7",
+"artista": "Leo Gandelman",
+"disco": "Ocidente",
+"ano": 1998,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8c5ed684",
+"artista": "Tavito",
+"disco": "Tavito 2",
+"ano": 1981,
+"mb": {
+"mbid": "3b4243b3-cf08-4555-81f5-fc7926b4c13c",
+"titulo": "Tavito 2",
+"primeiro_lancamento": "1981-07-13",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "be381892-9bc7-4f0b-b9d1-256d37023f45"
+},
+"erro": null
+},
+{
+"disco_id": "32c0f88a",
+"artista": "Velho Amarelo",
+"disco": "Infinito",
+"ano": 2023,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "41fb5e7f",
+"artista": "Simonetti",
+"disco": "Música à Luz da Oração Vol 2",
+"ano": 1961,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "67e90509",
+"artista": "Big Ugli Ci",
+"disco": "Terceiro",
+"ano": 2017,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4bb9efcd",
+"artista": "Erasmo Carlos",
+"disco": "O Meu Amigo",
+"ano": 1983,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9dacdb75",
+"artista": "Paura",
+"disco": "Karmic Punishment",
+"ano": 2023,
+"mb": {
+"mbid": "ceb2e20c-e7d7-4692-a749-a34b683d74ff",
+"titulo": "Karmic Punishment",
+"primeiro_lancamento": "2023-07-03",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "28b6c847-ad7e-479e-9684-4945d9a7b5df"
+},
+"erro": null
+},
+{
+"disco_id": "904ddf3d",
+"artista": "SANT",
+"disco": "#OQSHM",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8e5a4e9e",
+"artista": "Trem do Futuro",
+"disco": "TR3S",
+"ano": 2015,
+"mb": {
+"mbid": "1c6908d0-a234-4688-8580-ccedf5dc04e7",
+"titulo": "Tr3s",
+"primeiro_lancamento": "2017-04-17",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "003140ac-09c2-46f6-8b93-bc5cd50981fa"
+},
+"erro": null
+},
+{
+"disco_id": "2b496f35",
+"artista": "Attomica",
+"disco": "Attomica 2005 [DEMO]",
+"ano": 2005,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "42747f92",
+"artista": "Cidadãos Brasileiros",
+"disco": "A Voz do Povo",
+"ano": 2017,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "77251654",
+"artista": "Total Drama",
+"disco": "Sobreviventes",
+"ano": 2000,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "abb7b3b0",
+"artista": "Eddie",
+"disco": "Metropolitano",
+"ano": 2006,
+"mb": {
+"mbid": "587d4f32-5dd9-46b4-b79b-f3a66095c0f5",
+"titulo": "Metropolitano",
+"primeiro_lancamento": "2005",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "30543f92-121b-4f24-b716-4745b05b8eda"
+},
+"erro": null
+},
+{
+"disco_id": "a5ea6d38",
+"artista": "Persona",
+"disco": "Som",
+"ano": 1975,
+"mb": {
+"mbid": "6810fe30-0d40-4aaf-bcb7-0f426513eee8",
+"titulo": "Som",
+"primeiro_lancamento": "1975",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "dee1652c-868a-41f7-8bf5-ed32984fe864"
+},
+"erro": null
+},
+{
+"disco_id": "a8c1d501",
+"artista": "Barão Vermelho",
+"disco": "Balada MTV",
+"ano": 1999,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b7605c83",
+"artista": "Lenine",
+"disco": "Acustico MTV",
+"ano": 2006,
+"mb": {
+"mbid": "0a7e7150-7530-3b4f-9dda-699ba1bf2299",
+"titulo": "Acústico MTV",
+"primeiro_lancamento": "2006-09-01",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "da61fb5d-9543-4e36-9fa7-dad3111f7e8e"
+},
+"erro": null
+},
+{
+"disco_id": "ef3c44e2",
+"artista": "Reginaldo França",
+"disco": "Homenagem Ao Forró",
+"ano": 1985,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0033780a",
+"artista": "Almir Sater",
+"disco": "Caminhos Me Levem",
+"ano": 1996,
+"mb": {
+"mbid": "a79da2dd-367c-3793-9442-2c2ba9eab6eb",
+"titulo": "Caminhos me levem",
+"primeiro_lancamento": "1997",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "f7e8a06b-efad-4d2b-a26a-eb9d96466864"
+},
+"erro": null
+},
+{
+"disco_id": "2c065410",
+"artista": "Albertinho Fortuna",
+"disco": "Musicas De Novelas",
+"ano": 1964,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9560e1a9",
+"artista": "Martinho da Vila",
+"disco": "Voz e Coração",
+"ano": 2002,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "3d6155b8",
+"artista": "Mesa Verde",
+"disco": "In This Silence We Will Slow Dance [EP]",
+"ano": 2005,
+"mb": {
+"mbid": "07e73413-5fb9-47e4-b162-dfd1bfff04a1",
+"titulo": "In This Silence We Will Slow Dance",
+"primeiro_lancamento": "2005",
+"tipo": "EP",
+"ano_confere": true,
+"artista_mbid": "8cd5d398-a602-41a9-9274-c5bbc5322e5c"
+},
+"erro": null
+},
+{
+"disco_id": "8c9be0ff",
+"artista": "Paulinho da Viola",
+"disco": "Zumbido",
+"ano": 1979,
+"mb": {
+"mbid": "a6379d31-5616-3549-bc44-ee1061cb829c",
+"titulo": "Zumbido",
+"primeiro_lancamento": "1979",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "087fc778-c1ed-4f32-bff7-19f8eeba9e57"
+},
+"erro": null
+},
+{
+"disco_id": "b360ca02",
+"artista": "Vanusa",
+"disco": "Vanusa",
+"ano": 1974,
+"mb": {
+"mbid": "d2f5445a-ee2a-485a-9fba-35ad12600b1c",
+"titulo": "Vanusa",
+"primeiro_lancamento": "1969",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "8986a775-7c7b-4b1c-b9df-316fe339e3cd"
+},
+"erro": null
+},
+{
+"disco_id": "f2eb4614",
+"artista": "Cartel Mc's",
+"disco": "Cartel Mc's",
+"ano": 2009,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e9c8fd7f",
+"artista": "Barão Vermelho",
+"disco": "Declare Guerra",
+"ano": 1986,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5e580c6b",
+"artista": "Marinês",
+"disco": "O Nordeste E Seu Ritmo",
+"ano": 1961,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6447aac2",
+"artista": "Lemon Squeezer",
+"disco": "Demo Tape 96-97 + Bônus [DEMO]",
+"ano": 1997,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "dc5fd832",
+"artista": "Herman Torres",
+"disco": "Herman Torres",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "102cda28",
+"artista": "Uccio Gaeta",
+"disco": "Dedos Vertignosos",
+"ano": 1960,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2335eb85",
+"artista": "Paulinho Nogueira",
+"disco": "Sambas de Ontem e Hoje",
+"ano": 1961,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "7d2643a9",
+"artista": "Rosa Passos & Lula Galvão",
+"disco": "Letra & Música, Ary Barroso",
+"ano": 1997,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ec5013d2",
+"artista": "Iorigun",
+"disco": "Empty Houses- Filled Cities [EP]",
+"ano": 2018,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a6c89240",
+"artista": "Oswaldo Montenegro",
+"disco": "Poeta Maldito... Moleque Vadio",
+"ano": 1979,
+"mb": {
+"mbid": "852cdec5-a226-435b-8137-fc9e47e91f44",
+"titulo": "Poeta Maldito… Moleque Vadio",
+"primeiro_lancamento": "1979",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "bbd0c071-d9c4-465f-bb6c-0be9d7844d5d"
+},
+"erro": null
+},
+{
+"disco_id": "acc4b022",
+"artista": "VA",
+"disco": "Metal Rock",
+"ano": 1985,
+"mb": {
+"mbid": "b4454962-7cba-48a5-8d88-3a136e9a6933",
+"titulo": "Metal Rock",
+"primeiro_lancamento": "1982",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "24007106-c5f9-40f3-a5e2-55cb693024da"
+},
+"erro": null
+},
+{
+"disco_id": "b7457a27",
+"artista": "Ana Maria",
+"disco": "É Preciso Saber Viver [SINGLE]",
+"ano": 1969,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a915b50b",
+"artista": "Elza Soares",
+"disco": "Aquarela Brasileira",
+"ano": 1973,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "31bb6687",
+"artista": "Marisa Monte",
+"disco": "Portas",
+"ano": 2021,
+"mb": {
+"mbid": "148f0144-0d87-4d73-99a4-5b2874d734cc",
+"titulo": "Portas",
+"primeiro_lancamento": "2021-07-01",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "f81f19b9-c76e-43ac-8656-bb56071785fb"
+},
+"erro": null
+},
+{
+"disco_id": "bb24c6de",
+"artista": "Sergio Ricardo",
+"disco": "Do Lago à Cachoeira",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6af4f2cf",
+"artista": "Satwa",
+"disco": "Satwa",
+"ano": 1973,
+"mb": {
+"mbid": "865d9798-56f7-313e-bb1d-fdcabc311275",
+"titulo": "Satwa",
+"primeiro_lancamento": "1973",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "3ddfb178-81ca-4414-a94b-510bf44d2999"
+},
+"erro": null
+},
+{
+"disco_id": "f83b0bc4",
+"artista": "Manuel Bandeira & Sérgio Milliet",
+"disco": "Poesia",
+"ano": 1958,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "58d098da",
+"artista": "Letuce",
+"disco": "Couves [EP]",
+"ano": 2010,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8c26694f",
+"artista": "Egberto Gismonti",
+"disco": "Zigzag",
+"ano": 1995,
+"mb": {
+"mbid": "c5c18eb1-5c18-3dff-92fd-bfc02f5b6b4a",
+"titulo": "ZigZag",
+"primeiro_lancamento": "1996",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "7c0c720f-b7e1-43d9-906d-25ff261e86fa"
+},
+"erro": null
+},
+{
+"disco_id": "8504825d",
+"artista": "Cláudio di Moro",
+"disco": "Cláudio di Moro",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "75325a4a",
+"artista": "Ivan Lins",
+"disco": "Love Songs - A Quem Me Faz Feliz",
+"ano": 2002,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "00bf5d29",
+"artista": "Carlinhos E Seu Conjunto",
+"disco": "Como É Bom Dançar",
+"ano": 1956,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1184cb1a",
+"artista": "Vulcano",
+"disco": "Om Pushne Namah [EP]",
+"ano": 1983,
+"mb": {
+"mbid": "d772549d-ed1a-3dee-812f-acbdf3677b1c",
+"titulo": "Om pushne namah",
+"primeiro_lancamento": "1983-07",
+"tipo": "EP",
+"ano_confere": true,
+"artista_mbid": "a8eaa200-371a-44ad-8ca6-913b12de0e9d"
+},
+"erro": null
+},
+{
+"disco_id": "4cd5f0af",
+"artista": "Arthur Moreira Lima",
+"disco": "De Repente",
+"ano": 1984,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e6619321",
+"artista": "Torya",
+"disco": "Nega Doce [EP]",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ad2ee217",
+"artista": "Obanajé",
+"disco": "Macumblues",
+"ano": 2019,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9ff068e7",
+"artista": "Raul Seixas",
+"disco": "O Baú Do Raul Revirado",
+"ano": 2006,
+"mb": {
+"mbid": "871df59f-510b-47f5-be2b-573c9645c2bf",
+"titulo": "O baú do Raul revirado",
+"primeiro_lancamento": "2005",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "c4efd92a-5692-41d5-91bb-b23d4b75e735"
+},
+"erro": null
+},
+{
+"disco_id": "9dda926a",
+"artista": "Dead Fetus Collection & Expurgo",
+"disco": "Expurgo & Dead Fetus Collection [SPLIT]",
+"ano": 2009,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "515fcbe0",
+"artista": "Tonico & Tinoco",
+"disco": "Os Grandes Sucessos de Tonico & Tinoco",
+"ano": 1983,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "bd209b41",
+"artista": "VA",
+"disco": "A Música de Fogaça",
+"ano": 1982,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "208aa763",
+"artista": "Vellocet",
+"disco": "Macumbeiro 2​.0",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ae98c14f",
+"artista": "Talvez Seja Só Eu",
+"disco": "Talvez Seja Só Eu",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "60fbc081",
+"artista": "VA",
+"disco": "Mundo Groove de PB",
+"ano": 2010,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2de7d570",
+"artista": "Living In The Shit",
+"disco": "Chá Magiológico",
+"ano": 1996,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "dff28004",
+"artista": "Sergio Agusto",
+"disco": "Barquinho Diferente",
+"ano": 1965,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "653db696",
+"artista": "Vieira e Seu Conjunto",
+"disco": "Desafiando",
+"ano": 1983,
+"mb": {
+"mbid": "681bc518-bc73-4b9b-a949-3fbe2bca9411",
+"titulo": "Desafiando",
+"primeiro_lancamento": "1983",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "a701a099-785b-4e41-b949-33e37e18e0ee"
+},
+"erro": null
+},
+{
+"disco_id": "7cb16919",
+"artista": "Uakti",
+"disco": "Trilobyte",
+"ano": 1995,
+"mb": {
+"mbid": "7686baad-bee3-3122-a44a-887fca6d88ca",
+"titulo": "Trilobyte",
+"primeiro_lancamento": "1996",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "4b9b1847-0c7c-4dbb-9060-bf14d25a0ae5"
+},
+"erro": null
+},
+{
+"disco_id": "ce68b706",
+"artista": "Bezerra da Silva",
+"disco": "Ao Vivo",
+"ano": 1999,
+"mb": {
+"mbid": "0773f35a-012b-30d9-81b0-d791abe3b447",
+"titulo": "Ao vivo",
+"primeiro_lancamento": "1999",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "2d5347a5-ba26-4116-a8e2-c67c61923538"
+},
+"erro": null
+},
+{
+"disco_id": "75b94866",
+"artista": "Cuco",
+"disco": "1000 Voltz (Pra Deixar em Choque) [MIXTAPE]",
+"ano": 2009,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "3ddf2485",
+"artista": "Os Filhos do Forró",
+"disco": "Diga Que Sim",
+"ano": 1996,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "aaa20753",
+"artista": "Manger Cadavre?",
+"disco": "Como Nascem os Monstros",
+"ano": 2025,
+"mb": {
+"mbid": "ae4222a4-b4c7-4efa-97ff-3668992f4f67",
+"titulo": "Como nascem os monstros",
+"primeiro_lancamento": "2025-02-07",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "b5134026-003f-4162-bd1a-b33440fa5d09"
+},
+"erro": null
+},
+{
+"disco_id": "33326b7a",
+"artista": "Carlos de Almeida",
+"disco": "Serenata A Brasileira",
+"ano": 1987,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "cb23b21f",
+"artista": "Imã",
+"disco": "Furiosa Aberta [EP]",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "05e68913",
+"artista": "Chico Buarque",
+"disco": "Construção",
+"ano": 1971,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "3c2deb38",
+"artista": "Evocation",
+"disco": "Belial's Land [DEMO]",
+"ano": 1996,
+"mb": {
+"mbid": "b7d574cd-0491-4b45-a2dd-8a0432a9736c",
+"titulo": "Belial’s Land",
+"primeiro_lancamento": "1996",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "4c67c264-457a-4585-aaae-adf72de56d10"
+},
+"erro": null
+},
+{
+"disco_id": "213bcd28",
+"artista": "Murderess",
+"disco": "Time To Kill, Vol. Ii [EP]",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1e3f1fbd",
+"artista": "Esteban",
+"disco": "Eu, Tu e o Mundo",
+"ano": 2017,
+"mb": {
+"mbid": "828ea036-8ba6-4c2a-9f1f-a4b601e6ed60",
+"titulo": "Eu, Tu e o Mundo",
+"primeiro_lancamento": "2017-06-09",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "91682b26-bcde-409f-8b4e-44f09107e71a"
+},
+"erro": null
+},
+{
+"disco_id": "f9dcc808",
+"artista": "Gilberto Gil",
+"disco": "OK OK OK [DELUXE]",
+"ano": 2018,
+"mb": {
+"mbid": "a2084174-a0be-4868-8444-3dbcd7ddafb9",
+"titulo": "OK OK OK",
+"primeiro_lancamento": "2018-09-07",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "cf6b70f6-2616-481c-912c-0263cabfc974"
+},
+"erro": null
+},
+{
+"disco_id": "b1cdf47d",
+"artista": "The F.Ray",
+"disco": "Iniciação",
+"ano": 2026,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "454bf2f4",
+"artista": "Frankito Lopes",
+"disco": "Bar da Boemia Vol 7",
+"ano": 1989,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0e96183f",
+"artista": "Casa das Máquinas",
+"disco": "Brilho nos Olhos",
+"ano": 2022,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2edfaab7",
+"artista": "Erasmo Carlos",
+"disco": "Erasmo & Amigos",
+"ano": 2002,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "90ae231d",
+"artista": "Beto Guedes",
+"disco": "Alma de Borracha",
+"ano": 1986,
+"mb": {
+"mbid": "7dbe5c7a-ce80-474f-9036-66d65e653dff",
+"titulo": "Alma de Borracha",
+"primeiro_lancamento": "1986",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "14aea021-97ec-48f0-b69b-8a177c7c72ad"
+},
+"erro": null
+},
+{
+"disco_id": "b03b5f3d",
+"artista": "Geraldo Correia",
+"disco": "Forró em Cajazeira",
+"ano": 1973,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "bac4f320",
+"artista": "Mahmed",
+"disco": "Domínio das Águas e dos Céus [EP]",
+"ano": 2013,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8b4da0b2",
+"artista": "Airto Moreira",
+"disco": "Killer Bees",
+"ano": 1993,
+"mb": {
+"mbid": "1588ab9d-3d44-3193-875d-2836a02df28e",
+"titulo": "Killer Bees",
+"primeiro_lancamento": "1993",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "dd2abaa1-0b73-4ded-82ed-c80cce8d6378"
+},
+"erro": null
+},
+{
+"disco_id": "0e68246d",
+"artista": "Dante",
+"disco": "Sem Coração",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6d16176d",
+"artista": "3 Way",
+"disco": "No.Te.Sa",
+"ano": 2022,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "07b6c217",
+"artista": "O Elevador",
+"disco": "A Fuga do Albatroz no Mundo das Máquinas Loucas",
+"ano": 2017,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0edd7aab",
+"artista": "BaianaSystem",
+"disco": "Fogo [SINGLE]",
+"ano": 2019,
+"mb": {
+"mbid": "3193c53c-e28a-42bb-8909-960970449a4e",
+"titulo": "Fogo",
+"primeiro_lancamento": "2019-04-19",
+"tipo": "Single",
+"ano_confere": true,
+"artista_mbid": "15741996-1794-42a8-a2c7-1ce3e32d0d75"
+},
+"erro": null
+},
+{
+"disco_id": "fe19ae70",
+"artista": "Carta Magna",
+"disco": "A Carta Magna, o Começo de Uma Luta Sem Fim",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "72544ea4",
+"artista": "Zé Bettio",
+"disco": "Ataca de Oito Baixos",
+"ano": 1973,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "36519c18",
+"artista": "Nelson Ângelo",
+"disco": "Cateretê",
+"ano": 2000,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "641fed91",
+"artista": "Test",
+"disco": "Disco Normal",
+"ano": 2023,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "0f9d174e",
+"artista": "Simone",
+"disco": "Delírios E Delícias",
+"ano": 1983,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "713edbb5",
+"artista": "Davi Moraes",
+"disco": "Papo Macaco",
+"ano": 2002,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "10d3cb4b",
+"artista": "Mateus Vinícius",
+"disco": "Música da Alma",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4875feff",
+"artista": "Attomica",
+"disco": "Attomica",
+"ano": 1988,
+"mb": {
+"mbid": "7239361d-64b2-38dc-89d7-1e5bea01533a",
+"titulo": "Attomica",
+"primeiro_lancamento": "1987",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "f5602c41-f29f-4b1d-800e-fb8a16884c31"
+},
+"erro": null
+},
+{
+"disco_id": "b8fa2713",
+"artista": "Conjunto Sambossa",
+"disco": "Isto é Bossa Nova Mesmo",
+"ano": 1963,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "86cef33e",
+"artista": "Gang 90",
+"disco": "Nosso Louco Amor [SINGLE]",
+"ano": 1983,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e80308ec",
+"artista": "Ednardo",
+"disco": "Imã",
+"ano": 1980,
+"mb": {
+"mbid": "c5cf25f1-0274-4e8f-a079-df81a998b6c0",
+"titulo": "Ímã",
+"primeiro_lancamento": "1980",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "758df6ae-5774-4c20-9abc-1a63ffd3a232"
+},
+"erro": null
+},
+{
+"disco_id": "2a86cb9b",
+"artista": "Decaer",
+"disco": "corpo-imagem",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d0371161",
+"artista": "Miltinho",
+"disco": "Quanto Mais Samba Melhor",
+"ano": 1967,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c11d0b9a",
+"artista": "Pery Ribeiro",
+"disco": "Pery É Todo Bossa",
+"ano": 1963,
+"mb": {
+"mbid": "43f8ece9-efe2-37f3-9ddd-ec718fa1e43f",
+"titulo": "Pery é todo bossa",
+"primeiro_lancamento": "1963",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "063d505c-cbdc-4db6-b8d1-02046d61a1e1"
+},
+"erro": null
+},
+{
+"disco_id": "1eb26e19",
+"artista": "De Menos Crime",
+"disco": "Na Sua Mais Perfeita Ignorância",
+"ano": 1995,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "700c34f5",
+"artista": "Momo",
+"disco": "A Estética do Rabisco",
+"ano": 2006,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ccf93b43",
+"artista": "FBC & Vhoor",
+"disco": "Baile (Instrumental)",
+"ano": 2022,
+"mb": {
+"mbid": "77399722-2703-4b08-a012-16f4dbcebb86",
+"titulo": "Baile (Instrumental)",
+"primeiro_lancamento": "2021-12-17",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "97ddbe3a-3cec-488e-a6ad-8b497fd06356"
+},
+"erro": null
+},
+{
+"disco_id": "77d78176",
+"artista": "Coisa Linda Sound System",
+"disco": "Da vida e do Mundo",
+"ano": 2009,
+"mb": {
+"mbid": "db4e3fa6-1315-4800-8682-91bd80622b79",
+"titulo": "Da Vida e do Mundo",
+"primeiro_lancamento": null,
+"tipo": null,
+"ano_confere": false,
+"artista_mbid": "62ddb1b4-a1bf-4dd7-a2a8-6c9aa7f3807e"
+},
+"erro": null
+},
+{
+"disco_id": "99a55263",
+"artista": "Sá, Rodrix & Guarabyra",
+"disco": "Terra",
+"ano": 1973,
+"mb": {
+"mbid": "379a21cb-4ae7-322f-9f93-0f4792d00339",
+"titulo": "Terra",
+"primeiro_lancamento": "1973",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "9d814a40-39ea-462c-b349-359c09003870"
+},
+"erro": null
+},
+{
+"disco_id": "eee98c97",
+"artista": "Mario Alves",
+"disco": "Duas Taças",
+"ano": 1959,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "698fa076",
+"artista": "Perla",
+"disco": "Perla",
+"ano": 1977,
+"mb": {
+"mbid": "74a7ff5d-1eb5-4cc1-82d4-6a1443d62095",
+"titulo": "Perla",
+"primeiro_lancamento": "1977",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "409cae9f-c111-4890-aa79-b4633946d170"
+},
+"erro": null
+},
+{
+"disco_id": "00880dae",
+"artista": "Marianaa & Oruã",
+"disco": "Marginal Alado [SPLIT]",
+"ano": 2018,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "58f09c81",
+"artista": "Viper",
+"disco": "Projeto SP Metal [DEMO]",
+"ano": 1985,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "68e01616",
+"artista": "Combinação Lethal",
+"disco": "Na Missão",
+"ano": 2002,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "296c4861",
+"artista": "Murder Rape",
+"disco": "Evil Shall Burn Inside Me Forever",
+"ano": 2001,
+"mb": {
+"mbid": "6006e8a1-0314-43ac-bc5c-4684bffeb6be",
+"titulo": "Evil Shall Burn Inside Me Forever",
+"primeiro_lancamento": "2001",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "66a31cb5-4530-4d73-b6df-fff1b555ee73"
+},
+"erro": null
+},
+{
+"disco_id": "39976cf9",
+"artista": "Suzi Mariana",
+"disco": "Pagando o Preço [EP]",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1f9334b3",
+"artista": "Adelmo Arcoverde, João Lira & Roberto Corrêa",
+"disco": "Ao Capitão Furtado Marvada Viola",
+"ano": 1986,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5a8076c4",
+"artista": "Hélio Chaves",
+"disco": "A Voz Romântica De Helio Chaves",
+"ano": 1964,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5a0dc71d",
+"artista": "Camaleônica",
+"disco": "Eletrotropical",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9c688140",
+"artista": "B.Valente",
+"disco": "Quebra-Cabeça",
+"ano": 2012,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "314fe5ba",
+"artista": "Surface",
+"disco": "Redenção",
+"ano": 2019,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "baf0ac6f",
+"artista": "Laurindo Almeida & Ray Turner",
+"disco": "Impressões do Brasil",
+"ano": 1957,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "149cc5e3",
+"artista": "Pogoboll",
+"disco": "Marretada na Cabeça [DEMO]",
+"ano": 1996,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4aec10bb",
+"artista": "Galf AC & GORIBEATZZ",
+"disco": "Éden",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1693d626",
+"artista": "Tania Maria",
+"disco": "Forbidden Colors",
+"ano": 1998,
+"mb": {
+"mbid": "650ec0b4-406a-4185-9df9-a69d5eb81553",
+"titulo": "Forbidden Colors",
+"primeiro_lancamento": "1988",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "722acd7b-e04c-4250-912d-7bdd218a9f3b"
+},
+"erro": null
+},
+{
+"disco_id": "2d153d97",
+"artista": "Laurindo Almeida",
+"disco": "Acapulco 22",
+"ano": 1963,
+"mb": {
+"mbid": "6daaa91a-2336-379f-beba-e11692188de1",
+"titulo": "Acapulco '22",
+"primeiro_lancamento": "1963",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "c23280a8-abc8-4435-ab44-43762ce0c89c"
+},
+"erro": null
+},
+{
+"disco_id": "dcb70df3",
+"artista": "Panatron",
+"disco": "Panatron [EP]",
+"ano": 2009,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "aaded93d",
+"artista": "Maria Helena Coelho de Andrade",
+"disco": "Piano",
+"ano": 1984,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a3d5d96c",
+"artista": "Poly",
+"disco": "Romper da Aurora",
+"ano": 1973,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "765143f4",
+"artista": "ChromaKitsch",
+"disco": "Não Somos Robôs",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "61ea5ee9",
+"artista": "Coronel Ludrú",
+"disco": "Coronel Ludrú No Forró",
+"ano": 1971,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "eef9dffc",
+"artista": "Wanderléa",
+"disco": "Wanderléa",
+"ano": 1967,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ce5de658",
+"artista": "Honorina Silva",
+"disco": "Honorina Silva Interpreta Barrozo Netto e Carlos Mesquita",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "826d9cca",
+"artista": "Violeta de Outono",
+"disco": "Mulher na Montanha",
+"ano": 1999,
+"mb": {
+"mbid": "f8b59845-9aaa-4210-8922-9e10470f1ee0",
+"titulo": "Mulher na Montanha",
+"primeiro_lancamento": "1999-09-27",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "360942a6-1e2d-452a-9e86-89b8e46d2730"
+},
+"erro": null
+},
+{
+"disco_id": "08f56235",
+"artista": "Aline, Toninho Horta, Beto Lopes, Helvius Vilela & Bernard Aygaoux",
+"disco": "Mares De Minas",
+"ano": 1988,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "19cb8ec3",
+"artista": "Maestro Duda e Sua Orquestra",
+"disco": "Olinda Carnaval",
+"ano": 1979,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6c99368a",
+"artista": "Cyro Monteiro",
+"disco": "Senhor Samba",
+"ano": 1961,
+"mb": {
+"mbid": "9c88cfa7-8901-3cc6-bcba-288525129ace",
+"titulo": "Senhor Samba",
+"primeiro_lancamento": "1961",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "b36d86d4-ea52-4979-8610-02f7af9750c9"
+},
+"erro": null
+},
+{
+"disco_id": "7ec51cf3",
+"artista": "MNTH",
+"disco": "Lume Púrpuro",
+"ano": 2024,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "438aed46",
+"artista": "Streetlight Manifesto",
+"disco": "Keasbey Nights",
+"ano": 2006,
+"mb": {
+"mbid": "5b613390-d042-3f54-a284-298d5e7fa9a2",
+"titulo": "Keasbey Nights",
+"primeiro_lancamento": "2006-03-07",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "cbc9199f-944b-42e9-a945-627c9fc0ba6e"
+},
+"erro": null
+},
+{
+"disco_id": "3247c7fd",
+"artista": "Sérgio Reis",
+"disco": "Coração Estradeiro",
+"ano": 2008,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "75c4fbb5",
+"artista": "Ronnie Von",
+"disco": "Ronnie Von",
+"ano": 1973,
+"mb": {
+"mbid": "6f0f3b3c-6e68-356d-8d36-ef4c5e818ef1",
+"titulo": "Ronnie Von",
+"primeiro_lancamento": "1969",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "17e67ed2-ccea-4388-9e89-c34f7ae33a6a"
+},
+"erro": null
+},
+{
+"disco_id": "d15f6c96",
+"artista": "Raimundinho do Acordeon",
+"disco": "Mistura Gostosa",
+"ano": 1989,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "274ad4dd",
+"artista": "VE",
+"disco": "Beware of the Dog [DEMO]",
+"ano": 1995,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ed8e844c",
+"artista": "A Sangue Frio",
+"disco": "Uma Vida é Muito Pouco",
+"ano": 2008,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9c861951",
+"artista": "Pim",
+"disco": "É Cambalacho",
+"ano": 1988,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "56155a27",
+"artista": "Negrão dos 8 Baixos",
+"disco": "Só No Costurado",
+"ano": 1977,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d32a9b57",
+"artista": "Amiri",
+"disco": "Capítulo 4A, Caminho da Origem [EP]",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "7fb7ce38",
+"artista": "VA",
+"disco": "A Grande Jogada e a Margarida",
+"ano": 1968,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ebfb125e",
+"artista": "Caçadores de Harmonia",
+"disco": "A Noite Não Inspira Confiança",
+"ano": 2003,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "f269b9ac",
+"artista": "Elis Regina",
+"disco": "Me Deixa Em Paz",
+"ano": 1972,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "bd2ff4af",
+"artista": "Grupo Fundo De Quintal",
+"disco": "Simplicidade - Ao Vivo",
+"ano": 2000,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a68787a0",
+"artista": "Vanja Orico",
+"disco": "Interpreta Musicas Do Filme Lampiao Rei Do Cangaco [EP]",
+"ano": 1964,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "464c7e0b",
+"artista": "Lirinha",
+"disco": "O Labirinto e o Desmantelo",
+"ano": 2015,
+"mb": {
+"mbid": "6ef07584-82be-4b70-8ada-f0e9cb35d1a0",
+"titulo": "O Labirinto e o Desmantelo",
+"primeiro_lancamento": "2015-04-27",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "19f0a173-13ac-42c5-a950-f204fcce5518"
+},
+"erro": null
+},
+{
+"disco_id": "34eed0ed",
+"artista": "Mario Telles",
+"disco": "Mario Telles",
+"ano": 1962,
+"mb": {
+"mbid": "86c5f490-ce6c-3a6a-9ac8-24830ab302df",
+"titulo": "Mario Telles",
+"primeiro_lancamento": "1962",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "11b08537-e3cb-49c7-be55-481ab173dcb0"
+},
+"erro": null
+},
+{
+"disco_id": "8ac1d33a",
+"artista": "Dominguinhos",
+"disco": "Querubim",
+"ano": 1981,
+"mb": {
+"mbid": "ec726a40-af94-4c1c-8294-70dae9b77ea9",
+"titulo": "Querubim",
+"primeiro_lancamento": null,
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "d5956a2f-bab9-4aa3-a9be-ad393518e5b0"
+},
+"erro": null
+},
+{
+"disco_id": "ed9f0490",
+"artista": "Helena Angelini",
+"disco": "Tree Of Life, Heaven On Earth",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "dda89b49",
+"artista": "Bughouse",
+"disco": "Spring Fever [DEMO]",
+"ano": 1995,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4e540f8e",
+"artista": "Próstata",
+"disco": "Próstata! [EP]",
+"ano": 2026,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "6e3900bb",
+"artista": "VA",
+"disco": "Seleção 72",
+"ano": 1972,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "8667665f",
+"artista": "Carlos Malta",
+"disco": "Carlos Malta e Pife Muderno",
+"ano": 1999,
+"mb": {
+"mbid": "440f726e-d34a-350a-ad44-fb61b1054f45",
+"titulo": "Carlos Malta e Pife Muderno",
+"primeiro_lancamento": "1999",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "0bdca973-c50a-448f-92eb-d5234e4d92d8"
+},
+"erro": null
+},
+{
+"disco_id": "1ec207b9",
+"artista": "Black Pantera",
+"disco": "Capítulo Negro [EP]",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "016b8b6b",
+"artista": "Marcio Greyck",
+"disco": "Marcio Greyck [EP]",
+"ano": 1973,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "5b9f4299",
+"artista": "Aquarela Carioca",
+"disco": "Contos",
+"ano": 1991,
+"mb": {
+"mbid": "fae5997f-e22b-4ee2-934d-fdfc382a5d34",
+"titulo": "Contos",
+"primeiro_lancamento": "1991",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "89a1f326-0612-44ac-a8cb-236406dd8740"
+},
+"erro": null
+},
+{
+"disco_id": "da112da4",
+"artista": "Codinome PBL",
+"disco": "Vou Deixar Meu Rap Falar Por Mim",
+"ano": 2015,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1822f1c3",
+"artista": "14 Bis",
+"disco": "Siga O Sol",
+"ano": 1996,
+"mb": {
+"mbid": "390b07f6-fbde-302a-a5ec-47fb8d650eb9",
+"titulo": "Siga o Sol",
+"primeiro_lancamento": "1996",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "40c3dbd1-66c8-4c12-b673-f22d52177b45"
+},
+"erro": null
+},
+{
+"disco_id": "391e441c",
+"artista": "Divine",
+"disco": "Now Working! [DEMO]",
+"ano": 1997,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ca2bf3a9",
+"artista": "May East",
+"disco": "Tabapora",
+"ano": 1987,
+"mb": {
+"mbid": "dd56917e-a8f0-4714-ab75-a64b5a629249",
+"titulo": "Tabapora",
+"primeiro_lancamento": "1987",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "9006dad2-117d-41fc-a5f0-f181bb986b6c"
+},
+"erro": null
+},
+{
+"disco_id": "5938b1ee",
+"artista": "Jacob do Bandolim & Waldir Azevedo",
+"disco": "Jacob do Bandolim & Waldir Azevedo",
+"ano": 1974,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "db86f8e9",
+"artista": "João Brasil",
+"disco": "8 Hits",
+"ano": 2008,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1b1a2619",
+"artista": "Pink Opala",
+"disco": "Flores Vivas [EP]",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2ea80da1",
+"artista": "Ney Matogrosso",
+"disco": "Pérolas 1 [EP]",
+"ano": 2022,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "aeeed2d9",
+"artista": "Milton Nascimento & Lô Borges",
+"disco": "Molotov [BOOTLEG]",
+"ano": 2009,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "72c87353",
+"artista": "Bebeto",
+"disco": "Nos Bailes da Vida",
+"ano": 1993,
+"mb": {
+"mbid": "b97eba90-bf2f-4353-834b-8cef0ee16ea8",
+"titulo": "Nos Bailes da Vida",
+"primeiro_lancamento": "1993-11-30",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "91ef3a34-f20a-474b-970a-c41efc834215"
+},
+"erro": null
+},
+{
+"disco_id": "32694384",
+"artista": "Roberto Ribeiro",
+"disco": "Corrente de Aço",
+"ano": 1985,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "565a36cb",
+"artista": "Afrolirismos",
+"disco": "Afrolirismos N 1 [EP]",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "463e8f1e",
+"artista": "Vanessa da Mata",
+"disco": "Vanessa da Mata",
+"ano": 2002,
+"mb": {
+"mbid": "3f2460d9-75cb-3a5c-af46-d794967de14d",
+"titulo": "Vanessa da Mata",
+"primeiro_lancamento": "2002-08-31",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "f3580347-b84a-47d8-b86e-cad642322a47"
+},
+"erro": null
+},
+{
+"disco_id": "c314537a",
+"artista": "Azymuth",
+"disco": "21 Años",
+"ano": 1994,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "3575e5a2",
+"artista": "Maria Bethânia",
+"disco": "Talismã",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b1134298",
+"artista": "Sarah Abdala",
+"disco": "Pueblo",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "151ac957",
+"artista": "Pelé",
+"disco": "Pelé Ginga",
+"ano": 2006,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "688f53e8",
+"artista": "Deafkids & Test",
+"disco": "Sem Esperanças",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "41edd7fa",
+"artista": "Cyro Monteiro & Jorge Veiga",
+"disco": "De Leve",
+"ano": 1971,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "65090a96",
+"artista": "João Roberto Kelly",
+"disco": "João Roberto Kelly",
+"ano": 1980,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "fcc4d2e7",
+"artista": "Zé Gonzaga",
+"disco": "Baile Da Tartaruga",
+"ano": 1991,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b31712b6",
+"artista": "Sweet Fanny Adams",
+"disco": "Fanny, You're No Fun [EP]",
+"ano": 2008,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "ec798b19",
+"artista": "Nalva Aguiar",
+"disco": "Coração de Madeira [SINGLE]",
+"ano": 1967,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "4ad872fa",
+"artista": "Roberto Carlos",
+"disco": "Canzone Per Te [SINGLE]",
+"ano": 1968,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e521e3f6",
+"artista": "Elza Soares",
+"disco": "Sambossa",
+"ano": 1963,
+"mb": {
+"mbid": "a361eeb5-3b6e-4fa1-ab27-74928a035173",
+"titulo": "Sambossa",
+"primeiro_lancamento": "1963-03-06",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "a619471e-ee2f-430f-b57b-262f94457559"
+},
+"erro": null
+},
+{
+"disco_id": "d9ca34e1",
+"artista": "A Sangue Frio",
+"disco": "EP 2019 [EP]",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "7cce6098",
+"artista": "Uli Costa & Sandália de Prata",
+"disco": "Uli Costa & Sandália de Prata",
+"ano": 2025,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9c0a0991",
+"artista": "Vulcano",
+"disco": "The Man The Key The Beast",
+"ano": 2013,
+"mb": {
+"mbid": "93552d9a-31e3-4e4b-90e8-9ffbc39d4b04",
+"titulo": "The Man The Key The Beast",
+"primeiro_lancamento": "2013-04-18",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "a8eaa200-371a-44ad-8ca6-913b12de0e9d"
+},
+"erro": null
+},
+{
+"disco_id": "76ee834b",
+"artista": "CharlieEchoLimaTango",
+"disco": "Sounderground",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "34e85a21",
+"artista": "Ana Preta",
+"disco": "Ana Preta",
+"ano": 2022,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9e038dac",
+"artista": "Fabio Jr",
+"disco": "Só Você e Fábio Jr Ao Vivo",
+"ano": 1997,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1fbaf77b",
+"artista": "Trio Nagô",
+"disco": "Um Passeio Com o Trio Nagô",
+"ano": 1959,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "73e4aa9f",
+"artista": "Jedias Hertz",
+"disco": "Maverick Voador",
+"ano": 2021,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "d84acaa3",
+"artista": "Engenheiros do Hawaii",
+"disco": "Tchau Radar",
+"ano": 1999,
+"mb": {
+"mbid": "f739282b-8050-33c1-9d38-aed92c443b0e",
+"titulo": "!Tchau radar!",
+"primeiro_lancamento": "1999-05-05",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "92de023e-6f08-4133-8063-c0740c855e3d"
+},
+"erro": null
+},
+{
+"disco_id": "ed156795",
+"artista": "Emilio Santiago",
+"disco": "Aquarela Brasileira 4",
+"ano": 1991,
+"mb": {
+"mbid": "1e0a6ea8-9ac0-496d-9155-0689476d8503",
+"titulo": "Aquarela Brasileira 4",
+"primeiro_lancamento": "1991",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "1f97a764-961c-41fa-99f5-d30bc0319952"
+},
+"erro": null
+},
+{
+"disco_id": "dc1584e7",
+"artista": "Biu do Pife",
+"disco": "Pife Do Biu",
+"ano": 1976,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "95efdd8d",
+"artista": "DevastoProd",
+"disco": "Em Tempos De Hoje",
+"ano": 2017,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "f812dff1",
+"artista": "Doris Monteiro",
+"disco": "Confidencias de Doris Monteiro",
+"ano": 1956,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "71bedd0c",
+"artista": "Claudette Soares",
+"disco": "Corpo e Alma",
+"ano": 1975,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1db21b31",
+"artista": "Chaotic System",
+"disco": "Baixada Morta [EP]",
+"ano": 2018,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "b77cfb3e",
+"artista": "CPM 22",
+"disco": "Ao Vivo No Rock In Rio",
+"ano": 2016,
+"mb": {
+"mbid": "ad58885b-1363-4bd4-94f1-6d92bb125fb1",
+"titulo": "Ao vivo no Rock in Rio",
+"primeiro_lancamento": "2016-11-04",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "a305918f-ce88-4834-a134-3381e34ad4e8"
+},
+"erro": null
+},
+{
+"disco_id": "dbb0d013",
+"artista": "Dnilson",
+"disco": "Nosso Sonho de Amor [SINGLE]",
+"ano": 1972,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c32001cd",
+"artista": "Marcos Valle",
+"disco": "Viola Enluarada [SINGLE]",
+"ano": 1968,
+"mb": {
+"mbid": "27664b9f-17c5-36b8-a5df-24fbad944035",
+"titulo": "Viola enluarada",
+"primeiro_lancamento": "1968",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "1ba347eb-58e8-45d6-b7e3-09873dc2506a"
+},
+"erro": null
+},
+{
+"disco_id": "f27d30fa",
+"artista": "Orquestra Som Bateau",
+"disco": "Top Hits",
+"ano": 1966,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "90acc007",
+"artista": "Marcelo Jeneci",
+"disco": "Guaia",
+"ano": 2019,
+"mb": {
+"mbid": "8687a13c-cfa3-4e85-9d6b-e977b63cd02c",
+"titulo": "Guaia",
+"primeiro_lancamento": "2019-07-22",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "2cd7c5d2-2d5d-4753-91cb-e329ffa20f49"
+},
+"erro": null
+},
+{
+"disco_id": "3e34ad41",
+"artista": "Trilha $onora do Gueto",
+"disco": "Us Fracu Num Tem Veiz",
+"ano": 2003,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "110622bd",
+"artista": "Thiago Elniño",
+"disco": "Pedras Flechas Lanças Espadas e Espelhos",
+"ano": 2019,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "bea99bf0",
+"artista": "Juliana Ribeiro",
+"disco": "Juliana Ribeiro",
+"ano": 2009,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "273fc850",
+"artista": "Sergio Mendes",
+"disco": "Brasileiro",
+"ano": 1992,
+"mb": {
+"mbid": "4b975363-dd68-322d-884a-90bed681279b",
+"titulo": "Brasileiro",
+"primeiro_lancamento": "1992-05-12",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "6bf591c4-b050-478e-9d9f-167394d66c90"
+},
+"erro": null
+},
+{
+"disco_id": "ae34a163",
+"artista": "Natan Marques & Ricardo Leão",
+"disco": "Comboio",
+"ano": 1987,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1a430a39",
+"artista": "Itamar Brant",
+"disco": "Samba Trem",
+"ano": 2022,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "556c5d95",
+"artista": "Krisiun",
+"disco": "Unmerciful Order",
+"ano": 1994,
+"mb": {
+"mbid": "bf85d0dd-4657-3023-8248-50daadaf111d",
+"titulo": "Unmerciful Order",
+"primeiro_lancamento": "1994-03-11",
+"tipo": "EP",
+"ano_confere": true,
+"artista_mbid": "9e6458d6-7053-48eb-ac8f-bf6fdf9169c6"
+},
+"erro": null
+},
+{
+"disco_id": "eeb6f213",
+"artista": "Os Satélites",
+"disco": "Arrasta A Sandália",
+"ano": 1959,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "25422d04",
+"artista": "MV Bill",
+"disco": "Traficando Informação",
+"ano": 2000,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "dd5355c8",
+"artista": "Balbela",
+"disco": "Balbela [EP]",
+"ano": 2020,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "abc216b6",
+"artista": "Versa Libertália",
+"disco": "Uma Nova Forma de Enxergar a Vida",
+"ano": 2022,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "2036116f",
+"artista": "Zimbo Trio",
+"disco": "Zimbo Trio + Cordas Vol 1",
+"ano": 1967,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "696fde0e",
+"artista": "Noite Ilustrada",
+"disco": "Noite Ilustrada",
+"ano": 1969,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "e6102be0",
+"artista": "Vitrola Sintética",
+"disco": "Notícias",
+"ano": 2009,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "da5798b4",
+"artista": "Cipó Fogo",
+"disco": "Originais [SINGLE]",
+"ano": 2023,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "c025a5fc",
+"artista": "VA",
+"disco": "Trindade [OST]",
+"ano": 1978,
+"mb": {
+"mbid": "df2aa9b5-46f5-4bae-8510-1c9bf4e76c96",
+"titulo": "Trindade",
+"primeiro_lancamento": "2022-11-23",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "8e692d2e-9bbf-418a-af5a-55f1583ef607"
+},
+"erro": null
+},
+{
+"disco_id": "cbecad2b",
+"artista": "Benito Di Paula",
+"disco": "Brasil Som 75",
+"ano": 1975,
+"mb": {
+"mbid": "daa9134a-f8ba-479a-bafe-fbd15af95cfb",
+"titulo": "Brasil Som 75",
+"primeiro_lancamento": "1975",
+"tipo": "Album",
+"ano_confere": true,
+"artista_mbid": "2b51dd3c-6ad0-4f44-bfca-fbd890ff362c"
+},
+"erro": null
+},
+{
+"disco_id": "2725b147",
+"artista": "Heitor Villa-Lobos",
+"disco": "Canções Típicas Brasileiras",
+"ano": 1977,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "743c01d2",
+"artista": "Azymuth",
+"disco": "Carnival",
+"ano": 1997,
+"mb": {
+"mbid": "063af701-40dd-3c65-8ce4-0afc64630f5c",
+"titulo": "Carnival",
+"primeiro_lancamento": "1996",
+"tipo": "Album",
+"ano_confere": false,
+"artista_mbid": "5f86a079-be87-4eb3-8709-afe2498afa37"
+},
+"erro": null
+},
+{
+"disco_id": "1ddd2607",
+"artista": "Antraz",
+"disco": "Vidas Interrompidas",
+"ano": 2011,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "68517859",
+"artista": "Advertência Criminal",
+"disco": "Veneno da Serpente Vol 2",
+"ano": 2009,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "68b15bc6",
+"artista": "Waldomiro Lobo",
+"disco": "Waldomiro Lobo",
+"ano": 1973,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "1befcbb2",
+"artista": "Agnaldo Timóteo",
+"disco": "O Astro Do Sucesso",
+"ano": 1966,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "a5183803",
+"artista": "Cartel Mc's",
+"disco": "Sin City",
+"ano": 2014,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "9613336c",
+"artista": "Conexão do Morro",
+"disco": "Viver no Gueto, Vichiii",
+"ano": 2000,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "452f6834",
+"artista": "Projota",
+"disco": "Muita Luz (Mixtape 2013)",
+"ano": 2013,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "59fd462b",
+"artista": "Zé Vito",
+"disco": "Já Carregou",
+"ano": 2013,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "696052ce",
+"artista": "Os Meninos de Deus",
+"disco": "Aperte Não Sacuda",
+"ano": 1974,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "15441b80",
+"artista": "Camerata Carioca",
+"disco": "Tocar",
+"ano": 1983,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "076de2ae",
+"artista": "Topo Gigio",
+"disco": "Topo Gigio [SINGLE]",
+"ano": 1969,
+"mb": null,
+"erro": null
+},
+{
+"disco_id": "fb6cb266",
+"artista": "7º Selo",
+"disco": "O Plano",
+"ano": 2011,
+"mb": null,
+"erro": null
+}
+],
+"artistas": {
+"Woyzeck": {
+"mbid": "50bf2df1-2379-4851-9a45-8858516204dd",
+"nome": "Woyzeck",
+"tipo": "Group",
+"pais": "US",
+"area": "San Diego",
+"area_inicio": "San Diego",
+"inicio": "2016",
+"fim": null,
+"wikidata": "Q58343038",
+"lugar": "San Diego"
+},
+"Talita Avelino": null,
+"Violins": {
+"mbid": "6aa6d09d-ac11-4b60-88b8-8d3f5c26ec6f",
+"nome": "Violins",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Goiânia",
+"inicio": "2001-01",
+"fim": null,
+"wikidata": null
+},
+"Kika Deeke": null,
+"Mart'nália": {
+"mbid": "a36e4f1f-aaba-427d-bab0-0b9535c8fb7f",
+"nome": "Mart’nália",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1965-09-25",
+"fim": null,
+"wikidata": "Q6774067",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1965-09-07"
+},
+"Marcio Greyck": {
+"mbid": "2121bfdb-0399-42b8-bcc8-445be97094b0",
+"nome": "Márcio Greyck",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Irmandade": {
+"mbid": "69b4eabf-0b50-441a-88b2-c96e5f143a93",
+"nome": "Irmandade",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Claudia": {
+"mbid": "e9ccdca1-156a-4a08-9e07-bf0019453511",
+"nome": "Cláudya",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1948-05-10",
+"fim": null,
+"wikidata": "Q5137261",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1946-05-10"
+},
+"Frito Sampler": null,
+"Boca Livre": {
+"mbid": "6fa56da3-9e74-4920-8c76-947a43dd7fab",
+"nome": "Boca Livre",
+"tipo": "Group",
+"pais": "BR",
+"area": "Rio de Janeiro",
+"area_inicio": null,
+"inicio": "1978",
+"fim": null,
+"wikidata": "Q9660013"
+},
+"Mácleim": null,
+"Barulhista": {
+"mbid": "06128562-a6b5-4d03-b614-4c6eaa319549",
+"nome": "Barulhista",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": "Q65165256",
+"lugar": "Minas Gerais",
+"uf": "Minas Gerais",
+"nascimento": "1981-06-15"
+},
+"Jards Macalé": {
+"mbid": "bf6e292a-d95c-434c-b721-0a9ea9a466a3",
+"nome": "Jards Macalé",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Tijuca",
+"inicio": "1943-03-03",
+"fim": "2025-11-17",
+"wikidata": "Q10306388",
+"lugar": "Tijuca",
+"uf": "Rio de Janeiro",
+"nascimento": "1943-03-03"
+},
+"Rogério Skylab": null,
+"Cerberus": {
+"mbid": "dc24078b-3489-4c62-b86c-d45813ffc9d4",
+"nome": "Cerberus",
+"tipo": "Group",
+"pais": "GB",
+"area": "Luton",
+"area_inicio": "Luton",
+"inicio": "1988",
+"fim": null,
+"wikidata": null
+},
+"Cadu Tenório": null,
+"Douglas Scalioni Domingues": {
+"mbid": "4fd75e66-4e75-4aa1-a298-ebb416ff26bf",
+"nome": "Douglas Scalioni Domingues",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Moacyr Peixoto": {
+"mbid": "31d0830d-b714-4352-a07c-d8b1596e9051",
+"nome": "Moacyr Peixoto",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Moreira da Silva": {
+"mbid": "e54ff3e3-8e59-47c8-822b-5cd366a25c3e",
+"nome": "Moreira da Silva",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1902-04-01",
+"fim": "2000-06-06",
+"wikidata": "Q3891609",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1902-04-01"
+},
+"Jacinto Limeira": null,
+"The Funk Fuckers": {
+"mbid": "8d205fee-3d0b-42ca-a3b4-0ce234714d5e",
+"nome": "The Funk Fuckers",
+"tipo": "Group",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Yangprj": {
+"mbid": "e4f5ea13-3bfa-4a87-97ab-7ac9de8858d3",
+"nome": "Yangprj",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Tião Carreiro & Pardinho": null,
+"Roberto Ribeiro": {
+"mbid": "70d13364-265a-4961-856e-fd3d8bcfaf25",
+"nome": "Roberto Ribeiro",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Campos dos Goytacazes",
+"inicio": "1940-07-20",
+"fim": "1996-01-08",
+"wikidata": "Q7351875",
+"lugar": "Campos dos Goytacazes",
+"uf": "Rio de Janeiro",
+"nascimento": "1940-07-20"
+},
+"Kid Vinil": {
+"mbid": "67231c06-9472-4309-b462-8a8a0a3c0547",
+"nome": "Kid Vinil",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Cedral",
+"inicio": "1955-03-10",
+"fim": "2017-05-19",
+"wikidata": "Q10314314",
+"lugar": "Cedral",
+"uf": "São Paulo",
+"nascimento": "1955-03-10"
+},
+"Zimbra": {
+"mbid": "9d96f584-c3c9-4b89-a101-7c021663eabb",
+"nome": "Zimbra",
+"tipo": null,
+"pais": "BR",
+"area": "Santos",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": "Q97181299",
+"lugar": "Santos",
+"uf": "São Paulo"
+},
+"Wilson Miranda": {
+"mbid": "5a7c9e4d-57ed-4acd-b20c-0875443e61bc",
+"nome": "Wilson Miranda",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Thiagão": null,
+"Waldir Azevedo": {
+"mbid": "7185a825-204f-45d6-9c5a-87c2f5c1efa6",
+"nome": "Waldir Azevedo",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1923-01-27",
+"fim": "1980-09-21",
+"wikidata": "Q1929085",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1923-01-27"
+},
+"O Surto": {
+"mbid": "143cd620-88f9-4c58-a2c1-46028166d020",
+"nome": "O Surto",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Alpha Asian Malaria": null,
+"Lenine": {
+"mbid": "da61fb5d-9543-4e36-9fa7-dad3111f7e8e",
+"nome": "Lenine",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Recife",
+"inicio": "1959-02-02",
+"fim": null,
+"wikidata": "Q715987",
+"lugar": "Recife",
+"uf": "Pernambuco",
+"nascimento": "1959-02-02"
+},
+"Negro Leo, Rodrigo Coelho & Thomas Harres": null,
+"Macunamassa": null,
+"Dadá Joãozinho & Mundo Video": null,
+"Hermeto Pascoal & Aline Morena": null,
+"Nosso Querido Figueiredo": null,
+"Luiz Bonfá": {
+"mbid": "f926459e-1bd2-42a6-a174-8994ad950591",
+"nome": "Luiz Bonfá",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1922-10-17",
+"fim": "2001-01-12",
+"wikidata": "Q932925",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1922-10-17"
+},
+"Paulo Moura": {
+"mbid": "73756fb8-c195-4d3c-89b9-f9c5b5af9639",
+"nome": "Paulo Moura",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São José do Rio Preto",
+"inicio": "1932-07-15",
+"fim": "2010-07-12",
+"wikidata": "Q3031477",
+"lugar": "São José do Rio Preto",
+"uf": "São Paulo",
+"nascimento": "1932-07-15"
+},
+"Luiz Roberto": {
+"mbid": "e483896d-7f4e-4c77-a85e-09017d1ddc56",
+"nome": "Luiz Roberto",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Celso Blues Boy": {
+"mbid": "7b30d395-b9c7-4263-a7f5-6407cf7ebd4b",
+"nome": "Celso Blues Boy",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Lindomar Castilho": {
+"mbid": "3cc70f2b-224b-4e4b-85f0-a14cac596535",
+"nome": "Lindomar Castilho",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Goiás",
+"inicio": "1940-01-21",
+"fim": "2025-12-20",
+"wikidata": "Q9022739",
+"lugar": "Santa Helena de Goiás",
+"uf": "Goiás",
+"nascimento": "1940-01-21"
+},
+"Quinteto Violado": {
+"mbid": "23c07df4-b3bb-42e8-8bea-098c0b09fb90",
+"nome": "Quinteto Violado",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Recife",
+"inicio": "1970",
+"fim": null,
+"wikidata": "Q10356440"
+},
+"Leny Andrade": {
+"mbid": "59b2057f-5a0c-4ce1-a404-5de1ffdbc012",
+"nome": "Leny Andrade",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1943-01-25",
+"fim": "2023-07-24",
+"wikidata": "Q6523421",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1943-01-25"
+},
+"Tape Rec": {
+"mbid": "f9673382-84af-411d-b7ed-a98368184005",
+"nome": "Tape Rec",
+"tipo": "Group",
+"pais": "BR",
+"area": "Rio de Janeiro",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Ian Ramil": {
+"mbid": "4086093f-d29e-4258-804f-ddbf584786e0",
+"nome": "Ian Ramil",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Carne Doce": {
+"mbid": "79db020c-b8d7-43e8-bf8e-d3dda7fe0f73",
+"nome": "Carne Doce",
+"tipo": "Group",
+"pais": "BR",
+"area": "Goiânia",
+"area_inicio": "Goiânia",
+"inicio": "2013",
+"fim": "2025-10-28",
+"wikidata": "Q65166074",
+"lugar": "Goiânia",
+"uf": "Goiás"
+},
+"Nara Leão": null,
+"Nara Leão, Zé Keti & João Do Vale": null,
+"Elza Soares": {
+"mbid": "a619471e-ee2f-430f-b57b-262f94457559",
+"nome": "Elza Soares",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1930-06-23",
+"fim": "2022-01-20",
+"wikidata": "Q435176",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1930-06-23"
+},
+"Martinho da Vila": {
+"mbid": "88a13d24-7915-4b51-8d95-c8de00ab79ea",
+"nome": "Martinho da Vila",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1938-02-12",
+"fim": null,
+"wikidata": "Q385498",
+"lugar": "Duas Barras",
+"uf": "Rio de Janeiro",
+"nascimento": "1938-02-12"
+},
+"Luiz Caldas": {
+"mbid": "24ca9b35-f389-4472-bb62-37743dbd5d1c",
+"nome": "Luiz Caldas",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Feira de Santana",
+"inicio": "1963-01-19",
+"fim": null,
+"wikidata": "Q1597249",
+"lugar": "Feira de Santana",
+"uf": "Bahia",
+"nascimento": "1963-06-24"
+},
+"Orquestra Afro Brasileira": {
+"mbid": "2c7311a7-14f8-4690-8a0f-66c66b36665a",
+"nome": "Orquestra Afro-Brasileira",
+"tipo": "Group",
+"pais": "BR",
+"area": "Rio de Janeiro",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1942-04",
+"fim": "1970-03-02",
+"wikidata": null
+},
+"André Barbosa Filho": null,
+"Torture Squad": {
+"mbid": "8f2dbc82-6dea-4432-88c7-afc9e9efc44c",
+"nome": "Torture Squad",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1990",
+"fim": null,
+"wikidata": "Q1495983",
+"lugar": "São Paulo",
+"uf": "São Paulo"
+},
+"Rua do Absurdo": {
+"mbid": "1c1be0f9-51b1-4979-a7e3-b82e65ce0e60",
+"nome": "Rua do Absurdo",
+"tipo": "Group",
+"pais": "BR",
+"area": "Recife",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Tom Zé": {
+"mbid": "9f284484-c949-4199-8741-aba416a497a8",
+"nome": "Tom Zé",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Irará",
+"inicio": "1936-10-11",
+"fim": null,
+"wikidata": "Q1375576",
+"lugar": "Irará",
+"uf": "Bahia",
+"nascimento": "1936-10-11"
+},
+"Superafim": null,
+"Eduardo Pereira": {
+"mbid": "eb824aed-b002-4881-b349-4c80b16dbbb1",
+"nome": "Eduardo Pereira",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Armandinho (2)": null,
+"Pedro Lima": {
+"mbid": "792f0b88-fb86-4e9f-8afc-7a27acfea831",
+"nome": "Pedro Lima",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Dr Sin": {
+"mbid": "768e044a-80c3-4a41-8eb2-3a7c3342445f",
+"nome": "Dr. Sin",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1991",
+"fim": null,
+"wikidata": "Q1254064"
+},
+"Ana Mazzotti": {
+"mbid": "73df7f01-b8d6-4263-8e8f-0aae8037348d",
+"nome": "Ana Mazzotti",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Caxias do Sul",
+"inicio": "1950-08-17",
+"fim": "1988-01-20",
+"wikidata": "Q72613725",
+"lugar": "Caxias do Sul",
+"uf": "Rio Grande do Sul",
+"nascimento": "1950-08-17"
+},
+"Wanda Sá e João Donato": null,
+"Eduardo Araujo": {
+"mbid": "a7a03f48-1448-4cc1-8f76-b9345ff2742a",
+"nome": "Eduardo Araújo",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Minas Gerais",
+"inicio": "1942-07-23",
+"fim": null,
+"wikidata": "Q5340512",
+"lugar": "Joaíma",
+"uf": "Minas Gerais",
+"nascimento": "1942-07-23"
+},
+"Arte no Escuro": {
+"mbid": "efdb43bc-afe6-41ee-848b-fa17cb3ea68f",
+"nome": "Arte no Escuro",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Brasília",
+"inicio": "1984",
+"fim": null,
+"wikidata": null
+},
+"Rainer Pappon": null,
+"Banda de Pífanos de Caruaru": null,
+"Ruinas": null,
+"Trio Sabiá": {
+"mbid": "3e3ad40e-1066-4687-8fe4-1034073b6eb1",
+"nome": "Trio Sabiá",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1985",
+"fim": null,
+"wikidata": null
+},
+"Luis de Santana": null,
+"Criminal Bass": {
+"mbid": "88af656b-0a0e-446e-a59d-5d2bd055f491",
+"nome": "Criminal Bass",
+"tipo": "Person",
+"pais": "BR",
+"area": "São Paulo",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Dibigode": {
+"mbid": "17b1fa11-1ab7-47e1-8b60-fcc80731c0f1",
+"nome": "Dibigode",
+"tipo": null,
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Aloysio de Oliveira": {
+"mbid": "77314804-e379-4046-8992-8e88bd63182b",
+"nome": "Aloysio de Oliveira",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1914-12-30",
+"fim": "1995-02-20",
+"wikidata": "Q9607703",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1914-12-30"
+},
+"Luiz Bonfá, Eydie Gormé & Steve Lawrence": null,
+"Penna & Paulinho": null,
+"Velho": {
+"mbid": "0c49de09-fa16-4fff-b5a7-579daa8610fb",
+"nome": "Velho",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Duque de Caxias",
+"inicio": "2009",
+"fim": null,
+"wikidata": null
+},
+"Sepultura": {
+"mbid": "1d93c839-22e7-4f76-ad84-d27039efc048",
+"nome": "Sepultura",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Belo Horizonte",
+"inicio": "1984",
+"fim": "2026-11-07",
+"wikidata": "Q239074",
+"lugar": "Belo Horizonte",
+"uf": "Minas Gerais"
+},
+"Céu": null,
+"Marcos Valle": {
+"mbid": "1ba347eb-58e8-45d6-b7e3-09873dc2506a",
+"nome": "Marcos Valle",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1943-09-14",
+"fim": null,
+"wikidata": "Q3039180",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1943-09-14"
+},
+"Vulcano": {
+"mbid": "a8eaa200-371a-44ad-8ca6-913b12de0e9d",
+"nome": "Vulcano",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Santos",
+"inicio": "1981",
+"fim": null,
+"wikidata": "Q1410211"
+},
+"Poemátrio": null,
+"Martinha": {
+"mbid": "92b3d264-59b9-4daf-b494-c811c8ba34e7",
+"nome": "Martinha",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Belo Horizonte",
+"inicio": "1949-07-30",
+"fim": null,
+"wikidata": "Q10326926",
+"lugar": "Belo Horizonte",
+"uf": "Minas Gerais",
+"nascimento": "1949-07-30"
+},
+"Cinval Coco Grude": null,
+"Sant & LP Beatzz": null,
+"Baco Exú do Blues": {
+"mbid": "d316f174-4056-4d7c-b551-99da9925932f",
+"nome": "Baco Exu do Blues",
+"tipo": "Person",
+"pais": "BR",
+"area": "Salvador",
+"area_inicio": "Salvador",
+"inicio": "1996-01-11",
+"fim": null,
+"wikidata": "Q51881967",
+"lugar": "Salvador",
+"uf": "Bahia",
+"nascimento": "1996-01-11"
+},
+"Dori Caymmi": {
+"mbid": "aaaaab61-aa05-47e9-a607-5da742148efb",
+"nome": "Dori Caymmi",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1943-08-26",
+"fim": null,
+"wikidata": "Q5297751",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1943-08-26"
+},
+"Silvio Caldas": {
+"mbid": "8d85e22e-d4ba-4a57-b827-deb96d66ff64",
+"nome": "Sílvio Caldas",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1908-05-23",
+"fim": "1998-02-03",
+"wikidata": "Q10376356",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1908-05-23"
+},
+"Luiz Claudio Ramos": {
+"mbid": "5ca1f49a-39b4-4002-b95d-310972561db6",
+"nome": "Luiz Claudio Ramos",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1949-07-25",
+"fim": null,
+"wikidata": "Q10320692",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1949-07-25"
+},
+"Certo Porcos!": {
+"mbid": "6ca012f1-7769-4ae2-ad60-4d9b135536cd",
+"nome": "Certo Porcos!",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Marcelo D2": {
+"mbid": "8c1f7395-61b6-43bf-bb62-55d2c669f0e0",
+"nome": "Marcelo D2",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1967-11-05",
+"fim": null,
+"wikidata": "Q1275017",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1967-11-05"
+},
+"Hebe Camargo": {
+"mbid": "efe04173-9993-41d3-9cb3-d6a49e4f1159",
+"nome": "Hebe Camargo",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Taubaté",
+"inicio": "1929-03-08",
+"fim": "2012-09-29",
+"wikidata": "Q6105",
+"lugar": "Taubaté",
+"uf": "São Paulo",
+"nascimento": "1929-03-08"
+},
+"Anthares": {
+"mbid": "acc5fc0c-33e9-44dc-8c58-c3bf054dd791",
+"nome": "Anthares",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1984",
+"fim": null,
+"wikidata": "Q572233"
+},
+"Orquestra Zezinho da TV": null,
+"Paulinho Moska": {
+"mbid": "9158dfd7-7d67-4461-ba0a-346dec4355a5",
+"nome": "Paulinho Moska",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1967-08-27",
+"fim": null,
+"wikidata": "Q7155120",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1967-08-27"
+},
+"Aloyr Mendes": null,
+"Marcelo Callado": {
+"mbid": "ea6f399b-9b8e-4e8a-a6c0-5b034e44be50",
+"nome": "Marcelo Callado",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1979-08-16",
+"fim": null,
+"wikidata": null
+},
+"Sulamericana": null,
+"Hareton Salvanini": {
+"mbid": "9e62e65c-2644-46b9-a9a9-f9c37da4c1f5",
+"nome": "Hareton Salvanini",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Bauru",
+"inicio": "1945",
+"fim": "2006",
+"wikidata": null
+},
+"Coronel Narcizinho": null,
+"Wanderley Cardoso": {
+"mbid": "ac157892-ac30-4396-bf77-72874bf30d5d",
+"nome": "Wanderley Cardoso",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1945-03-10",
+"fim": null,
+"wikidata": null
+},
+"Milionário & José Rico": null,
+"Jana Vasconcellos": null,
+"Lelo Nazario": {
+"mbid": "2f9f1bb0-16e6-40c2-a32b-a184b543da00",
+"nome": "Lelo Nazário",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1956",
+"fim": null,
+"wikidata": "Q3026932",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1956-01-01"
+},
+"Claudia Telles": {
+"mbid": "d52950f6-045a-4ea1-bdce-a9e789523654",
+"nome": "Claudia Telles",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1957-08-26",
+"fim": "2020-02-21",
+"wikidata": "Q9785396",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1957-08-26"
+},
+"Roberto Luna": {
+"mbid": "6524ba6e-0559-413e-8989-dbfb17329a73",
+"nome": "Roberto Luna",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Paraíba",
+"inicio": "1929-12-01",
+"fim": "2022-06-26",
+"wikidata": "Q10363373",
+"lugar": "Serraria",
+"uf": "Paraíba",
+"nascimento": "1929-12-01"
+},
+"The Fevers": {
+"mbid": "d1932cd4-28d5-4564-a851-62f3125dbf7f",
+"nome": "The Fevers",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1964",
+"fim": null,
+"wikidata": "Q7733705"
+},
+"Emerson Faria": null,
+"Maysa": {
+"mbid": "e12fbbb6-46fe-4099-9bfa-1aeb56aef7e6",
+"nome": "Maysa",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1936-06-06",
+"fim": "1977-01-22",
+"wikidata": "Q2635164",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1936-06-06"
+},
+"Raça Negra": null,
+"Carlos Lyra": {
+"mbid": "2674d9a0-7647-4220-8c10-6d8d0c9677d9",
+"nome": "Carlos Lyra",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1933-05-11",
+"fim": "2023-12-16",
+"wikidata": "Q567872",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1933-05-11"
+},
+"A Barata Oriental": {
+"mbid": "0b39ed73-e803-48ad-b2e2-b83fe7917892",
+"nome": "A Barata Oriental",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Novo Hamburgo",
+"inicio": "1989",
+"fim": null,
+"wikidata": null
+},
+"Surface": null,
+"Liverpool Sound": null,
+"Jamelão": null,
+"Tiganá Santana": {
+"mbid": "9278996f-e0c6-4c6c-8412-89ce8c6a7890",
+"nome": "Tiganá Santana",
+"tipo": "Person",
+"pais": "BR",
+"area": "Salvador",
+"area_inicio": "Salvador",
+"inicio": "1982-12-29",
+"fim": null,
+"wikidata": "Q20048412",
+"lugar": "Salvador",
+"uf": "Bahia",
+"nascimento": "1982-12-29"
+},
+"Fish Magic": {
+"mbid": "5f86d62b-4802-474a-b2c2-a9ebf00f8b18",
+"nome": "Fish Magic",
+"tipo": "Person",
+"pais": "BR",
+"area": "Rio de Janeiro",
+"area_inicio": "Rio de Janeiro",
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Luisa Lacerda": {
+"mbid": "43b81039-dfe6-43dc-9ace-b1a1e5c0030a",
+"nome": "Luísa Lacerda",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"O Grande Ogro": null,
+"Almir Guineto": {
+"mbid": "8351ba2d-2532-4787-b4be-532644ecfd0c",
+"nome": "Almir Guineto",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1946-07-12",
+"fim": "2017-05-05",
+"wikidata": "Q4733825",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1946-07-12"
+},
+"Zé Maria": {
+"mbid": "32622d2c-f5fd-4bb8-a9a6-08579a012ee2",
+"nome": "Zé Maria",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Selton": {
+"mbid": "59e347ec-f2cc-4fd3-a9aa-3337ff811caa",
+"nome": "Selton",
+"tipo": "Group",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": "2005",
+"fim": null,
+"wikidata": "Q3954926",
+"lugar": "Barcelona"
+},
+"Descontrole": null,
+"Persecuter": null,
+"Hermeto Pascoal": {
+"mbid": "c7a4c4a0-9544-44e3-87f2-5779d18b753f",
+"nome": "Hermeto Pascoal",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Arapiraca",
+"inicio": "1936-06-22",
+"fim": "2025-09-13",
+"wikidata": "Q560969",
+"lugar": "Arapiraca",
+"uf": "Alagoas",
+"nascimento": "1936-06-22"
+},
+"Cascabulho": {
+"mbid": "e4de8727-b6c9-4017-9e9a-f2e5a2956127",
+"nome": "Cascabulho",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Recife",
+"inicio": null,
+"fim": null,
+"wikidata": "Q48855167",
+"lugar": "Recife",
+"uf": "Pernambuco"
+},
+"Agregados FDR": null,
+"Momo": {
+"mbid": "f613577f-6a48-4da2-8199-fdd0fbbc951f",
+"nome": "MOMO.",
+"tipo": "Person",
+"pais": "GB",
+"area": "United Kingdom",
+"area_inicio": "Brazil",
+"inicio": "1979-02-17",
+"fim": null,
+"wikidata": "Q60999510",
+"lugar": "Belo Horizonte",
+"uf": "Minas Gerais",
+"nascimento": "1979-02-17"
+},
+"Papa Poluição": null,
+"Larry Goldings": {
+"mbid": "c42811d0-8881-4bb0-ac42-300401e0a69c",
+"nome": "Larry Goldings",
+"tipo": "Person",
+"pais": "US",
+"area": "United States",
+"area_inicio": "Boston",
+"inicio": "1968-08-28",
+"fim": null,
+"wikidata": "Q1806063",
+"lugar": "Boston",
+"nascimento": "1968-08-28"
+},
+"Ilessi & Diogo Sili": null,
+"Os Replicantes": {
+"mbid": "c03332ff-829e-4d03-ad4a-41f4a4874d2a",
+"nome": "Os Replicantes",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Porto Alegre",
+"inicio": "1983",
+"fim": null,
+"wikidata": "Q10342079"
+},
+"Cauby Peixoto": {
+"mbid": "ad2328f1-f69f-4cfc-b6b8-0a750033ee3a",
+"nome": "Cauby Peixoto",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Niterói",
+"inicio": "1931-02-10",
+"fim": "2016-05-15",
+"wikidata": "Q13164627",
+"lugar": "Niterói",
+"uf": "Rio de Janeiro",
+"nascimento": "1931-02-10"
+},
+"Dorsal Atlântica": null,
+"Chico Bezerra": null,
+"Quarto Sensorial": {
+"mbid": "7394038b-849b-4f53-b4f1-a15b281ef28b",
+"nome": "Quarto Sensorial",
+"tipo": "Group",
+"pais": "BR",
+"area": "Porto Alegre",
+"area_inicio": "Porto Alegre",
+"inicio": "2007",
+"fim": null,
+"wikidata": null
+},
+"Camarão": null,
+"Maria Augusta Calado": null,
+"Renata Lu": {
+"mbid": "c52762b5-8769-4088-8277-41d51d4a19c4",
+"nome": "Renata Lú",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Amado Batista": {
+"mbid": "ae0b5f40-f185-4740-b488-437dc4c0faac",
+"nome": "Amado Batista",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Goiás",
+"inicio": "1951-02-17",
+"fim": null,
+"wikidata": "Q9609477",
+"lugar": "Goiás",
+"uf": "Goiás",
+"nascimento": "1951-02-17"
+},
+"Oswaldo Montenegro": {
+"mbid": "bbd0c071-d9c4-465f-bb6c-0be9d7844d5d",
+"nome": "Oswaldo Montenegro",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1956-03-15",
+"fim": null,
+"wikidata": "Q7108196",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1956-03-15"
+},
+"Bel Medula & Luczan": null,
+"Di Melo": {
+"mbid": "06f60a76-ffe5-44b8-b78b-2455e3850f0c",
+"nome": "Di Melo",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Recife",
+"inicio": "1949-04-22",
+"fim": null,
+"wikidata": "Q10265887",
+"lugar": "Recife",
+"uf": "Pernambuco",
+"nascimento": "1949-04-22"
+},
+"Turma do Ganzá": null,
+"Gilberto Lima": {
+"mbid": "59aab511-068f-4a59-a354-c1aba983c270",
+"nome": "Gilberto Lima",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Provérbio X": null,
+"Kid Abelha": {
+"mbid": "e3e90633-b6f1-4376-b15b-2492c94b4cf7",
+"nome": "Kid Abelha",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1982",
+"fim": "2016",
+"wikidata": "Q2437762"
+},
+"Thomas Roth": {
+"mbid": "df780493-04e1-443a-aac0-d976620f4029",
+"nome": "Thomas Roth",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1951-12-28",
+"fim": null,
+"wikidata": "Q21482044",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1951-12-28"
+},
+"Capilé": {
+"mbid": "d89f29a1-2d6f-4e3d-861e-5213d011b3e1",
+"nome": "Capilé",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Trio Irakitan": {
+"mbid": "87c86499-fb51-4c29-b2de-66d63389e061",
+"nome": "Trio Irakitan",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Natal",
+"inicio": "1950",
+"fim": null,
+"wikidata": "Q10384819"
+},
+"Odair José": {
+"mbid": "c9f10840-34cf-40a5-9196-7b52df2efba1",
+"nome": "Odair José",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Goiás",
+"inicio": "1948-08-16",
+"fim": null,
+"wikidata": "Q10340215",
+"lugar": "Morrinhos",
+"uf": "Goiás",
+"nascimento": "1948-08-16"
+},
+"Pública": null,
+"Tonico & Tinoco": {
+"mbid": "bc73f959-820b-4b94-9886-08e8affe9115",
+"nome": "Tonico & Tinoco",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1945",
+"fim": "1994",
+"wikidata": "Q7821391"
+},
+"Korzus": {
+"mbid": "4e413de0-0379-4c9b-bb48-712d27c7fd42",
+"nome": "Korzus",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1983",
+"fim": null,
+"wikidata": "Q1339744"
+},
+"Sh1ft": {
+"mbid": "af44afd2-34a0-4150-80f3-bc1a434f0288",
+"nome": "SH1FT",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"A6": {
+"mbid": "3ec260d5-ac39-40c1-8a4d-a3b65ca826f8",
+"nome": "A6",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"YMA": {
+"mbid": "82d89e35-6ff4-4c2e-8f39-039e5119e277",
+"nome": "YMA",
+"tipo": "Person",
+"pais": "BR",
+"area": "São Paulo",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"a_omori": null,
+"Manduka": {
+"mbid": "aff43f79-f32f-403d-94f6-8123d0d7a2ad",
+"nome": "Manduka",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Petrópolis",
+"inicio": "1952-02-21",
+"fim": "2004-10-17",
+"wikidata": "Q10323582",
+"lugar": "Petrópolis",
+"uf": "Rio de Janeiro",
+"nascimento": "1952-02-21"
+},
+"Laurindo Almeida": {
+"mbid": "c23280a8-abc8-4435-ab44-43762ce0c89c",
+"nome": "Laurindo Almeida",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1917-09-02",
+"fim": "1995-07-26",
+"wikidata": "Q633481",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1917-09-02"
+},
+"Joyce": {
+"mbid": "f47a0968-f2c1-4ec5-b0e3-0a15ae73b88d",
+"nome": "Joyce",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1948-01-31",
+"fim": null,
+"wikidata": "Q3084419",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1948-01-31"
+},
+"Gal Costa": {
+"mbid": "fc63a914-272d-4b95-9221-61adcce6f793",
+"nome": "Gal Costa",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Salvador",
+"inicio": "1945-09-26",
+"fim": "2022-11-09",
+"wikidata": "Q236361",
+"lugar": "Salvador",
+"uf": "Bahia",
+"nascimento": "1945-09-26"
+},
+"Arco Iris": null,
+"Nervosa": {
+"mbid": "ea01b409-1ffc-4cd2-94a6-50c9a8a08a26",
+"nome": "Nervosa",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "2010-02",
+"fim": null,
+"wikidata": "Q10336372",
+"lugar": "São Paulo",
+"uf": "São Paulo"
+},
+"Heitor Villa-Lobos": {
+"mbid": "a8dbf22f-9788-4cf6-a0df-c9244384f295",
+"nome": "Heitor Villa‐Lobos",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1887-03-05",
+"fim": "1959-11-17",
+"wikidata": "Q203514",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1887-03-05"
+},
+"Loomer": {
+"mbid": "7aec5060-e4df-490b-b190-23f1bb52b12b",
+"nome": "Loomer",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Trio de Ouro": {
+"mbid": "4806c827-63ae-4b5a-b9f3-0ffaebc22487",
+"nome": "Trio de Ouro",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1937",
+"fim": null,
+"wikidata": "Q10384837"
+},
+"Alfa MCs": null,
+"Ndee Naldinho": {
+"mbid": "b69dc57f-5049-4050-aced-c26a798b83f0",
+"nome": "Ndee Naldinho",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Neusa Maria": {
+"mbid": "36986a79-7b43-436b-8219-3bcbf73c86d6",
+"nome": "Neusa Maria",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1928-12-01",
+"fim": "2011-02-13",
+"wikidata": "Q20048271",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1928-12-01"
+},
+"Againe": {
+"mbid": "c28ec6e9-e86c-4c8e-908d-28e10b4d8f2f",
+"nome": "Againe",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1995",
+"fim": null,
+"wikidata": null
+},
+"A Corte": null,
+"Conjunto Arpoador": null,
+"João Negrão": null,
+"Maria Creuza": {
+"mbid": "a1b9129e-50b6-42cf-a7d4-ab254fd24c3f",
+"nome": "Maria Creuza",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Bahia",
+"inicio": "1944-02-26",
+"fim": null,
+"wikidata": "Q273360",
+"lugar": "Esplanada",
+"uf": "Bahia",
+"nascimento": "1944-02-26"
+},
+"Ed Maciel": null,
+"Quarto Astral": {
+"mbid": "f3d331f9-7374-432a-aad1-3f1d22ccf2e1",
+"nome": "Quarto Astral",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Brazil",
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Cristina Santos": {
+"mbid": "5ab6465f-995e-4a71-a7e5-f709951d19c2",
+"nome": "Cristina Santos",
+"tipo": "Person",
+"pais": "BR",
+"area": "Rio de Janeiro",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Luiz Gonzaga": {
+"mbid": "712fcc0f-25f5-45bf-bbb8-2601872d08e1",
+"nome": "Luiz Gonzaga",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Pernambuco",
+"inicio": "1912-12-13",
+"fim": "1989-08-02",
+"wikidata": "Q982314",
+"lugar": "Exu",
+"uf": "Pernambuco",
+"nascimento": "1912-12-13"
+},
+"Sergio Mendes": {
+"mbid": "6bf591c4-b050-478e-9d9f-167394d66c90",
+"nome": "Sérgio Mendes",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Niterói",
+"inicio": "1941-02-11",
+"fim": "2024-09-05",
+"wikidata": "Q337359",
+"lugar": "Niterói",
+"uf": "Rio de Janeiro",
+"nascimento": "1941-02-11"
+},
+"Volta da Jurema": null,
+"Pena Branca & Xavantinho": {
+"mbid": "0d695e63-788e-4aef-ac8e-e4777440f6cb",
+"nome": "Pena Branca & Xavantinho",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"D.V.C": null,
+"José Roberto Bertrami": {
+"mbid": "10e8fbb6-f126-4369-81c9-728329a75b06",
+"nome": "José Roberto Bertrami",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Tatuí",
+"inicio": "1946-02-21",
+"fim": "2012-07-07",
+"wikidata": "Q553695",
+"lugar": "Tatuí",
+"uf": "São Paulo",
+"nascimento": "1946-02-21"
+},
+"João Silva": null,
+"Joãolima": null,
+"Jair Rodrigues": {
+"mbid": "170f8e52-73ce-44a4-b032-11c706cadb85",
+"nome": "Jair Rodrigues",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Igarapava",
+"inicio": "1939-02-06",
+"fim": "2014-05-08",
+"wikidata": "Q1089193",
+"lugar": "Igarapava",
+"uf": "São Paulo",
+"nascimento": "1939-02-06"
+},
+"No Milk Today": {
+"mbid": "eaa8df58-b1ce-472f-846e-d1926c10a85c",
+"nome": "No Milk Today",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Curitiba",
+"inicio": "1993",
+"fim": null,
+"wikidata": "Q10337127",
+"lugar": "Curitiba",
+"uf": "Paraná"
+},
+"38MilManos": null,
+"Som Nosso de Cada Dia": {
+"mbid": "6833d1d9-190e-4767-9a80-fbfbf72ee742",
+"nome": "Som Nosso de Cada Dia",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1972",
+"fim": "1977",
+"wikidata": "Q10373204"
+},
+"José Dias": {
+"mbid": "687e3ac5-f453-4959-8a06-cc6cf1c16cbf",
+"nome": "José Dias",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Lobão": null,
+"Maré Tardia": {
+"mbid": "4952cc24-618a-4baa-87d1-a7acae1b0c19",
+"nome": "Maré Tardia",
+"tipo": "Group",
+"pais": "BR",
+"area": "Vila Velha",
+"area_inicio": "Vila Velha",
+"inicio": "2021",
+"fim": null,
+"wikidata": null
+},
+"Manassés": null,
+"Baby Consuelo": null,
+"Vitor Ramil": {
+"mbid": "7f1b64e3-7396-42fb-98d2-08badf1e755c",
+"nome": "Vitor Ramil",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio Grande do Sul",
+"inicio": "1962-04-07",
+"fim": null,
+"wikidata": "Q7937200",
+"lugar": "Pelotas",
+"uf": "Rio Grande do Sul",
+"nascimento": "1962-04-07"
+},
+"Nitrominds": {
+"mbid": "1d437204-5dbd-4282-b04f-9eb7df4d5b64",
+"nome": "Nitrominds",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Santo André",
+"inicio": "1994",
+"fim": null,
+"wikidata": null
+},
+"Boogarins": {
+"mbid": "46713d05-4143-4704-a9c3-71b482a13944",
+"nome": "Boogarins",
+"tipo": "Group",
+"pais": "BR",
+"area": "Goiânia",
+"area_inicio": "Goiânia",
+"inicio": "2012",
+"fim": null,
+"wikidata": "Q18707803",
+"lugar": "Goiânia",
+"uf": "Goiás"
+},
+"GI Joke & Test": null,
+"Cidadão Instigado": null,
+"Inezita Barroso": {
+"mbid": "cc1ac4fd-7df5-4389-b64f-5a9ac1ef0040",
+"nome": "Inezita Barroso",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1925-03-04",
+"fim": "2015-03-08",
+"wikidata": "Q6028735",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1925-03-04"
+},
+"Pravda": {
+"mbid": "75976b58-7721-4dcf-84bd-e58d0a564275",
+"nome": "Banda Pravda",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Iberê Gomes Grosso": null,
+"Maria Bethânia": null,
+"Guitüx": null,
+"Anna Maria Kieffer": {
+"mbid": "55cf3183-f338-4c15-a538-6a7cfbb3f9a9",
+"nome": "Anna Maria Kieffer",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": "Q9616301",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1941-07-28"
+},
+"Instiga": {
+"mbid": "b29a3faa-58f5-4034-b397-2b66da43bbb0",
+"nome": "Instiga",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Campinas",
+"inicio": "2000",
+"fim": null,
+"wikidata": null
+},
+"Satanique Samba Trio": {
+"mbid": "fc59a717-edb2-463f-be7b-928f7dbda244",
+"nome": "Satanique Samba Trio",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brasília",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Desecration": {
+"mbid": "f159da86-a5e1-4780-a58d-582094611c30",
+"nome": "Desecration",
+"tipo": "Group",
+"pais": "GB",
+"area": "Blaenau Gwent",
+"area_inicio": null,
+"inicio": "1992",
+"fim": null,
+"wikidata": null
+},
+"EricBeatz": {
+"mbid": "8c3bca0c-a2b2-445c-838e-0f2746c64d06",
+"nome": "EricBeatz",
+"tipo": null,
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Mestre Salustiano": {
+"mbid": "d15ca155-e0af-4e76-b36d-ae76c3238177",
+"nome": "Mestre Salustiano",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Itamar Assumpção": null,
+"Código do Morro": null,
+"Jane Duboc": {
+"mbid": "c8cf64ba-734b-479a-a39c-556fa76da955",
+"nome": "Jane Duboc",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Belém",
+"inicio": "1950-11-16",
+"fim": null,
+"wikidata": "Q10305203",
+"lugar": "Belém",
+"uf": "Pará",
+"nascimento": "1950-11-16"
+},
+"Trio Melodia": {
+"mbid": "55e4a906-a3c0-4d58-a4a0-959b5549939e",
+"nome": "Trio Melodia",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1965",
+"fim": "1973",
+"wikidata": "Q10384824"
+},
+"Orquestra Imperial": {
+"mbid": "68ce4f71-fab3-429a-971d-1294d4829d33",
+"nome": "Orquestra Imperial",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "2002",
+"fim": null,
+"wikidata": "Q7104035",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro"
+},
+"Daniela Mercury": {
+"mbid": "2cf241c0-0d6e-472c-be49-d7691a7aec61",
+"nome": "Daniela Mercury",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Salvador",
+"inicio": "1965-07-28",
+"fim": null,
+"wikidata": "Q465927",
+"lugar": "Salvador",
+"uf": "Bahia",
+"nascimento": "1965-07-28"
+},
+"Bebê Feio": {
+"mbid": "92fbe331-ec9b-4510-92c4-1f1200b2b405",
+"nome": "Bebê Feio",
+"tipo": "Group",
+"pais": "BR",
+"area": "São Paulo",
+"area_inicio": "São Paulo",
+"inicio": "2021-02",
+"fim": null,
+"wikidata": null
+},
+"Pesta": {
+"mbid": "3262bf7d-3277-4e8a-8419-cfa06fb871ed",
+"nome": "Pesta",
+"tipo": "Group",
+"pais": "BR",
+"area": "Belo Horizonte",
+"area_inicio": null,
+"inicio": "2014-03",
+"fim": null,
+"wikidata": null
+},
+"Belchior": {
+"mbid": "d51c2d7f-921e-4f24-9fe7-92efc5189708",
+"nome": "Belchior",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Ceará",
+"inicio": "1946-10-26",
+"fim": "2017-04-30",
+"wikidata": "Q4882073",
+"lugar": "Sobral",
+"uf": "Ceará",
+"nascimento": "1946-10-26"
+},
+"Fernas Morais": null,
+"Norma Benguell": null,
+"Trio Cristal": null,
+"Sebastião do Rojão": null,
+"Autoramas": {
+"mbid": "1c8d248f-82c8-4d6d-a918-07078d8b3a8f",
+"nome": "Autoramas",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1997",
+"fim": null,
+"wikidata": "Q2856367",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro"
+},
+"Notorious Vinni NY": null,
+"Moacir Morales": null,
+"Radamés Gnattali & Camerata Carioca": null,
+"Grenade": {
+"mbid": "6311b88e-9eb1-4ede-bd7b-f8440454a352",
+"nome": "Grenade",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Italo Azevedo": null,
+"Orquestra Som Bateau": null,
+"Ivan Lins": {
+"mbid": "2f31098d-1258-4f8f-af5f-95815b02f2d2",
+"nome": "Ivan Lins",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1945-06-16",
+"fim": null,
+"wikidata": "Q703330",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1945-06-16"
+},
+"Cabruera": {
+"mbid": "e7a68a63-ee98-40c1-b3f4-a6a1702bb5c1",
+"nome": "Cabruêra",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Campina Grande",
+"inicio": "1998",
+"fim": null,
+"wikidata": "Q12305021"
+},
+"Marcelo Perdido": {
+"mbid": "12d44e8c-0062-4bda-84ea-dbf7a745a042",
+"nome": "Marcelo Perdido",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": "Rio de Janeiro",
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Scumbags": {
+"mbid": "a7638cf3-a7dc-4235-a313-9312649857ef",
+"nome": "Scumbags",
+"tipo": "Group",
+"pais": null,
+"area": null,
+"area_inicio": "Joinville",
+"inicio": "2017-11-15",
+"fim": null,
+"wikidata": null
+},
+"Nina Becker": {
+"mbid": "82803d0a-057a-48c0-aea8-f3f9a0349f74",
+"nome": "Nina Becker",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1974-07-21",
+"fim": null,
+"wikidata": null
+},
+"X-Rated": {
+"mbid": "60ee848f-921f-4c98-9768-e0cd79368794",
+"nome": "X‐Rated",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Canto dos Malditos na Terra do Nunca": {
+"mbid": "eaf32174-b7c0-4b93-800a-49fd68f48a45",
+"nome": "Canto dos Malditos na Terra do Nunca",
+"tipo": "Group",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": "2003",
+"fim": "2007",
+"wikidata": "Q6835893"
+},
+"Julia Albook": null,
+"Dulce Nunes": null,
+"Paralamas do Sucesso": {
+"mbid": "f197a8df-ac2b-4e78-9913-4abf13741f12",
+"nome": "Os Paralamas do Sucesso",
+"tipo": "Group",
+"pais": "BR",
+"area": "Rio de Janeiro",
+"area_inicio": null,
+"inicio": "1977",
+"fim": null,
+"wikidata": "Q2701611"
+},
+"Gueersh": null,
+"Victor Assis Brasil": {
+"mbid": "955a8827-55e3-4a3d-8682-9ab0db5a4ebe",
+"nome": "Victor Assis Brasil",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1945-08-28",
+"fim": "1981-04-14",
+"wikidata": "Q7925699",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1945-08-28"
+},
+"Expressão Ativa": null,
+"Mariã": null,
+"Leo Gandelman": {
+"mbid": "327fd7d2-bb78-4802-bc72-12a2faa87968",
+"nome": "Leo Gandelman",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1956-08-10",
+"fim": null,
+"wikidata": "Q4133222",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1956-08-10"
+},
+"Tavito": {
+"mbid": "be381892-9bc7-4f0b-b9d1-256d37023f45",
+"nome": "Tavito",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Belo Horizonte",
+"inicio": "1948-01-26",
+"fim": "2019-02-26",
+"wikidata": "Q10378409",
+"lugar": "Belo Horizonte",
+"uf": "Minas Gerais",
+"nascimento": "1948-01-26"
+},
+"Velho Amarelo": null,
+"Simonetti": null,
+"Big Ugli Ci": null,
+"Erasmo Carlos": {
+"mbid": "c7c9fa4d-262b-45c1-9477-237849654948",
+"nome": "Erasmo Carlos",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1941-06-05",
+"fim": "2022-11-22",
+"wikidata": "Q2085377",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1941-06-05"
+},
+"Paura": {
+"mbid": "28b6c847-ad7e-479e-9684-4945d9a7b5df",
+"nome": "Paura",
+"tipo": "Group",
+"pais": "BR",
+"area": "São Paulo",
+"area_inicio": null,
+"inicio": "1995",
+"fim": null,
+"wikidata": null
+},
+"SANT": {
+"mbid": "fd528391-c292-4840-a3d7-09588bf4c307",
+"nome": "Sant",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1994",
+"fim": null,
+"wikidata": null
+},
+"Trem do Futuro": {
+"mbid": "003140ac-09c2-46f6-8b93-bc5cd50981fa",
+"nome": "Trem do Futuro",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Fortaleza",
+"inicio": "1981",
+"fim": null,
+"wikidata": null
+},
+"Attomica": {
+"mbid": "f5602c41-f29f-4b1d-800e-fb8a16884c31",
+"nome": "Attomica",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São José dos Campos",
+"inicio": "1985",
+"fim": null,
+"wikidata": "Q18616440"
+},
+"Cidadãos Brasileiros": null,
+"Total Drama": null,
+"Eddie": {
+"mbid": "30543f92-121b-4f24-b716-4745b05b8eda",
+"nome": "Eddie",
+"tipo": "Group",
+"pais": "BR",
+"area": "Pernambuco",
+"area_inicio": "Olinda",
+"inicio": "1989",
+"fim": null,
+"wikidata": "Q20049054"
+},
+"Persona": {
+"mbid": "dee1652c-868a-41f7-8bf5-ed32984fe864",
+"nome": "Persona",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Barão Vermelho": null,
+"Reginaldo França": null,
+"Almir Sater": {
+"mbid": "f7e8a06b-efad-4d2b-a26a-eb9d96466864",
+"nome": "Almir Sater",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Campo Grande",
+"inicio": "1956-11-14",
+"fim": null,
+"wikidata": "Q16142152",
+"lugar": "Campo Grande",
+"uf": "Mato Grosso do Sul",
+"nascimento": "1956-11-14"
+},
+"Albertinho Fortuna": null,
+"Mesa Verde": {
+"mbid": "8cd5d398-a602-41a9-9274-c5bbc5322e5c",
+"nome": "Mesa Verde",
+"tipo": "Group",
+"pais": "GB",
+"area": "Scotland",
+"area_inicio": null,
+"inicio": "2004-06",
+"fim": "2010",
+"wikidata": "Q1922286"
+},
+"Paulinho da Viola": {
+"mbid": "087fc778-c1ed-4f32-bff7-19f8eeba9e57",
+"nome": "Paulinho da Viola",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1942-11-12",
+"fim": null,
+"wikidata": "Q241801",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1942-11-12"
+},
+"Vanusa": {
+"mbid": "8986a775-7c7b-4b1c-b9df-316fe339e3cd",
+"nome": "Vanusa",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Cruzeiro",
+"inicio": "1947-09-22",
+"fim": "2020-11-08",
+"wikidata": "Q7915270",
+"lugar": "Cruzeiro",
+"uf": "São Paulo",
+"nascimento": "1947-09-22"
+},
+"Cartel Mc's": {
+"mbid": "0307df4c-d091-43b8-805b-fb845a77b4c2",
+"nome": "Cartel Mc's",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Marinês": null,
+"Lemon Squeezer": {
+"mbid": "2ff7b180-58b6-4d78-8ed7-450ce0196f77",
+"nome": "Lemon Squeezer",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Herman Torres": {
+"mbid": "1538e3ad-0f27-45d6-95df-d22edff3cd5a",
+"nome": "Herman Torres",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Uccio Gaeta": null,
+"Paulinho Nogueira": {
+"mbid": "f5f168e5-f1f2-4c63-9be5-236dd34e0661",
+"nome": "Paulinho Nogueira",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Campinas",
+"inicio": "1927-10-08",
+"fim": "2003-08-02",
+"wikidata": "Q2570553",
+"lugar": "Campinas",
+"uf": "São Paulo",
+"nascimento": "1929-10-08"
+},
+"Rosa Passos & Lula Galvão": null,
+"Iorigun": {
+"mbid": "222bb1a2-4eec-41fe-b429-3456bc66998d",
+"nome": "IORIGUN",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Ana Maria": {
+"mbid": "49c84ca4-c916-46da-af68-1d3c923ed2e8",
+"nome": "Ana Maria",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Marisa Monte": {
+"mbid": "f81f19b9-c76e-43ac-8656-bb56071785fb",
+"nome": "Marisa Monte",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1967-07-01",
+"fim": null,
+"wikidata": "Q51960",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1967-07-01"
+},
+"Sergio Ricardo": {
+"mbid": "482a9b74-712a-4902-a5b2-69ebe10c7f33",
+"nome": "Sérgio Ricardo",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Marília",
+"inicio": "1932-06-18",
+"fim": "2020-07-23",
+"wikidata": "Q7666104",
+"lugar": "Marília",
+"uf": "São Paulo",
+"nascimento": "1932-06-18"
+},
+"Satwa": {
+"mbid": "3ddfb178-81ca-4414-a94b-510bf44d2999",
+"nome": "Satwa",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Recife",
+"inicio": "1972",
+"fim": "1973",
+"wikidata": null
+},
+"Manuel Bandeira & Sérgio Milliet": null,
+"Letuce": {
+"mbid": "30a1ea60-5bda-4ad6-8d93-8fc98f70ac53",
+"nome": "Letuce",
+"tipo": "Group",
+"pais": "BR",
+"area": "Rio de Janeiro",
+"area_inicio": null,
+"inicio": "2008",
+"fim": "2016",
+"wikidata": "Q18276773",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro"
+},
+"Egberto Gismonti": {
+"mbid": "7c0c720f-b7e1-43d9-906d-25ff261e86fa",
+"nome": "Egberto Gismonti Trio",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Cláudio di Moro": null,
+"Carlinhos E Seu Conjunto": null,
+"Arthur Moreira Lima": {
+"mbid": "6696c761-6d9e-4017-bdb5-5c36f15df967",
+"nome": "Arthur Moreira Lima",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1940-07-16",
+"fim": "2024-10-30",
+"wikidata": "Q1041189",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1940-07-16"
+},
+"Torya": {
+"mbid": "c05d113c-9f45-4dfe-8f72-d2fa10db0175",
+"nome": "Torya",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Brazil",
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Obanajé": null,
+"Raul Seixas": {
+"mbid": "c4efd92a-5692-41d5-91bb-b23d4b75e735",
+"nome": "Raul Seixas",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Salvador",
+"inicio": "1945-06-28",
+"fim": "1989-08-21",
+"wikidata": "Q1392583",
+"lugar": "Salvador",
+"uf": "Bahia",
+"nascimento": "1945-06-28"
+},
+"Dead Fetus Collection & Expurgo": null,
+"Vellocet": {
+"mbid": "93faad99-b393-45c8-a197-5a133de9f79d",
+"nome": "Vellocet",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Talvez Seja Só Eu": null,
+"Living In The Shit": null,
+"Sergio Agusto": null,
+"Vieira e Seu Conjunto": {
+"mbid": "a701a099-785b-4e41-b949-33e37e18e0ee",
+"nome": "Vieira e Seu Conjunto",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Uakti": {
+"mbid": "4b9b1847-0c7c-4dbb-9060-bf14d25a0ae5",
+"nome": "Uakti",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1978",
+"fim": "2015",
+"wikidata": "Q6553297",
+"lugar": "Belo Horizonte",
+"uf": "Minas Gerais"
+},
+"Bezerra da Silva": {
+"mbid": "2d5347a5-ba26-4116-a8e2-c67c61923538",
+"nome": "Bezerra da Silva",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Recife",
+"inicio": "1927-02-23",
+"fim": "2005-01-17",
+"wikidata": "Q268288",
+"lugar": "Recife",
+"uf": "Pernambuco",
+"nascimento": "1927-03-09"
+},
+"Cuco": null,
+"Os Filhos do Forró": null,
+"Manger Cadavre?": {
+"mbid": "b5134026-003f-4162-bd1a-b33440fa5d09",
+"nome": "Manger Cadavre?",
+"tipo": "Group",
+"pais": "BR",
+"area": "São José dos Campos",
+"area_inicio": "São José dos Campos",
+"inicio": "2011",
+"fim": null,
+"wikidata": null
+},
+"Carlos de Almeida": null,
+"Imã": {
+"mbid": "0fc576b5-d54f-49ed-9d5c-2af09fcf13f4",
+"nome": "IMA",
+"tipo": "Group",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": "1984",
+"fim": null,
+"wikidata": null
+},
+"Chico Buarque": {
+"mbid": "3a5d1cc7-627e-48ea-aba3-fdd20d782c33",
+"nome": "Chico Buarque",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1944-06-19",
+"fim": null,
+"wikidata": "Q333632",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1944-06-19"
+},
+"Evocation": {
+"mbid": "4c67c264-457a-4585-aaae-adf72de56d10",
+"nome": "Evocation",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio Grande do Sul",
+"inicio": "1996",
+"fim": null,
+"wikidata": null
+},
+"Murderess": {
+"mbid": "12d94492-01e7-42eb-b14c-95c14c1fda28",
+"nome": "Murderess",
+"tipo": "Group",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Esteban": {
+"mbid": "91682b26-bcde-409f-8b4e-44f09107e71a",
+"nome": "Esteban Tavares",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": "Q10363950",
+"lugar": "Camaquã",
+"uf": "Rio Grande do Sul",
+"nascimento": "1982-04-12"
+},
+"Gilberto Gil": {
+"mbid": "cf6b70f6-2616-481c-912c-0263cabfc974",
+"nome": "Gilberto Gil",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Salvador",
+"inicio": "1942-06-26",
+"fim": null,
+"wikidata": "Q221479",
+"lugar": "Salvador",
+"uf": "Bahia",
+"nascimento": "1942-06-26"
+},
+"The F.Ray": null,
+"Frankito Lopes": null,
+"Casa das Máquinas": null,
+"Beto Guedes": {
+"mbid": "14aea021-97ec-48f0-b69b-8a177c7c72ad",
+"nome": "Beto Guedes",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Montes Claros",
+"inicio": "1951-08-13",
+"fim": null,
+"wikidata": "Q4898161",
+"lugar": "Montes Claros",
+"uf": "Minas Gerais",
+"nascimento": "1951-08-13"
+},
+"Geraldo Correia": null,
+"Mahmed": {
+"mbid": "e0cde68c-7c6c-4d21-8c7c-db7282666b28",
+"nome": "Mahmed",
+"tipo": "Group",
+"pais": "BR",
+"area": "Natal",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Airto Moreira": {
+"mbid": "dd2abaa1-0b73-4ded-82ed-c80cce8d6378",
+"nome": "Airto Moreira",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Santa Catarina",
+"inicio": "1941-08-05",
+"fim": null,
+"wikidata": "Q409259",
+"lugar": "Itaiópolis",
+"uf": "Santa Catarina",
+"nascimento": "1941-08-05"
+},
+"Dante": null,
+"3 Way": null,
+"O Elevador": null,
+"BaianaSystem": {
+"mbid": "15741996-1794-42a8-a2c7-1ce3e32d0d75",
+"nome": "BaianaSystem",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Salvador",
+"inicio": "2009",
+"fim": null,
+"wikidata": "Q25431353",
+"lugar": "Salvador",
+"uf": "Bahia"
+},
+"Carta Magna": {
+"mbid": "f7f5980c-ad5d-4b6c-9e6b-98b44d23613d",
+"nome": "Carta Magna",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Zé Bettio": null,
+"Nelson Ângelo": null,
+"Test": null,
+"Simone": null,
+"Davi Moraes": {
+"mbid": "f00bb573-0a69-4e23-8af7-3325e321ed0f",
+"nome": "Davi Moraes",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Mateus Vinícius": null,
+"Conjunto Sambossa": null,
+"Gang 90": null,
+"Ednardo": {
+"mbid": "758df6ae-5774-4c20-9abc-1a63ffd3a232",
+"nome": "Ednardo",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1945-04-17",
+"fim": null,
+"wikidata": "Q10270498",
+"lugar": "Fortaleza",
+"uf": "Ceará",
+"nascimento": "1945-04-17"
+},
+"Decaer": null,
+"Miltinho": {
+"mbid": "72f30cc4-4708-4081-8fda-536e80183d98",
+"nome": "Miltinho",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1928-01-31",
+"fim": "2014-09-07",
+"wikidata": "Q10330096",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1928-01-31"
+},
+"Pery Ribeiro": {
+"mbid": "063d505c-cbdc-4db6-b8d1-02046d61a1e1",
+"nome": "Pery Ribeiro",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1937-10-27",
+"fim": "2012-02-24",
+"wikidata": "Q2072868",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1937-10-27"
+},
+"De Menos Crime": {
+"mbid": "f75170d1-a9f3-4870-a3a1-8c0427ce192b",
+"nome": "De Menos Crime",
+"tipo": "Group",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"FBC & Vhoor": {
+"mbid": "97ddbe3a-3cec-488e-a6ad-8b497fd06356",
+"nome": "FBC",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Belo Horizonte",
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Coisa Linda Sound System": {
+"mbid": "62ddb1b4-a1bf-4dd7-a2a8-6c9aa7f3807e",
+"nome": "Coisa Linda Sound System",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Sá, Rodrix & Guarabyra": {
+"mbid": "9d814a40-39ea-462c-b349-359c09003870",
+"nome": "Sá, Rodrix & Guarabyra",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1971",
+"fim": "1973",
+"wikidata": null
+},
+"Mario Alves": null,
+"Perla": {
+"mbid": "409cae9f-c111-4890-aa79-b4633946d170",
+"nome": "Perla",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Paraguay",
+"inicio": "1951-03-17",
+"fim": null,
+"wikidata": "Q7169124",
+"lugar": "Paraguai",
+"nascimento": "1952-03-17"
+},
+"Marianaa & Oruã": null,
+"Viper": {
+"mbid": "b420ff86-e1d9-4387-b1e6-d04600a8a25b",
+"nome": "Viper",
+"tipo": "Person",
+"pais": "US",
+"area": "Houston",
+"area_inicio": "El Dorado",
+"inicio": "1971-10-07",
+"fim": null,
+"wikidata": "Q20687519",
+"lugar": "El Dorado",
+"nascimento": "1971-10-07"
+},
+"Combinação Lethal": null,
+"Murder Rape": {
+"mbid": "66a31cb5-4530-4d73-b6df-fff1b555ee73",
+"nome": "Murder Rape",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Curitiba",
+"inicio": "1992",
+"fim": null,
+"wikidata": null
+},
+"Suzi Mariana": null,
+"Adelmo Arcoverde, João Lira & Roberto Corrêa": null,
+"Hélio Chaves": null,
+"Camaleônica": null,
+"B.Valente": null,
+"Laurindo Almeida & Ray Turner": null,
+"Pogoboll": null,
+"Galf AC & GORIBEATZZ": null,
+"Tania Maria": {
+"mbid": "722acd7b-e04c-4250-912d-7bdd218a9f3b",
+"nome": "Tania Maria",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Luís",
+"inicio": "1948-05-09",
+"fim": null,
+"wikidata": "Q469539",
+"lugar": "São Luís",
+"uf": "Maranhão",
+"nascimento": "1948-05-09"
+},
+"Panatron": null,
+"Maria Helena Coelho de Andrade": null,
+"Poly": {
+"mbid": "5f136096-6067-4a32-8646-7c2b8ad48031",
+"nome": "Poly",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1920-08-08",
+"fim": "1985-04-10",
+"wikidata": "Q10350798",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1920-08-08"
+},
+"ChromaKitsch": null,
+"Coronel Ludrú": {
+"mbid": "7028be11-d6a5-4c99-af8b-db9b74cedc13",
+"nome": "Coronel Ludrú",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Wanderléa": null,
+"Honorina Silva": null,
+"Violeta de Outono": {
+"mbid": "360942a6-1e2d-452a-9e86-89b8e46d2730",
+"nome": "Violeta de Outono",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1984",
+"fim": null,
+"wikidata": "Q17397570"
+},
+"Aline, Toninho Horta, Beto Lopes, Helvius Vilela & Bernard Aygaoux": null,
+"Maestro Duda e Sua Orquestra": null,
+"Cyro Monteiro": {
+"mbid": "b36d86d4-ea52-4979-8610-02f7af9750c9",
+"nome": "Ciro Monteiro",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1913-05-28",
+"fim": "1973-07-13",
+"wikidata": "Q9766445",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1913-05-28"
+},
+"MNTH": null,
+"Streetlight Manifesto": {
+"mbid": "cbc9199f-944b-42e9-a945-627c9fc0ba6e",
+"nome": "Streetlight Manifesto",
+"tipo": "Group",
+"pais": "US",
+"area": "United States",
+"area_inicio": "New Brunswick",
+"inicio": "2002",
+"fim": null,
+"wikidata": "Q1382101",
+"lugar": "New Brunswick"
+},
+"Sérgio Reis": null,
+"Ronnie Von": {
+"mbid": "17e67ed2-ccea-4388-9e89-c34f7ae33a6a",
+"nome": "Ronnie Von",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Niterói",
+"inicio": "1944-07-17",
+"fim": null,
+"wikidata": "Q4124883",
+"lugar": "Niterói",
+"uf": "Rio de Janeiro",
+"nascimento": "1944-07-17"
+},
+"Raimundinho do Acordeon": {
+"mbid": "6ccce4f7-57b8-435b-90bd-a8f1729991ef",
+"nome": "Raimundinho do Acordeon",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"VE": {
+"mbid": "5bbbdf5d-17d9-4ce5-825e-0db522644407",
+"nome": "V.E.",
+"tipo": "Group",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": "Q20467915"
+},
+"A Sangue Frio": null,
+"Pim": {
+"mbid": "96d75f72-9202-43fe-971e-62f14580fc54",
+"nome": "Pim",
+"tipo": "Person",
+"pais": "US",
+"area": "Orange County",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Negrão dos 8 Baixos": null,
+"Amiri": {
+"mbid": "22f9c8f2-1557-468a-b5ad-e35bc3fdc094",
+"nome": "Amiri",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Caçadores de Harmonia": null,
+"Elis Regina": {
+"mbid": "e9e85a54-074c-4d29-a886-bcaaa9d44f9f",
+"nome": "Elis Regina",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Porto Alegre",
+"inicio": "1945-03-17",
+"fim": "1982-01-19",
+"wikidata": "Q465877",
+"lugar": "Porto Alegre",
+"uf": "Rio Grande do Sul",
+"nascimento": "1945-03-17"
+},
+"Grupo Fundo De Quintal": {
+"mbid": "04f71d27-a65f-4516-acc0-e078839b4db0",
+"nome": "Grupo Fundo de Quintal",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1978-01-20",
+"fim": null,
+"wikidata": "Q1320656"
+},
+"Vanja Orico": {
+"mbid": "0bba85a9-49c3-4d55-8fd5-b34cd58596bf",
+"nome": "Vanja Orico",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1931-11-15",
+"fim": "2015-01-28",
+"wikidata": "Q10389172",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1931-11-15"
+},
+"Lirinha": {
+"mbid": "19f0a173-13ac-42c5-a950-f204fcce5518",
+"nome": "Lirinha",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Arcoverde",
+"inicio": "1976-11-09",
+"fim": null,
+"wikidata": null
+},
+"Mario Telles": {
+"mbid": "11b08537-e3cb-49c7-be55-481ab173dcb0",
+"nome": "Mario Telles",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Dominguinhos": {
+"mbid": "d5956a2f-bab9-4aa3-a9be-ad393518e5b0",
+"nome": "Dominguinhos",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Pernambuco",
+"inicio": "1941-02-12",
+"fim": "2013-07-23",
+"wikidata": "Q5290443",
+"lugar": "Garanhuns",
+"uf": "Pernambuco",
+"nascimento": "1941-02-12"
+},
+"Helena Angelini": null,
+"Bughouse": {
+"mbid": "3f67e79e-a5fd-41f3-b963-2fcaba18585a",
+"nome": "bughouse",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Próstata": null,
+"Carlos Malta": {
+"mbid": "0bdca973-c50a-448f-92eb-d5234e4d92d8",
+"nome": "Carlos Malta",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1960-02-25",
+"fim": null,
+"wikidata": "Q3660097",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1960-02-25"
+},
+"Black Pantera": {
+"mbid": "fb0f4520-2095-491b-b2f2-ade4c3f2e5fa",
+"nome": "Black Pantera",
+"tipo": "Group",
+"pais": "BR",
+"area": "Minas Gerais",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": "Q100349127",
+"lugar": "Uberaba",
+"uf": "Minas Gerais"
+},
+"Aquarela Carioca": {
+"mbid": "89a1f326-0612-44ac-a8cb-236406dd8740",
+"nome": "Aquarela Carioca",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1988",
+"fim": "2002",
+"wikidata": "Q16493136",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro"
+},
+"Codinome PBL": null,
+"14 Bis": {
+"mbid": "40c3dbd1-66c8-4c12-b673-f22d52177b45",
+"nome": "14 Bis",
+"tipo": "Group",
+"pais": "BR",
+"area": "Minas Gerais",
+"area_inicio": "Minas Gerais",
+"inicio": "1979",
+"fim": null,
+"wikidata": "Q4549932"
+},
+"Divine": null,
+"May East": {
+"mbid": "9006dad2-117d-41fc-a5f0-f181bb986b6c",
+"nome": "May East",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Jacob do Bandolim & Waldir Azevedo": null,
+"João Brasil": null,
+"Pink Opala": {
+"mbid": "68593938-5b42-4a76-b339-36ad3661b846",
+"nome": "Pink Opala",
+"tipo": "Group",
+"pais": "BR",
+"area": "Goiânia",
+"area_inicio": "Goiânia",
+"inicio": "2018",
+"fim": null,
+"wikidata": null
+},
+"Ney Matogrosso": {
+"mbid": "67e97898-3bb5-412a-a51e-95a7b59a1bef",
+"nome": "Ney Matogrosso",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Mato Grosso do Sul",
+"inicio": "1941-08-01",
+"fim": null,
+"wikidata": "Q742334",
+"lugar": "Bela Vista",
+"uf": "Mato Grosso do Sul",
+"nascimento": "1941-08-01"
+},
+"Milton Nascimento & Lô Borges": null,
+"Bebeto": {
+"mbid": "91ef3a34-f20a-474b-970a-c41efc834215",
+"nome": "Bebeto",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1947-09-07",
+"fim": null,
+"wikidata": "Q16336862",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1947-09-07"
+},
+"Afrolirismos": null,
+"Vanessa da Mata": {
+"mbid": "f3580347-b84a-47d8-b86e-cad642322a47",
+"nome": "Vanessa da Mata",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Mato Grosso",
+"inicio": "1976-02-10",
+"fim": null,
+"wikidata": "Q432243",
+"lugar": "Alto Garças",
+"uf": "Mato Grosso",
+"nascimento": "1976-02-10"
+},
+"Azymuth": {
+"mbid": "5f86a079-be87-4eb3-8709-afe2498afa37",
+"nome": "Azymuth",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1973",
+"fim": null,
+"wikidata": "Q201798",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro"
+},
+"Sarah Abdala": null,
+"Pelé": {
+"mbid": "736ce674-b38c-4c81-bdee-4c586a01f9cc",
+"nome": "Pelé",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Três Corações",
+"inicio": "1940-10-23",
+"fim": "2022-12-29",
+"wikidata": "Q12897",
+"lugar": "Três Corações",
+"uf": "Minas Gerais",
+"nascimento": "1940-10-23"
+},
+"Deafkids & Test": null,
+"Cyro Monteiro & Jorge Veiga": null,
+"João Roberto Kelly": null,
+"Zé Gonzaga": {
+"mbid": "681e2b08-1aca-49d4-b568-d6949b7759b2",
+"nome": "Zé Gonzaga",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": "Pernambuco",
+"inicio": "1921-01-15",
+"fim": "2002",
+"wikidata": "Q20048454",
+"lugar": "Exu",
+"uf": "Pernambuco",
+"nascimento": "1921-01-15"
+},
+"Sweet Fanny Adams": null,
+"Nalva Aguiar": {
+"mbid": "8ec04738-df9b-4f2c-acaf-0e60cb89018d",
+"nome": "Nalva Aguiar",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1945-10-09",
+"fim": null,
+"wikidata": "Q10335416",
+"lugar": "Tupaciguara",
+"uf": "Minas Gerais",
+"nascimento": "1945-10-09"
+},
+"Roberto Carlos": {
+"mbid": "e43f8c07-2d2e-47fd-8279-dc0e9880882c",
+"nome": "Roberto Carlos",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Cachoeiro de Itapemirim",
+"inicio": "1941-04-19",
+"fim": null,
+"wikidata": "Q465191",
+"lugar": "Cachoeiro de Itapemirim",
+"uf": "Espírito Santo",
+"nascimento": "1941-04-19"
+},
+"Uli Costa & Sandália de Prata": null,
+"CharlieEchoLimaTango": null,
+"Ana Preta": null,
+"Fabio Jr": {
+"mbid": "f3e83286-b99e-4852-b3fd-fdc49ba701d2",
+"nome": "Fábio Jr.",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1953-11-21",
+"fim": null,
+"wikidata": "Q1630281",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1953-11-21"
+},
+"Trio Nagô": {
+"mbid": "5c9c87df-88f2-4357-82cd-80257207b365",
+"nome": "Trio Nagó",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Jedias Hertz": null,
+"Engenheiros do Hawaii": {
+"mbid": "92de023e-6f08-4133-8063-c0740c855e3d",
+"nome": "Engenheiros do Hawaii",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Porto Alegre",
+"inicio": "1985-01-11",
+"fim": "2008",
+"wikidata": "Q290485"
+},
+"Emilio Santiago": {
+"mbid": "1f97a764-961c-41fa-99f5-d30bc0319952",
+"nome": "Emílio Santiago",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1946-12-06",
+"fim": "2013-03-20",
+"wikidata": "Q1790945",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1946-12-06"
+},
+"Biu do Pife": null,
+"DevastoProd": null,
+"Doris Monteiro": {
+"mbid": "229938bc-027c-48c3-b00f-8f66567c1e3b",
+"nome": "Dóris Monteiro",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1934-10-23",
+"fim": "2023-07-24",
+"wikidata": "Q5320351",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1934-10-23"
+},
+"Claudette Soares": {
+"mbid": "94153cb5-e27b-4b68-b680-96c035832d8b",
+"nome": "Claudette Soares",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1937-10-31",
+"fim": "2026-11-13",
+"wikidata": "Q16337229",
+"lugar": "Rio de Janeiro",
+"uf": "Rio de Janeiro",
+"nascimento": "1935-10-31"
+},
+"Chaotic System": null,
+"CPM 22": {
+"mbid": "a305918f-ce88-4834-a134-3381e34ad4e8",
+"nome": "CPM 22",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1995",
+"fim": null,
+"wikidata": "Q1024216"
+},
+"Dnilson": null,
+"Marcelo Jeneci": {
+"mbid": "2cd7c5d2-2d5d-4753-91cb-e329ffa20f49",
+"nome": "Marcelo Jeneci",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1982-04-07",
+"fim": null,
+"wikidata": "Q10325120",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1982-04-07"
+},
+"Trilha $onora do Gueto": null,
+"Thiago Elniño": null,
+"Juliana Ribeiro": {
+"mbid": "827e269f-ecbd-4221-9e0a-bd6af7e2d31d",
+"nome": "Juliana Ribeiro",
+"tipo": "Person",
+"pais": "BR",
+"area": "Salvador",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Natan Marques & Ricardo Leão": null,
+"Itamar Brant": null,
+"Krisiun": {
+"mbid": "9e6458d6-7053-48eb-ac8f-bf6fdf9169c6",
+"nome": "Krisiun",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Ijuí",
+"inicio": "1990",
+"fim": null,
+"wikidata": "Q937907"
+},
+"Os Satélites": null,
+"MV Bill": {
+"mbid": "971a3753-56d4-4665-928e-539f03910ecd",
+"nome": "MV Bill",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Rio de Janeiro",
+"inicio": "1974-01-03",
+"fim": null,
+"wikidata": "Q611736",
+"lugar": "Cidade de Deus",
+"uf": "Rio de Janeiro",
+"nascimento": "1974-01-03"
+},
+"Balbela": {
+"mbid": "8b1d5952-6905-4d6c-87ca-ed8ff432c71b",
+"nome": "Balbela",
+"tipo": null,
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Versa Libertália": null,
+"Zimbo Trio": {
+"mbid": "37415d82-7f25-46c5-a94e-aa76abf12840",
+"nome": "Zimbo Trio",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1964",
+"fim": null,
+"wikidata": "Q8072106"
+},
+"Noite Ilustrada": {
+"mbid": "ffa4cae3-f44e-4af0-adfd-1f988189cc76",
+"nome": "Noite Ilustrada",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Minas Gerais",
+"inicio": "1928-04-10",
+"fim": "2003-07-28",
+"wikidata": "Q6625624",
+"lugar": "Pirapetinga",
+"uf": "Minas Gerais",
+"nascimento": "1928-04-10"
+},
+"Vitrola Sintética": null,
+"Cipó Fogo": null,
+"Benito Di Paula": {
+"mbid": "2b51dd3c-6ad0-4f44-bfca-fbd890ff362c",
+"nome": "Benito di Paula",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "Nova Friburgo",
+"inicio": "1941-11-28",
+"fim": "2026-10-18",
+"wikidata": "Q9654390",
+"lugar": "Nova Friburgo",
+"uf": "Rio de Janeiro",
+"nascimento": "1941-11-28"
+},
+"Antraz": {
+"mbid": "baa6a528-5a9b-4252-aefd-0888a6143ea7",
+"nome": "Antraz",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Advertência Criminal": null,
+"Waldomiro Lobo": null,
+"Agnaldo Timóteo": null,
+"Conexão do Morro": null,
+"Projota": {
+"mbid": "e5e03fa4-7899-4296-baec-4400a11f2bab",
+"nome": "Projota",
+"tipo": "Person",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": "São Paulo",
+"inicio": "1986-04-11",
+"fim": null,
+"wikidata": "Q10354528",
+"lugar": "São Paulo",
+"uf": "São Paulo",
+"nascimento": "1986-04-11"
+},
+"Zé Vito": {
+"mbid": "ec4dcf2c-538e-42e1-bf7c-0307bc8fe3c8",
+"nome": "Zé Vito",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Os Meninos de Deus": {
+"mbid": "30ff0ffe-5024-4d79-b226-0dac765cc6a9",
+"nome": "Os Meninos de Deus",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"Camerata Carioca": {
+"mbid": "8be31481-b67e-4b19-be76-e14f2698d482",
+"nome": "Camerata Carioca",
+"tipo": "Group",
+"pais": "BR",
+"area": "Brazil",
+"area_inicio": null,
+"inicio": "1979",
+"fim": "1979",
+"wikidata": "Q18242080"
+},
+"Topo Gigio": {
+"mbid": "c5b6013a-2d6b-4166-a1e2-fb8e8e76b930",
+"nome": "Topo Gigio",
+"tipo": "Person",
+"pais": null,
+"area": null,
+"area_inicio": null,
+"inicio": null,
+"fim": null,
+"wikidata": null
+},
+"7º Selo": null
+}
+}
